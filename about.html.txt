@@ -1,0 +1,253 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About ClinixAI | AI-Powered Pharmacovigilance</title>
+
+<meta name="description" content="Learn about ClinixAI, our mission, vision, and approach to AI-powered Pharmacovigilance and Drug Safety innovation.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f6f8fc;
+color:#1a1a1a;
+line-height:1.7;
+}
+
+nav{
+background:#071a34;
+padding:18px 20px;
+}
+
+.nav-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:white;
+font-size:28px;
+font-weight:bold;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+background:linear-gradient(135deg,#071a34,#0f3b78);
+color:white;
+padding:90px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:14px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+margin-bottom:25px;
+}
+
+.card h2{
+color:#071a34;
+margin-bottom:15px;
+}
+
+.values{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.value-box{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+footer{
+background:#071a34;
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:36px;
+}
+
+.menu{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-container">
+
+<div class="logo">ClinixAI</div>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="index.html#solutions">Solutions</a>
+<a href="index.html#training">Training</a>
+<a href="index.html#careers">Careers</a>
+<a href="index.html#contact">Contact</a>
+</div>
+
+</div>
+</nav>
+
+<section class="hero">
+<h1>About ClinixAI</h1>
+<p>
+Combining Pharmacovigilance expertise with Artificial Intelligence to improve patient safety and operational excellence.
+</p>
+</section>
+
+<section class="section">
+
+<div class="card">
+
+<h2>Our Mission</h2>
+
+<p>
+To help life sciences organizations responsibly leverage Artificial Intelligence to improve efficiency, quality, compliance, and patient safety across Pharmacovigilance operations.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>What We Do</h2>
+
+<p>
+ClinixAI helps organizations explore, evaluate, and implement AI-driven approaches within Drug Safety and Pharmacovigilance workflows.
+</p>
+
+<br>
+
+<ul>
+<li>AI-Powered Pharmacovigilance Solutions</li>
+<li>Drug Safety Consulting</li>
+<li>Process Optimization</li>
+<li>Training & Upskilling</li>
+<li>AI Adoption Strategy</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Why ClinixAI</h2>
+
+<div class="values">
+
+<div class="value-box">
+<h3>Domain Expertise</h3>
+<p>Built around Pharmacovigilance and Drug Safety workflows.</p>
+</div>
+
+<div class="value-box">
+<h3>AI First</h3>
+<p>Focused on practical AI applications that create measurable value.</p>
+</div>
+
+<div class="value-box">
+<h3>Human-in-the-Loop</h3>
+<p>Combining human expertise with intelligent automation.</p>
+</div>
+
+<div class="value-box">
+<h3>Compliance Focus</h3>
+<p>Supporting quality and regulatory expectations.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Our Vision</h2>
+
+<p>
+A future where Artificial Intelligence amplifies human expertise, enabling safer, faster, and more efficient patient safety operations worldwide.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Leadership</h2>
+
+<p>
+ClinixAI was founded with the vision of bridging the gap between deep Pharmacovigilance expertise and emerging Artificial Intelligence technologies, helping organizations modernize operations while maintaining focus on patient safety.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>ClinixAI</h2>
+
+<p>
+AI Solutions • Consulting • Training • Pharmacovigilance Innovation
+</p>
+
+<br>
+
+<p>
+contact@theclinixai.com
+</p>
+
+<br>
+
+<p>
+© 2026 ClinixAI. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
+```
