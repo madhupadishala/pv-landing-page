@@ -1,101 +1,141 @@
-```html
-<nav style="background:#0b1f3a;padding:15px;position:sticky;top:0;z-index:1000;">
-  <div style="max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;">
-    <h2 style="color:white;margin:0;">ClinixAI</h2>
-    <div>
-      <a href="#about" style="color:white;margin:10px;text-decoration:none;">About</a>
-      <a href="#solutions" style="color:white;margin:10px;text-decoration:none;">Solutions</a>
-      <a href="#services" style="color:white;margin:10px;text-decoration:none;">Services</a>
-      <a href="#training" style="color:white;margin:10px;text-decoration:none;">Training</a>
-      <a href="#careers" style="color:white;margin:10px;text-decoration:none;">Careers</a>
-      <a href="#contact" style="color:white;margin:10px;text-decoration:none;">Contact</a>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClinixAI | Transforming Patient Safety with AI</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+line-height:1.6;
+background:#f5f7fa;
+}
+
+nav{
+background:#0b1f3a;
+padding:15px;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 12px;
+}
+
+.hero{
+background:#0b1f3a;
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:56px;
+margin-bottom:20px;
+}
+
+.btn{
+background:#1e88ff;
+color:white;
+padding:12px 24px;
+border-radius:6px;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+margin:15px 0;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+footer{
+background:#061225;
+color:white;
+text-align:center;
+padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#solutions">Solutions</a>
+<a href="#services">Services</a>
+<a href="#training">Training</a>
+<a href="#careers">Careers</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<section style="background:#0b1f3a;color:white;padding:80px 20px;">
-  <div style="max-width:1000px;margin:auto;">
-    <h1 style="font-size:48px;">Transforming Patient Safety with AI</h1>
-    <p style="font-size:20px;">
-      Empowering Pharmacovigilance organizations with AI-driven solutions,
-      consulting, training, and automation.
-    </p>
-    <a href="#contact" class="btn">Book a Demo</a>
-  </div>
+<section class="hero">
+<h1>Transforming Patient Safety with AI</h1>
+<p>AI Solutions • Consulting • Training • Pharmacovigilance Innovation</p>
+<a class="btn" href="#contact">Book a Demo</a>
 </section>
 
-<section id="about" style="padding:60px 20px;background:white;">
-  <div style="max-width:1000px;margin:auto;">
-    <h2>About ClinixAI</h2>
-    <p>
-      ClinixAI combines Pharmacovigilance expertise with Artificial Intelligence
-      to help organizations improve efficiency, compliance, and patient safety.
-    </p>
-  </div>
+<section id="about" class="section">
+<h2>About ClinixAI</h2>
+<div class="card">
+ClinixAI combines Pharmacovigilance expertise with Artificial Intelligence to improve efficiency, compliance and patient safety.
+</div>
 </section>
 
-<section id="solutions" style="padding:60px 20px;background:#f5f7fa;">
-  <div style="max-width:1000px;margin:auto;">
-    <h2>AI Solutions</h2>
-    <div class="box">
-      <h3>AI Case Processing</h3>
-      <p>Accelerate intake, triage, and review workflows.</p>
-    </div>
-    <div class="box">
-      <h3>Literature Screening Automation</h3>
-      <p>Reduce manual effort with AI-assisted screening.</p>
-    </div>
-    <div class="box">
-      <h3>Medical Writing Support</h3>
-      <p>Improve productivity across safety documentation.</p>
-    </div>
-  </div>
+<section id="solutions" class="section">
+<h2>Solutions</h2>
+<div class="card">AI Case Processing</div>
+<div class="card">Literature Screening Automation</div>
+<div class="card">Medical Writing Support</div>
+<div class="card">PV Workflow Intelligence</div>
 </section>
 
-<section id="services" style="padding:60px 20px;background:white;">
-  <div style="max-width:1000px;margin:auto;">
-    <h2>Services</h2>
-    <ul>
-      <li>Pharmacovigilance Consulting</li>
-      <li>AI Implementation</li>
-      <li>Veeva Vault Safety Support</li>
-      <li>Process Optimization</li>
-    </ul>
-  </div>
+<section id="services" class="section">
+<h2>Services</h2>
+<div class="card">Pharmacovigilance Consulting</div>
+<div class="card">AI Implementation</div>
+<div class="card">Veeva Vault Safety Support</div>
 </section>
 
-<section id="training" style="padding:60px 20px;background:#f5f7fa;">
-  <div style="max-width:1000px;margin:auto;">
-    <h2>Training Programs</h2>
-    <ul>
-      <li>AI for Pharmacovigilance</li>
-      <li>Veeva Vault Safety</li>
-      <li>Medical Writing</li>
-      <li>SQL for Drug Safety</li>
-      <li>Python for Pharmacovigilance</li>
-      <li>Corporate Upskilling Programs</li>
-    </ul>
-  </div>
+<section id="training" class="section">
+<h2>Training Programs</h2>
+<div class="card">AI for Pharmacovigilance</div>
+<div class="card">Veeva Vault Safety</div>
+<div class="card">Medical Writing</div>
+<div class="card">SQL for Drug Safety</div>
+<div class="card">Python for Pharmacovigilance</div>
 </section>
 
-<section id="careers" style="padding:60px 20px;background:white;">
-  <div style="max-width:1000px;margin:auto;">
-    <h2>Careers</h2>
-    <p>Join us in shaping the future of Patient Safety and AI.</p>
-    <p>Email your resume to: contact@theclinixai.com</p>
-  </div>
+<section id="careers" class="section">
+<h2>Careers</h2>
+<div class="card">
+Send your resume to contact@theclinixai.com
+</div>
 </section>
 
-<section id="contact" style="padding:60px 20px;background:#0b1f3a;color:white;">
-  <div style="max-width:1000px;margin:auto;">
-    <h2>Contact Us</h2>
-    <p>Email: contact@theclinixai.com</p>
-    <p>Book a demo or discuss partnership opportunities.</p>
-  </div>
+<section id="contact" class="section">
+<h2>Contact</h2>
+<div class="card">
+Email: contact@theclinixai.com
+</div>
 </section>
 
-<footer style="background:#061225;color:white;padding:20px;text-align:center;">
-  © 2026 ClinixAI. All Rights Reserved.
+<footer>
+© 2026 ClinixAI. All Rights Reserved.
 </footer>
-```
 
+</body>
+</html>
