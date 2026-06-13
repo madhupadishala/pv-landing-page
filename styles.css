@@ -122,3 +122,24 @@ h1{font-size:39px}
 .hero-grid,.hero-simple{padding:42px 20px 46px}
 .media-slot{min-height:230px}
 }
+.menu a.active,
+.dropdown-toggle.active{
+color:#9ce7ff;
+font-weight:800;
+}
+
+.menu a.active::after,
+.dropdown-toggle.active::after{
+background:#9ce7ff;
+border-radius:999px;
+content:"";
+display:block;
+height:3px;
+margin-top:5px;
+width:100%;
+}
+
+.nav-cta.active{
+background:#fff;
+color:var(--ink);
+}
