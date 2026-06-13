@@ -6,40 +6,91 @@
 
 <title>ClinixAI Academy | Healthcare AI Career Transformation Program</title>
 <meta name="description" content="Build a portfolio-ready Healthcare AI project with ClinixAI Academy. No coding required. Designed for healthcare graduates, PV professionals, regulatory, medical writing, clinical research and quality professionals.">
-<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://theclinixai.com/academy-individual.html">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="ClinixAI Academy | Healthcare AI Career Transformation Program">
-<meta property="og:description" content="Build your own Healthcare AI solution. No coding required. Strengthen your resume, LinkedIn profile and interview conversations.">
-<meta property="og:url" content="https://theclinixai.com/academy-individual.html">
-<meta property="og:image" content="https://theclinixai.com/images/training-hero.png.png">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="ClinixAI Academy | Healthcare AI Career Transformation Program">
-<meta name="twitter:description" content="Build a portfolio-ready Healthcare AI project without coding. Designed for healthcare graduates and healthcare professionals.">
-<meta name="twitter:image" content="https://theclinixai.com/images/training-hero.png.png">
-
-<link rel="preload" as="image" href="images/training-hero.png.png">
 <link rel="stylesheet" href="styles.css">
+
+<style>
+.ai-slider{
+background:rgba(255,255,255,.11);
+border:1px solid rgba(255,255,255,.28);
+border-radius:18px;
+box-shadow:0 24px 60px rgba(0,0,0,.24);
+min-height:380px;
+overflow:hidden;
+padding:34px;
+position:relative;
+}
+
+.slide{
+display:none;
+animation:fadeSlide .8s ease;
+}
+
+.slide.active{
+display:block;
+}
+
+.slide span{
+background:#eaf3ff;
+border-radius:999px;
+color:#0c5fd1;
+display:inline-block;
+font-size:13px;
+font-weight:800;
+letter-spacing:.08em;
+margin-bottom:22px;
+padding:8px 14px;
+text-transform:uppercase;
+}
+
+.slide h3{
+color:#fff;
+font-size:34px;
+line-height:1.15;
+margin-bottom:18px;
+}
+
+.slide p{
+color:#dcefff;
+font-size:19px;
+line-height:1.55;
+}
+
+.slider-dots{
+bottom:22px;
+display:flex;
+gap:8px;
+left:34px;
+position:absolute;
+}
+
+.slider-dots span{
+background:rgba(255,255,255,.35);
+border-radius:50%;
+display:block;
+height:9px;
+width:9px;
+}
+
+.slider-dots span.active{
+background:#fff;
+}
+
+@keyframes fadeSlide{
+from{opacity:0;transform:translateY(18px)}
+to{opacity:1;transform:translateY(0)}
+}
+</style>
 </head>
 
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
 <header class="site-header">
 <div class="nav">
+<a class="logo" href="index.html"><span class="logo-mark"></span>ClinixAI</a>
+<button class="menu-toggle" aria-label="Open menu">=</button>
 
-<a class="logo" href="index.html" aria-label="ClinixAI home">
-<span class="logo-mark"></span>ClinixAI
-</a>
-
-<button class="menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
-<span aria-hidden="true">☰</span>
-</button>
-
-<nav class="menu" aria-label="Main navigation">
+<nav class="menu">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="solutions.html">Solutions</a>
@@ -47,16 +98,10 @@
 <a href="consulting.html">Consulting</a>
 
 <div class="dropdown">
-<span class="dropdown-toggle" tabindex="0">Academy</span>
+<span class="dropdown-toggle">Academy</span>
 <div class="dropdown-menu">
-<a href="academy-individual.html">
-<strong>Individual Career Transformation</strong>
-<span>Build your own Healthcare AI project. No coding required.</span>
-</a>
-<a href="academy-corporate.html">
-<strong>Corporate Training</strong>
-<span>AI upskilling workshops for Pharma, CRO and healthcare teams.</span>
-</a>
+<a href="academy-individual.html"><strong>Individual Career Transformation</strong><span>Build your own Healthcare AI project. No coding required.</span></a>
+<a href="academy-corporate.html"><strong>Corporate Training</strong><span>AI upskilling workshops for Pharma, CRO and healthcare teams.</span></a>
 </div>
 </div>
 
@@ -64,55 +109,57 @@
 <a href="careers.html">Careers</a>
 <a class="nav-cta" href="contact.html">Contact</a>
 </nav>
-
 </div>
 </header>
 
-<main id="main-content">
+<main>
 
 <section class="hero">
 <div class="hero-grid">
 
 <div>
 <div class="eyebrow">ClinixAI Academy • Healthcare AI Career Transformation</div>
-
 <h1>Become the Healthcare Professional Who Leads AI Transformation</h1>
-
-<p style="font-size:23px;line-height:1.45;max-width:860px;">
-AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operations. Start your career transformation today.
-</p>
+<p style="font-size:23px;line-height:1.45;max-width:860px;">AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operations. Start your career transformation today.</p>
 
 <div class="hero-actions">
-<a class="btn btn-primary" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now — ₹19,999 (Pay Later Available)</a>
-<a class="btn btn-ghost" href="#outcomes">What You Will Achieve</a>
+<a class="btn btn-primary" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now — ₹19,999</a>
+<a class="btn btn-ghost" href="#outcomes">View Outcomes</a>
 </div>
 </div>
 
-<div class="grid grid-2">
+<div class="ai-slider">
 
-<article class="card">
-<span class="badge badge-blue">AI for PV</span>
-<h3>Drug Safety Automation</h3>
-<p>Data extraction, adverse event detection, case intake support and case automation workflows.</p>
-</article>
+<div class="slide active">
+<span>AI for PV</span>
+<h3>Data Extraction • AE Detection • Case Automation</h3>
+<p>Build AI workflows for literature screening, case intake, triage, adverse event identification and safety documentation.</p>
+</div>
 
-<article class="card">
-<span class="badge badge-teal">AI for Regulatory</span>
-<h3>Compliance Intelligence</h3>
-<p>Regulatory tracking, submissions support, impact assessment and workflow automation.</p>
-</article>
+<div class="slide">
+<span>AI for Regulatory</span>
+<h3>Compliance • Submissions • Workflow Automation</h3>
+<p>Create AI agents for regulatory intelligence, impact assessment, compliance tracking and submission workflow support.</p>
+</div>
 
-<article class="card">
-<span class="badge badge-green">AI for Medical Writing</span>
-<h3>Scientific Content Support</h3>
-<p>Summarization, literature screening, document structuring and content quality workflows.</p>
-</article>
+<div class="slide">
+<span>AI for Medical Writing</span>
+<h3>Summarization • Literature Screening • Drafting</h3>
+<p>Use AI to summarize literature, structure documents, draft content and support medical writing quality workflows.</p>
+</div>
 
-<article class="card">
-<span class="badge badge-amber">AI for Clinical Research</span>
-<h3>Clinical Data Thinking</h3>
-<p>Trial data support, patient safety analytics, study workflows and evidence organization.</p>
-</article>
+<div class="slide">
+<span>AI for Clinical Research</span>
+<h3>Trial Data • Patient Safety Analytics</h3>
+<p>Explore AI workflows for trial data review, patient safety tracking, clinical operations and evidence organization.</p>
+</div>
+
+<div class="slider-dots">
+<span class="active"></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
 
 </div>
 
@@ -131,57 +178,30 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 <section class="section center" id="outcomes">
 <div class="section-head">
 <h2>What You Will Achieve</h2>
-<p>Clear outcomes. No vague promises. You build something real that you can show, explain and use in career conversations.</p>
+<p>Build something real. Show it clearly. Use it in career conversations.</p>
 </div>
 
 <div class="grid grid-3">
-
-<article class="card">
-<h3>Build Your Own Healthcare AI Solution</h3>
-<p>Create a practical AI project based on a real healthcare problem.</p>
-</article>
-
-<article class="card">
-<h3>Showcase It Professionally</h3>
-<p>Use your project for resume, LinkedIn and interview discussions.</p>
-</article>
-
-<article class="card">
-<h3>Stand Out Beyond Certificates</h3>
-<p>Move from certificate-only learning to portfolio-based positioning.</p>
-</article>
-
-<article class="card">
-<h3>Learn AI Without Coding</h3>
-<p>Use modern AI tools, no-code workflows, prompts and structured outputs.</p>
-</article>
-
-<article class="card">
-<h3>Solve Real PV & Healthcare Gaps</h3>
-<p>Identify workflow gaps and design AI-powered solutions around them.</p>
-</article>
-
-<article class="card">
-<h3>Build Future-Ready Skills</h3>
-<p>Understand how AI is changing healthcare workflows and professional expectations.</p>
-</article>
-
+<article class="card"><h3>Build Your Own Healthcare AI Solution</h3><p>Create a practical AI project based on a real healthcare problem.</p></article>
+<article class="card"><h3>Showcase It Professionally</h3><p>Use your project for resume, LinkedIn and interview discussions.</p></article>
+<article class="card"><h3>Stand Out Beyond Certificates</h3><p>Move from certificate-only learning to portfolio-based positioning.</p></article>
+<article class="card"><h3>Learn AI Without Coding</h3><p>Use modern AI tools, no-code workflows, prompts and structured outputs.</p></article>
+<article class="card"><h3>Solve Real PV & Healthcare Gaps</h3><p>Identify workflow gaps and design AI-powered solutions around them.</p></article>
+<article class="card"><h3>Build Future-Ready Skills</h3><p>Understand how AI is changing healthcare workflows and professional expectations.</p></article>
 </div>
 </section>
 
 <section class="section center">
 <div class="section-head">
 <h2>Built for Freshers and Experienced Professionals</h2>
-<p>Choose your path. Freshers build visibility. Experienced professionals build transformation capability.</p>
+<p>Freshers build visibility. Experienced professionals build transformation capability.</p>
 </div>
 
 <div class="grid grid-2">
 
 <article class="card">
 <span class="badge badge-blue">FOR FRESHERS</span>
-
 <h3>Launch Your Healthcare Career With Practical AI Experience</h3>
-
 <p>Most candidates have similar qualifications. Very few can show a real Healthcare AI project that recruiters and interviewers can discuss.</p>
 
 <ul style="text-align:left;max-width:520px;margin:20px auto;">
@@ -198,14 +218,11 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 <p><strong>₹19,999 — Pay Later Available</strong></p>
 <a class="btn btn-blue" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now</a>
 </div>
-
 </article>
 
 <article class="card">
 <span class="badge badge-teal">FOR EXPERIENCED PROFESSIONALS</span>
-
 <h3>Transform Into AI-Enabled PV Leadership.</h3>
-
 <p>Go beyond training — build complete AI-powered solutions. From writing URS and FRS to delivering end-to-end problem-solving systems, you’ll learn to identify gaps in drug safety workflows and fill them with intelligent automation.</p>
 
 <ul style="text-align:left;max-width:520px;margin:20px auto;">
@@ -220,7 +237,6 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 <p><strong>₹19,999 — Pay Later Available</strong></p>
 <a class="btn btn-blue" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now</a>
 </div>
-
 </article>
 
 </div>
@@ -236,20 +252,12 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 </div>
 
 <div class="grid">
-<article class="card">
-<h3>You Bring the Healthcare Context</h3>
-<p>Choose a real problem from Pharmacovigilance, regulatory affairs, medical writing, clinical research, quality, nursing, hospital operations or life sciences.</p>
-</article>
-
-<article class="card">
-<h3>ClinixAI Helps You Build the Solution</h3>
-<p>Learn how to structure workflows, use AI tools, design prompts, define outputs and present the project professionally.</p>
-</article>
+<article class="card"><h3>You Bring the Healthcare Context</h3><p>Choose a real problem from Pharmacovigilance, regulatory affairs, medical writing, clinical research, quality, nursing, hospital operations or life sciences.</p></article>
+<article class="card"><h3>ClinixAI Helps You Build the Solution</h3><p>Learn how to structure workflows, use AI tools, design prompts, define outputs and present the project professionally.</p></article>
 </div>
 </div>
 
-<img class="hero-img" src="images/case-processing.png.png" alt="ClinixAI no-code Healthcare AI project building" width="900" height="506" loading="lazy">
-
+<img class="hero-img" src="images/case-processing.png.png" alt="ClinixAI no-code Healthcare AI project building">
 </div>
 </section>
 
@@ -260,58 +268,20 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 </div>
 
 <div class="grid grid-3">
-
-<article class="card">
-<h3>AI Literature Screening Assistant</h3>
-<p>Support article prioritization, relevance review and safety documentation workflows.</p>
-</article>
-
-<article class="card">
-<h3>Case Intake & Triage Assistant</h3>
-<p>Support adverse event intake, triage logic, seriousness prompts and structured documentation.</p>
-</article>
-
-<article class="card">
-<h3>Regulatory Intelligence Agent</h3>
-<p>Track regulatory updates, identify impact areas and generate action-ready summaries.</p>
-</article>
-
-<article class="card">
-<h3>Signal Detection Dashboard</h3>
-<p>Visualize safety trends, risks and signal prioritization concepts.</p>
-</article>
-
-<article class="card">
-<h3>Aggregate Reporting Assistant</h3>
-<p>Support PSUR/PBRER-style data organization, summary preparation and report thinking.</p>
-</article>
-
-<article class="card">
-<h3>Medical Information Assistant</h3>
-<p>Support healthcare information retrieval, response drafting and knowledge management use cases.</p>
-</article>
-
-<article class="card">
-<h3>Medical Writing Assistant</h3>
-<p>Support structured writing, document outlines, summaries and quality review preparation.</p>
-</article>
-
-<article class="card">
-<h3>Patient Education Assistant</h3>
-<p>Create patient-friendly explanations, guidance content and healthcare communication flows.</p>
-</article>
-
-<article class="card">
-<h3>Healthcare Workflow Intelligence Tool</h3>
-<p>Improve tracking, visibility and decision support across healthcare operations.</p>
-</article>
-
+<article class="card"><h3>AI Literature Screening Assistant</h3><p>Support article prioritization, relevance review and safety documentation workflows.</p></article>
+<article class="card"><h3>Case Intake & Triage Assistant</h3><p>Support adverse event intake, triage logic, seriousness prompts and structured documentation.</p></article>
+<article class="card"><h3>Regulatory Intelligence Agent</h3><p>Track regulatory updates, identify impact areas and generate action-ready summaries.</p></article>
+<article class="card"><h3>Signal Detection Dashboard</h3><p>Visualize safety trends, risks and signal prioritization concepts.</p></article>
+<article class="card"><h3>Aggregate Reporting Assistant</h3><p>Support PSUR/PBRER-style data organization, summary preparation and report thinking.</p></article>
+<article class="card"><h3>Medical Information Assistant</h3><p>Support healthcare information retrieval, response drafting and knowledge management use cases.</p></article>
+<article class="card"><h3>Medical Writing Assistant</h3><p>Support structured writing, document outlines, summaries and quality review preparation.</p></article>
+<article class="card"><h3>Patient Education Assistant</h3><p>Create patient-friendly explanations, guidance content and healthcare communication flows.</p></article>
+<article class="card"><h3>Healthcare Workflow Intelligence Tool</h3><p>Improve tracking, visibility and decision support across healthcare operations.</p></article>
 </div>
 </section>
 
 <section class="section">
 <div class="split">
-
 <div>
 <div class="section-head">
 <h2>What Makes ClinixAI Different</h2>
@@ -332,8 +302,7 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 </div>
 </div>
 
-<img class="hero-img" src="images/solutions-hero.png.png" alt="ClinixAI Healthcare AI project workflow" width="900" height="506" loading="lazy">
-
+<img class="hero-img" src="images/solutions-hero.png.png" alt="ClinixAI Healthcare AI project workflow">
 </div>
 </section>
 
@@ -344,52 +313,15 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 </div>
 
 <div class="grid grid-3">
-
 <article class="card"><h3>Healthcare AI Foundations</h3><p>Understand AI concepts in healthcare language, not software jargon.</p></article>
-
 <article class="card"><h3>No-Code AI Tools</h3><p>Learn how to use AI and no-code tools to create practical solutions.</p></article>
-
 <article class="card"><h3>AI Workflow Design</h3><p>Convert healthcare problems into structured AI-enabled workflows.</p></article>
-
 <article class="card"><h3>Project Mentorship</h3><p>Get guidance to refine your idea, workflow and final project direction.</p></article>
-
 <article class="card"><h3>Signal Detection Fundamentals</h3><p>Bonus module to understand safety trend and signal-thinking concepts.</p></article>
-
 <article class="card"><h3>Aggregate Reporting Fundamentals</h3><p>Bonus module to understand reporting concepts and safety summary thinking.</p></article>
-
 <article class="card"><h3>Resume Positioning</h3><p>Learn how to describe your project professionally.</p></article>
-
 <article class="card"><h3>LinkedIn Showcase</h3><p>Prepare a project story that can be shared publicly.</p></article>
-
 <article class="card"><h3>Completion Certificate</h3><p>Receive certificate after successful participation and project completion.</p></article>
-
-</div>
-</section>
-
-<section class="section">
-<div class="split">
-
-<div>
-<div class="section-head">
-<h2>Eligibility</h2>
-<p>You qualify if you have either a healthcare degree or healthcare industry experience.</p>
-</div>
-
-<div class="grid">
-<article class="card">
-<h3>Healthcare Degrees</h3>
-<p>B.Pharm, M.Pharm, Pharm.D, Nursing, Life Sciences, Biotechnology, Clinical Research, Healthcare or related backgrounds.</p>
-</article>
-
-<article class="card">
-<h3>Healthcare Industry Experience</h3>
-<p>Pharmacovigilance, Regulatory Affairs, Medical Writing, Clinical Research, Quality, Medical Information, Healthcare Operations or related experience.</p>
-</article>
-</div>
-</div>
-
-<img class="hero-img" src="images/resources-hero.png.png" alt="ClinixAI academy eligibility and healthcare career transformation" width="900" height="506" loading="lazy">
-
 </div>
 </section>
 
@@ -400,27 +332,12 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 </div>
 
 <div class="grid grid-3">
-
-<article class="card">
-<h3>Program Fee</h3>
-<p><strong>₹19,999</strong></p>
-<p>Pay Later available through supported Razorpay payment options.</p>
-</article>
-
-<article class="card">
-<h3>What Is Included</h3>
-<p>Training, project guidance, mentorship, bonus modules, career positioning and completion certificate.</p>
-</article>
-
-<article class="card">
-<h3>After Payment</h3>
-<p>You will receive onboarding instructions and complete the Project Discovery Form to start your project journey.</p>
-</article>
-
+<article class="card"><h3>Program Fee</h3><p><strong>₹19,999</strong></p><p>Pay Later available through supported Razorpay payment options.</p></article>
+<article class="card"><h3>What Is Included</h3><p>Training, project guidance, mentorship, bonus modules, career positioning and completion certificate.</p></article>
+<article class="card"><h3>After Payment</h3><p>You will receive onboarding instructions and complete the Project Discovery Form to start your project journey.</p></article>
 </div>
 
 <br>
-
 <a class="btn btn-blue" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now — ₹19,999</a>
 </section>
 
@@ -431,22 +348,9 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 </div>
 
 <div class="grid grid-3">
-
-<article class="card">
-<h3>Enrollment</h3>
-<p>Enrollment is confirmed only after successful payment through Razorpay.</p>
-</article>
-
-<article class="card">
-<h3>No Job Guarantee</h3>
-<p>This program improves project experience, portfolio strength and career positioning, but does not guarantee employment, salary increase or job placement.</p>
-</article>
-
-<article class="card">
-<h3>Communication</h3>
-<p>By enrolling, you agree to receive program-related communication through email and/or WhatsApp.</p>
-</article>
-
+<article class="card"><h3>Enrollment</h3><p>Enrollment is confirmed only after successful payment through Razorpay.</p></article>
+<article class="card"><h3>No Job Guarantee</h3><p>This program improves project experience, portfolio strength and career positioning, but does not guarantee employment, salary increase or job placement.</p></article>
+<article class="card"><h3>Communication</h3><p>By enrolling, you agree to receive program-related communication through email and/or WhatsApp.</p></article>
 </div>
 </section>
 
@@ -458,37 +362,34 @@ AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operation
 <h2>The Future of Healthcare Will Not Be Built by Technology Alone.</h2>
 <p>It will be built by healthcare professionals who understand how to apply technology responsibly. Become one of them.</p>
 </div>
-
 <a class="btn btn-primary" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now</a>
 </div>
 </section>
 
 <footer class="site-footer">
 <div class="footer-inner">
-
-<div>
-<p class="footer-brand">ClinixAI</p>
-<p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+<div><p class="footer-brand">ClinixAI</p><p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p></div>
+<div><strong>Explore</strong><a href="solutions.html">Solutions</a><a href="consulting.html">Consulting</a><a href="academy-corporate.html">Corporate Training</a><a href="resources.html">Resources</a></div>
+<div><strong>Contact</strong><p>academy@theclinixai.com</p><a href="contact.html">Send inquiry</a></div>
 </div>
-
-<div>
-<strong>Explore</strong>
-<a href="solutions.html">Solutions</a>
-<a href="consulting.html">Consulting</a>
-<a href="academy-corporate.html">Corporate Training</a>
-<a href="resources.html">Resources</a>
-</div>
-
-<div>
-<strong>Contact</strong>
-<p>academy@theclinixai.com</p>
-<a href="contact.html">Send inquiry</a>
-</div>
-
-</div>
-
 <div class="footer-bottom">© 2026 ClinixAI. All Rights Reserved.</div>
 </footer>
+
+<script>
+const slides = document.querySelectorAll(".ai-slider .slide");
+const dots = document.querySelectorAll(".slider-dots span");
+let currentSlide = 0;
+
+if (slides.length) {
+setInterval(() => {
+slides[currentSlide].classList.remove("active");
+dots[currentSlide].classList.remove("active");
+currentSlide = (currentSlide + 1) % slides.length;
+slides[currentSlide].classList.add("active");
+dots[currentSlide].classList.add("active");
+}, 3000);
+}
+</script>
 
 <script src="site.js"></script>
 </body>
