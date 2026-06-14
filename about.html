@@ -1,293 +1,349 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>About ClinixAI | Healthcare AI, Patient Safety & PV Transformation</title>
-<meta name="description" content="ClinixAI helps healthcare, pharma, CRO and life sciences teams modernize patient safety, pharmacovigilance, compliance and operations through responsible AI adoption.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://theclinixai.com/about.html">
+  <title>About ClinixAI | Healthcare AI, Patient Safety & PV Transformation</title>
+  <meta name="description" content="ClinixAI helps healthcare, pharma, CRO and life sciences teams modernize patient safety, pharmacovigilance, compliance and operations through responsible AI adoption." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.theclinixai.com/about.html" />
 
-<link rel="icon" href="/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
 
-<link rel="stylesheet" href="styles.css">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
+
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:46px 28px 48px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
+
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
+
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card-grid.four{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card p{color:#5e7188;font-size:16px;line-height:1.65}
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+
+    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
+    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
+    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18);width:100%}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-image{height:auto}
+      .stats-container,.card-grid,.card-grid.four,.footer{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .stats-container,.card-grid,.card-grid.four,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
 </head>
 
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
 <header class="site-header">
-<div class="nav">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
 
-<a class="logo" href="index.html" aria-label="ClinixAI Home">
-<span class="logo-mark"></span>ClinixAI
-</a>
-
-<button class="menu-toggle" aria-label="Open menu" aria-expanded="false" type="button">
-<span aria-hidden="true">☰</span>
-</button>
-
-<nav class="menu" aria-label="Main navigation">
-<a href="index.html">Home</a>
-<a class="active" href="about.html">About</a>
-<a href="solutions.html">Solutions</a>
-<a href="services.html">Services</a>
-<a href="consulting.html">Consulting</a>
-
-<div class="dropdown">
-<span class="dropdown-toggle">Academy</span>
-<div class="dropdown-menu">
-<a href="academy-individual.html">
-<strong>Individual Career Transformation</strong>
-<span>Build your own Healthcare AI project. No coding required.</span>
-</a>
-<a href="academy-corporate.html">
-<strong>Corporate Training</strong>
-<span>AI upskilling workshops for Pharma, CRO and healthcare teams.</span>
-</a>
-</div>
-</div>
-
-<a href="resources.html">Resources</a>
-<a href="careers.html">Careers</a>
-<a class="nav-cta" href="contact.html">Contact</a>
-</nav>
-
-</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="academy-individual.html">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main id="main-content">
+<main>
 
 <section class="hero">
-<div class="hero-grid">
+  <div class="hero-container">
+    <div>
+      <p class="eyebrow">About ClinixAI</p>
+      <h1>Built at the Intersection of Healthcare, Patient Safety and Technology.</h1>
+      <p class="hero-text">
+        ClinixAI exists to help healthcare organizations and professionals modernize responsibly through intelligent automation,
+        practical AI adoption, compliance-aware transformation and patient safety focused decision-making.
+      </p>
 
-<div>
-<div class="eyebrow">About ClinixAI</div>
-<h1>Built at the Intersection of Healthcare, Patient Safety and Technology.</h1>
-<p>ClinixAI exists to help healthcare organizations and professionals modernize responsibly through intelligent automation, practical AI adoption, compliance-aware transformation and patient safety focused decision-making.</p>
+      <div class="hero-actions">
+        <a href="solutions.html" class="btn btn-light">Explore Solutions</a>
+        <a href="#vision" class="btn btn-outline">Our Vision</a>
+      </div>
+    </div>
 
-<div class="hero-actions">
-<a class="btn btn-primary" href="solutions.html">Explore Solutions</a>
-<a class="btn btn-ghost" href="#vision">Our Vision</a>
-</div>
-</div>
-
-<img class="hero-img" src="images/home-hero.png.png" alt="ClinixAI healthcare AI and patient safety transformation">
-
-</div>
+    <div class="hero-image-wrap">
+      <img src="images/home-hero.png.png" alt="ClinixAI healthcare AI and patient safety transformation" class="hero-image" />
+    </div>
+  </div>
 </section>
 
 <section class="stats">
-<div class="stats-inner">
-<div class="stat"><strong>Patient Safety</strong><span>At the center of every solution</span></div>
-<div class="stat"><strong>PV + Quality</strong><span>Domain-led transformation</span></div>
-<div class="stat"><strong>AI Adoption</strong><span>Responsible and practical</span></div>
-<div class="stat"><strong>365 Days</strong><span>Audit-ready operating mindset</span></div>
-</div>
-</section>
-
-<section class="section center">
-<div class="section-head">
-<h2>Why ClinixAI Exists</h2>
-<p>Healthcare is entering a defining decade. The future will not be built by technology alone. It will be built by healthcare professionals who understand how to apply technology responsibly.</p>
-</div>
-
-<div class="grid grid-3">
-<article class="card">
-<span class="badge badge-blue">Challenge</span>
-<h3>Manual Workflows Will Not Scale</h3>
-<p>Healthcare, pharmacovigilance and compliance teams are managing increasing data volumes, evolving regulations and complex operational expectations.</p>
-</article>
-
-<article class="card">
-<span class="badge badge-teal">Need</span>
-<h3>Better Calibrated Decisions</h3>
-<p>Organizations need timely, traceable and defensible decisions that support quality, compliance, operational performance and patient safety.</p>
-</article>
-
-<article class="card">
-<span class="badge badge-green">Purpose</span>
-<h3>Responsible AI Transformation</h3>
-<p>ClinixAI helps teams adopt intelligent automation without weakening human oversight, regulatory discipline or patient-centric thinking.</p>
-</article>
-</div>
+  <div class="stats-container">
+    <div><strong>Patient Safety</strong><span>At the center of every solution</span></div>
+    <div><strong>PV + Quality</strong><span>Domain-led transformation</span></div>
+    <div><strong>AI Adoption</strong><span>Responsible and practical</span></div>
+    <div><strong>365 Days</strong><span>Audit-ready operating mindset</span></div>
+  </div>
 </section>
 
 <section class="section">
-<div class="split">
+  <div class="section-head">
+    <h2>Why ClinixAI Exists</h2>
+    <p>
+      Healthcare is entering a defining decade. The future will not be built by technology alone.
+      It will be built by healthcare professionals who understand how to apply technology responsibly.
+    </p>
+  </div>
 
-<div>
-<div class="section-head">
-<h2>Healthcare Must Evolve</h2>
-<p>Across Pharmacovigilance, Regulatory Affairs, Quality Management, Clinical Development and Healthcare Operations, organizations are expected to move faster while remaining compliant, inspection-ready and patient focused.</p>
-</div>
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag blue">Challenge</span>
+      <h3>Manual Workflows Will Not Scale</h3>
+      <p>Healthcare, pharmacovigilance and compliance teams are managing increasing data volumes, evolving regulations and complex operational expectations.</p>
+    </div>
 
-<div class="card">
-<p>Yet many critical healthcare processes still depend on fragmented systems, manual activities and reactive decision-making. These operating models were not designed for the scale, speed and complexity of modern healthcare.</p>
-<br>
-<p>ClinixAI was created to help organizations move from reactive operations to intelligent, governed and patient-centric operating models.</p>
-<br>
-<p>Our work connects domain expertise, consulting, academy programs and AI-driven solution thinking into one practical model for healthcare modernization.</p>
-</div>
-</div>
+    <div class="card">
+      <span class="tag teal">Need</span>
+      <h3>Better Calibrated Decisions</h3>
+      <p>Organizations need timely, traceable and defensible decisions that support quality, compliance, operational performance and patient safety.</p>
+    </div>
 
-<img class="hero-img" src="images/consulting-hero.png.png" alt="ClinixAI consulting and healthcare transformation workshop">
-
-</div>
+    <div class="card">
+      <span class="tag green">Purpose</span>
+      <h3>Responsible AI Transformation</h3>
+      <p>ClinixAI helps teams adopt intelligent automation without weakening human oversight, regulatory discipline or patient-centric thinking.</p>
+    </div>
+  </div>
 </section>
 
-<section class="section center">
-<div class="section-head">
-<h2>What We Believe</h2>
-<p>AI should strengthen healthcare professionals, not replace accountability, scientific judgment or regulatory responsibility.</p>
-</div>
+<section class="section white">
+  <div class="two-column">
+    <div>
+      <h2>Healthcare Must Evolve</h2>
+      <p>
+        Across Pharmacovigilance, Regulatory Affairs, Quality Management, Clinical Development and Healthcare Operations,
+        organizations are expected to move faster while remaining compliant, inspection-ready and patient focused.
+      </p>
+      <p>
+        Many critical healthcare processes still depend on fragmented systems, manual activities and reactive decision-making.
+        These operating models were not designed for the scale, speed and complexity of modern healthcare.
+      </p>
+      <p>
+        ClinixAI was created to help organizations move from reactive operations to intelligent, governed and patient-centric operating models.
+      </p>
+    </div>
 
-<div class="grid grid-4">
-<article class="card"><h3>Domain First</h3><p>Healthcare and PV workflows must define technology adoption, not the other way around.</p></article>
-<article class="card"><h3>Human Oversight</h3><p>AI should support better review, better consistency and better decisions through responsible human-in-the-loop design.</p></article>
-<article class="card"><h3>Compliance by Design</h3><p>Documentation, traceability, quality thinking and audit readiness must be embedded into every workflow.</p></article>
-<article class="card"><h3>Patient-Centric Impact</h3><p>Every process, every signal, every workflow and every decision ultimately impacts patient safety.</p></article>
-</div>
+    <img src="images/consulting-hero.png.png" alt="ClinixAI consulting and healthcare transformation workshop" class="rounded-image" />
+  </div>
 </section>
 
-<section class="section" id="leadership">
-<div class="split">
+<section class="section">
+  <div class="section-head">
+    <h2>What We Believe</h2>
+    <p>AI should strengthen healthcare professionals, not replace accountability, scientific judgment or regulatory responsibility.</p>
+  </div>
 
-<div>
-<div class="section-head">
-<h2>Leadership & Expert Network</h2>
-<p>ClinixAI is supported by a diverse network of healthcare, pharmacovigilance, quality and technology professionals with experience across regulated healthcare environments, global service delivery, patient safety governance and transformation programs.</p>
-</div>
-
-<img class="hero-img" src="images/case-processing.png.png" alt="ClinixAI leadership and expert network">
-</div>
-
-<div class="card">
-<h3>Built on Industry Perspective</h3>
-<p>Our leadership and expert network bring experience across Pharmacovigilance Operations, Patient Safety Governance, Quality Systems, Regulatory Compliance, Healthcare Technology, Clinical Development, Commercial Operations and Global Service Delivery.</p>
-<br>
-<p>Having worked across both service provider and client environments, our network understands healthcare challenges from multiple perspectives — operational, regulatory, technology, commercial and patient-centric.</p>
-<br>
-<p>ClinixAI brings these perspectives together to help organizations and professionals adopt AI responsibly, improve efficiency, strengthen oversight and remain aligned with patient safety expectations.</p>
-</div>
-
-</div>
+  <div class="card-grid four">
+    <div class="card"><h3>Domain First</h3><p>Healthcare and PV workflows must define technology adoption, not the other way around.</p></div>
+    <div class="card"><h3>Human Oversight</h3><p>AI should support better review, better consistency and better decisions through human-in-the-loop design.</p></div>
+    <div class="card"><h3>Compliance by Design</h3><p>Documentation, traceability, quality thinking and audit readiness must be embedded into every workflow.</p></div>
+    <div class="card"><h3>Patient-Centric Impact</h3><p>Every process, every signal, every workflow and every decision ultimately impacts patient safety.</p></div>
+  </div>
 </section>
 
-<section class="section center">
-<div class="section-head">
-<h2>Our Perspective</h2>
-<p>What makes ClinixAI different is not only the experience we bring. It is the perspective we bring.</p>
-</div>
+<section class="section white">
+  <div class="two-column">
+    <img src="images/case-processing.png.png" alt="ClinixAI leadership and expert network" class="rounded-image" />
 
-<div class="grid grid-4">
-<article class="card"><h3>Patient Perspective</h3><p>Healthcare transformation must ultimately improve safety, clarity and outcomes for patients and families.</p></article>
-<article class="card"><h3>Operational Perspective</h3><p>Solutions must work in real-world delivery environments with volume, timelines, quality expectations and SLA pressures.</p></article>
-<article class="card"><h3>Regulatory Perspective</h3><p>Innovation must respect compliance, documentation, governance, traceability and inspection readiness.</p></article>
-<article class="card"><h3>Technology Perspective</h3><p>AI must be practical, explainable and designed to strengthen human decision-making, not create uncontrolled risk.</p></article>
-</div>
+    <div>
+      <h2>Leadership & Expert Network</h2>
+      <p>
+        ClinixAI is supported by a diverse network of healthcare, pharmacovigilance, quality and technology professionals
+        with experience across regulated healthcare environments, global service delivery, patient safety governance and transformation programs.
+      </p>
+      <p>
+        Our leadership and expert network bring experience across Pharmacovigilance Operations, Patient Safety Governance,
+        Quality Systems, Regulatory Compliance, Healthcare Technology, Clinical Development and Global Service Delivery.
+      </p>
+      <p>
+        ClinixAI brings these perspectives together to help organizations and professionals adopt AI responsibly,
+        improve efficiency, strengthen oversight and remain aligned with patient safety expectations.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="vision">
-<div class="split">
+<section class="section">
+  <div class="section-head">
+    <h2>Our Perspective</h2>
+    <p>What makes ClinixAI different is not only the experience we bring. It is the perspective we bring.</p>
+  </div>
 
-<div>
-<div class="section-head">
-<h2>Our Vision</h2>
-<p>Our vision is not to replace human expertise. Our vision is to amplify it.</p>
-</div>
-
-<div class="card">
-<p>We envision a future where healthcare organizations operate with real-time visibility, intelligent oversight and proactive risk identification.</p>
-<br>
-<p>A future where emerging risks are identified earlier, quality is embedded into every process and compliance becomes a natural outcome of operational excellence.</p>
-<br>
-<p>A future where organizations are audit-ready by design, not only by preparation.</p>
-<br>
-<p>A future where better technology enables better decisions, stronger patient protection and safer healthcare outcomes.</p>
-<br>
-<p><strong>Because better decisions create safer healthcare.</strong></p>
-<p><strong>And safer healthcare creates a better future for patients, families and future generations.</strong></p>
-</div>
-</div>
-
-<img class="hero-img" src="images/resources-hero.png.png" alt="ClinixAI healthcare AI vision and patient safety innovation">
-
-</div>
+  <div class="card-grid four">
+    <div class="card"><h3>Patient Perspective</h3><p>Healthcare transformation must ultimately improve safety, clarity and outcomes for patients and families.</p></div>
+    <div class="card"><h3>Operational Perspective</h3><p>Solutions must work in real-world delivery environments with volume, timelines and SLA pressures.</p></div>
+    <div class="card"><h3>Regulatory Perspective</h3><p>Innovation must respect compliance, documentation, governance, traceability and inspection readiness.</p></div>
+    <div class="card"><h3>Technology Perspective</h3><p>AI must be practical, explainable and designed to strengthen human decision-making, not create uncontrolled risk.</p></div>
+  </div>
 </section>
 
-<section class="section center">
-<div class="section-head">
-<h2>How ClinixAI Helps</h2>
-<p>ClinixAI supports healthcare organizations and professionals through connected solutions, consulting and academy programs.</p>
-</div>
+<section class="section white" id="vision">
+  <div class="two-column">
+    <div>
+      <h2>Our Vision</h2>
+      <p>
+        Our vision is not to replace human expertise. Our vision is to amplify it.
+      </p>
+      <p>
+        We envision a future where healthcare organizations operate with real-time visibility,
+        intelligent oversight and proactive risk identification.
+      </p>
+      <p>
+        A future where emerging risks are identified earlier, quality is embedded into every process,
+        and compliance becomes a natural outcome of operational excellence.
+      </p>
+      <p>
+        A future where better technology enables better decisions, stronger patient protection and safer healthcare outcomes.
+      </p>
+      <p><strong>Because better decisions create safer healthcare.</strong></p>
+    </div>
 
-<div class="grid grid-3">
-<article class="card">
-<span class="badge badge-blue">Solutions</span>
-<h3>Healthcare AI & PV Automation</h3>
-<p>AI-enabled workflow support for literature screening, case intake, regulatory intelligence, signal detection and operational visibility.</p>
-<a class="btn btn-blue" href="solutions.html">Explore Solutions</a>
-</article>
+    <img src="images/resources-hero.png.png" alt="ClinixAI healthcare AI vision and patient safety innovation" class="rounded-image" />
+  </div>
+</section>
 
-<article class="card">
-<span class="badge badge-teal">Consulting</span>
-<h3>Compliance & Transformation Advisory</h3>
-<p>PV operations, QMS support, audit readiness, process optimization, AI adoption guidance and workflow modernization.</p>
-<a class="btn btn-blue" href="consulting.html">Explore Consulting</a>
-</article>
+<section class="section">
+  <div class="section-head">
+    <h2>How ClinixAI Helps</h2>
+    <p>ClinixAI supports healthcare organizations and professionals through connected solutions, consulting and academy programs.</p>
+  </div>
 
-<article class="card">
-<span class="badge badge-green">Academy</span>
-<h3>Healthcare AI Workforce Transformation</h3>
-<p>Individual and corporate programs that help professionals and teams prepare for AI-enabled healthcare operations.</p>
-<a class="btn btn-blue" href="academy-individual.html">Explore Academy</a>
-</article>
-</div>
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag blue">Solutions</span>
+      <h3>Healthcare AI & PV Automation</h3>
+      <p>AI-enabled workflow support for literature screening, case intake, regulatory intelligence, signal detection and operational visibility.</p>
+      <br>
+      <a class="btn btn-blue" href="solutions.html">Explore Solutions</a>
+    </div>
+
+    <div class="card">
+      <span class="tag teal">Consulting</span>
+      <h3>Compliance & Transformation Advisory</h3>
+      <p>PV operations, QMS support, audit readiness, process optimization, AI adoption guidance and workflow modernization.</p>
+      <br>
+      <a class="btn btn-blue" href="consulting.html">Explore Consulting</a>
+    </div>
+
+    <div class="card">
+      <span class="tag green">Academy</span>
+      <h3>Healthcare AI Workforce Transformation</h3>
+      <p>Individual and corporate programs that help professionals and teams prepare for AI-enabled healthcare operations.</p>
+      <br>
+      <a class="btn btn-blue" href="academy-individual.html">Explore Academy</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Patient Safety Deserves Better Calibrated Decisions.</h2>
+    <p>ClinixAI helps healthcare teams modernize responsibly with intelligent automation, domain expertise and patient-centric thinking.</p>
+  </div>
+  <a href="contact.html" class="btn btn-light">Talk to ClinixAI</a>
 </section>
 
 </main>
 
-<section class="cta-band">
-<div class="cta-inner">
-<div>
-<h2>Patient Safety Deserves Better Calibrated Decisions.</h2>
-<p>ClinixAI helps healthcare teams modernize responsibly with intelligent automation, domain expertise and patient-centric thinking.</p>
-</div>
-<a class="btn btn-primary" href="contact.html">Talk to ClinixAI</a>
-</div>
-</section>
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
 
-<footer class="site-footer">
-<div class="footer-inner">
+  <div>
+    <h4>Explore</h4>
+    <a href="solutions.html">Solutions</a>
+    <a href="services.html">Services</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="academy-individual.html">Academy</a>
+  </div>
 
-<div>
-<p class="footer-brand">ClinixAI</p>
-<p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
-</div>
-
-<div>
-<strong>Explore</strong>
-<a href="solutions.html">Solutions</a>
-<a href="services.html">Services</a>
-<a href="consulting.html">Consulting</a>
-<a href="academy-individual.html">Individual Academy</a>
-<a href="academy-corporate.html">Corporate Training</a>
-</div>
-
-<div>
-<strong>Contact</strong>
-<p>contact@theclinixai.com</p>
-<a href="contact.html">Send inquiry</a>
-</div>
-
-</div>
-<div class="footer-bottom">© 2026 ClinixAI. All Rights Reserved.</div>
+  <div>
+    <h4>Contact</h4>
+    <p>contact@theclinixai.com</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
 </footer>
 
-<script src="site.js"></script>
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
 </body>
 </html>
+```
