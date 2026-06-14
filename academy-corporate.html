@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>ClinixAI Academy | Corporate AI Training for PV & Healthcare Teams</title>
-  <meta name="description" content="Corporate AI training programs for pharmacovigilance, drug safety, regulatory, medical writing, quality and healthcare teams." />
+  <title>ClinixAI Academy | Healthcare AI Training & Career Transformation</title>
+  <meta name="description" content="ClinixAI Academy offers individual career transformation internships and corporate AI training for pharmacovigilance, healthcare and life sciences professionals." />
 
   <link rel="icon" type="image/png" href="/favicon.png?v=50" />
   <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
@@ -50,11 +50,10 @@
     .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
     .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
     .section p{font-size:17px;line-height:1.65;color:#5e7188}
-    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .card-grid.two{grid-template-columns:repeat(2,1fr)}
-    .card-grid.four{grid-template-columns:repeat(4,1fr)}
-    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
-    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+    .card-grid.three{grid-template-columns:repeat(3,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:30px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:24px;font-weight:950;margin-bottom:10px;color:#061326}
     .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
     .card ul{padding-left:20px;margin-top:12px}
     .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
@@ -62,18 +61,6 @@
     .teal{background:rgba(16,184,199,.13);color:#05717d}
     .green{background:rgba(24,138,91,.13);color:#188a5b}
     .amber{background:rgba(240,169,40,.16);color:#9a6500}
-
-    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
-    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
-    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
-    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18);width:100%}
-
-    .contact-box{background:#fff;border:1px solid #d8e4f0;border-radius:20px;padding:30px;box-shadow:0 25px 70px rgba(7,26,52,.15)}
-    .contact-box h3{font-size:26px;font-weight:950;color:#061326;margin-bottom:8px}
-    .contact-box label{display:block;font-size:14px;font-weight:900;margin:16px 0 6px;color:#061326}
-    .contact-box input,.contact-box select,.contact-box textarea{width:100%;border:1px solid #d8e4f0;border-radius:12px;padding:13px;font:inherit;background:#fff}
-    .contact-box textarea{min-height:110px;resize:vertical}
-    .contact-box button{margin-top:20px;width:100%}
 
     .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
     .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
@@ -86,9 +73,9 @@
 
     @media(max-width:1100px){
       .nav-container{flex-direction:column;align-items:flex-start}
-      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-container{grid-template-columns:1fr}
       .hero-image{height:auto}
-      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr 1fr}
+      .stats-container,.card-grid,.card-grid.three,.footer{grid-template-columns:1fr 1fr}
     }
     @media(max-width:720px){
       .main-nav{gap:11px}
@@ -97,7 +84,7 @@
       h1{font-size:38px}
       .hero-actions{flex-direction:column}
       .btn{width:100%}
-      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr}
+      .stats-container,.card-grid,.card-grid.three,.footer{grid-template-columns:1fr}
       .cta{flex-direction:column;align-items:flex-start}
     }
   </style>
@@ -118,7 +105,7 @@
       <a href="solutions.html">Solutions</a>
       <a href="services.html">Services</a>
       <a href="consulting.html">Consulting</a>
-      <a href="academy-individual.html">Academy</a>
+      <a href="academy.html" class="active">Academy</a>
       <a href="resources.html">Resources</a>
       <a href="careers.html">Careers</a>
       <a href="contact.html" class="nav-button">Contact</a>
@@ -131,243 +118,138 @@
 <section class="hero">
   <div class="hero-container">
     <div>
-      <p class="eyebrow">ClinixAI Academy for Organizations</p>
-      <h1>Corporate AI Training for Pharmacovigilance and Healthcare Teams.</h1>
+      <p class="eyebrow">ClinixAI Academy</p>
+      <h1>Healthcare AI Training for Individuals and Organizations.</h1>
       <p class="hero-text">
-        Help your teams understand, evaluate and adopt AI responsibly across Drug Safety,
-        Regulatory, Medical Writing, Quality and healthcare operations.
+        Build AI-ready healthcare talent through internship-style individual programs and corporate training for
+        pharmacovigilance, life sciences and healthcare teams.
       </p>
 
       <div class="hero-actions">
-        <a href="#corporate-inquiry" class="btn btn-light">Request Corporate Training</a>
-        <a href="#programs" class="btn btn-outline">View Programs</a>
+        <a href="academy-individual.html" class="btn btn-light">Individual Internship</a>
+        <a href="academy-corporate.html" class="btn btn-outline">Corporate Training</a>
       </div>
     </div>
 
     <div class="hero-image-wrap">
-      <img src="images/consulting-hero.png.png" alt="ClinixAI corporate AI training for pharmacovigilance teams" class="hero-image" />
+      <img src="images/training-hero.png.png" alt="ClinixAI Academy healthcare AI training" class="hero-image" />
     </div>
   </div>
 </section>
 
 <section class="stats">
   <div class="stats-container">
-    <div><strong>PV-Focused</strong><span>Not generic AI training</span></div>
-    <div><strong>Role-Based</strong><span>Built for real healthcare teams</span></div>
-    <div><strong>Customizable</strong><span>Adapted to your workflows</span></div>
-    <div><strong>Practical</strong><span>Use cases, governance and adoption</span></div>
-  </div>
-</section>
-
-<section class="section" id="programs">
-  <div class="section-head">
-    <h2>Choose the Right Corporate Program</h2>
-    <p>
-      ClinixAI offers practical AI training formats for leadership teams, operational teams and organizations preparing for AI-enabled transformation.
-    </p>
-  </div>
-
-  <div class="card-grid">
-    <div class="card">
-      <span class="tag blue">Leadership</span>
-      <h3>Executive Awareness Session</h3>
-      <p>For PV Heads, Directors, QA leaders, Regulatory leaders and business decision-makers who need strategic clarity on AI adoption.</p>
-      <ul>
-        <li>Duration: 2–4 hours</li>
-        <li>AI opportunity overview</li>
-        <li>Risk, governance and compliance discussion</li>
-        <li>Use-case prioritization</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <span class="tag teal">Teams</span>
-      <h3>Team Upskilling Program</h3>
-      <p>For case processors, medical reviewers, safety scientists, regulatory teams, QA teams and medical writing teams.</p>
-      <ul>
-        <li>Duration: 1–3 days</li>
-        <li>Hands-on workflow examples</li>
-        <li>AI use cases by function</li>
-        <li>Human-in-the-loop design</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <span class="tag green">Enterprise</span>
-      <h3>AI Adoption Enablement</h3>
-      <p>For organizations planning structured AI pilots, internal enablement and long-term transformation programs.</p>
-      <ul>
-        <li>Assessment support</li>
-        <li>Training roadmap</li>
-        <li>Governance workshops</li>
-        <li>Change management support</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section white">
-  <div class="two-column">
-    <div>
-      <h2>Training Areas</h2>
-      <p>
-        Corporate modules can be delivered independently or combined into a customized program based on your team size,
-        maturity level and objectives.
-      </p>
-
-      <div class="card">
-        <h3>Core Modules</h3>
-        <ul>
-          <li>AI for Pharmacovigilance</li>
-          <li>Literature Screening Automation</li>
-          <li>Case Intake, Triage and Validity Thinking</li>
-          <li>Seriousness Assessment and Prioritization</li>
-          <li>Signal Detection Fundamentals</li>
-          <li>Aggregate Reporting Fundamentals</li>
-          <li>Regulatory Intelligence</li>
-          <li>AI Governance, Compliance and Human Oversight</li>
-          <li>No-Code AI for Healthcare Teams</li>
-        </ul>
-      </div>
-    </div>
-
-    <img src="images/signal-detection.png.png" alt="ClinixAI signal detection and corporate AI training modules" class="rounded-image" />
+    <div><strong>No Coding</strong><span>Built around no-code AI tools</span></div>
+    <div><strong>Mobile Friendly</strong><span>Learn from anywhere</span></div>
+    <div><strong>PV + AI</strong><span>Healthcare-specific learning</span></div>
+    <div><strong>Corporate Ready</strong><span>Training for teams and leaders</span></div>
   </div>
 </section>
 
 <section class="section">
   <div class="section-head">
-    <h2>Built for Healthcare Workflows</h2>
+    <h2>Choose Your Academy Path</h2>
     <p>
-      This is not generic prompt engineering training. ClinixAI corporate programs are designed around pharmacovigilance,
-      drug safety, regulatory, medical writing, quality and healthcare operational realities.
+      ClinixAI Academy supports both individual career growth and enterprise workforce transformation.
     </p>
   </div>
 
-  <div class="card-grid four">
-    <div class="card"><span class="tag blue">Pharma</span><h3>Pharma Teams</h3><p>Support PV, regulatory, medical writing, QA and transformation teams.</p></div>
-    <div class="card"><span class="tag teal">CRO</span><h3>CRO Operations</h3><p>Upskill teams handling high-volume safety, clinical and quality workflows.</p></div>
-    <div class="card"><span class="tag green">Biotech</span><h3>Biotech Teams</h3><p>Prepare lean teams for scalable, AI-enabled operating models.</p></div>
-    <div class="card"><span class="tag amber">Tech</span><h3>Healthcare Tech</h3><p>Train teams building or supporting healthcare and life sciences technology solutions.</p></div>
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag blue">For Individuals</span>
+      <h3>Individual Career Transformation Internship</h3>
+      <p>
+        Work from anywhere. Mobile is sufficient. No coding required.
+        Build practical Healthcare AI and Pharmacovigilance automation projects using no-code AI tools.
+      </p>
+      <ul>
+        <li>Internship-style learning model</li>
+        <li>Healthcare AI portfolio projects</li>
+        <li>Resume and LinkedIn project assets</li>
+        <li>Freshers and working professionals can join</li>
+      </ul>
+      <br>
+      <a href="academy-individual.html" class="btn btn-blue">Explore Individual Internship</a>
+    </div>
+
+    <div class="card">
+      <span class="tag teal">For Organizations</span>
+      <h3>Corporate AI Training</h3>
+      <p>
+        Train pharmacovigilance, regulatory, quality, medical writing and healthcare operations teams
+        on practical, responsible and workflow-specific AI adoption.
+      </p>
+      <ul>
+        <li>Executive awareness sessions</li>
+        <li>Team upskilling workshops</li>
+        <li>AI governance and compliance training</li>
+        <li>Custom programs for Pharma, CRO and Biotech</li>
+      </ul>
+      <br>
+      <a href="academy-corporate.html" class="btn btn-blue">Explore Corporate Training</a>
+    </div>
   </div>
 </section>
 
 <section class="section white">
-  <div class="two-column">
-    <div>
-      <h2>Customized to Your Organization</h2>
-      <p>
-        Every organization is different. ClinixAI can tailor training content to your workflows, maturity level,
-        regulatory environment, team structure and business goals.
-      </p>
+  <div class="section-head">
+    <h2>What ClinixAI Academy Teaches</h2>
+    <p>
+      Practical AI adoption for healthcare workflows, not generic prompt engineering.
+    </p>
+  </div>
 
-      <div class="card-grid">
-        <div class="card"><h3>Before</h3><p>We understand your team profile, training goals and current AI maturity level.</p></div>
-        <div class="card"><h3>During</h3><p>We use relevant healthcare and PV examples instead of generic AI theory.</p></div>
-        <div class="card"><h3>After</h3><p>Your team receives practical next steps for safer, governed and more useful AI adoption.</p></div>
-      </div>
-    </div>
-
-    <img src="images/resources-hero.png.png" alt="ClinixAI corporate training resources and AI adoption roadmap" class="rounded-image" />
+  <div class="card-grid three">
+    <div class="card"><span class="tag blue">PV AI</span><h3>Pharmacovigilance Automation</h3><p>Literature screening, case validity, seriousness assessment, workflow tracking and case processing support.</p></div>
+    <div class="card"><span class="tag teal">No-Code AI</span><h3>AI Tools Without Coding</h3><p>Use practical AI tools to build healthcare workflows without software engineering knowledge.</p></div>
+    <div class="card"><span class="tag green">Governance</span><h3>Responsible AI Adoption</h3><p>Human oversight, documentation, compliance awareness and safe AI implementation thinking.</p></div>
   </div>
 </section>
 
-<section class="section" id="corporate-inquiry">
-  <div class="two-column">
-    <div>
-      <h2>Request Corporate Training</h2>
-      <p>
-        Use this short form to start a conversation. The first step is understanding your team, goals and timeline.
-      </p>
+<section class="section">
+  <div class="section-head">
+    <h2>Who Can Benefit?</h2>
+    <p>
+      The academy is designed for both learners and organizations preparing for AI-enabled healthcare operations.
+    </p>
+  </div>
 
-      <div class="card">
-        <h3>Ideal For</h3>
-        <ul>
-          <li>PV leadership teams</li>
-          <li>Drug Safety operations teams</li>
-          <li>Medical writing teams</li>
-          <li>Regulatory affairs teams</li>
-          <li>Quality and compliance teams</li>
-          <li>Healthcare transformation teams</li>
-        </ul>
-      </div>
+  <div class="card-grid three">
+    <div class="card"><h3>Freshers & Graduates</h3><p>B.Pharm, PharmD, M.Pharm, life sciences and healthcare graduates who want AI-ready career positioning.</p></div>
+    <div class="card"><h3>Working Professionals</h3><p>PV, QA, regulatory, medical writing and healthcare professionals who want to upgrade their career profile.</p></div>
+    <div class="card"><h3>Organizations</h3><p>Pharma, CRO, biotech and healthcare teams preparing for AI adoption, workflow redesign and responsible transformation.</p></div>
+  </div>
+</section>
 
-      <div class="card" style="margin-top:18px;">
-        <h3>Academy Contact</h3>
-        <p><strong>Email:</strong> academy@theclinixai.com</p>
-        <p><strong>WhatsApp:</strong> +91 9182950889</p>
-      </div>
+<section class="section white">
+  <div class="section-head">
+    <h2>Academy Contact</h2>
+    <p>
+      For individual internship or corporate training enquiries, contact the ClinixAI Academy team.
+    </p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag blue">Email</span>
+      <h3>academy@theclinixai.com</h3>
+      <p>Use this email for individual programs, corporate training, academy partnerships and training queries.</p>
     </div>
 
-    <form class="contact-box">
-      <h3>Corporate Training Inquiry</h3>
-
-      <label>Company</label>
-      <input type="text" placeholder="Company name" />
-
-      <label>Contact Person</label>
-      <input type="text" placeholder="Your name" />
-
-      <label>Business Email</label>
-      <input type="email" placeholder="name@company.com" />
-
-      <label>WhatsApp / Phone</label>
-      <input type="tel" placeholder="+91 9182950889" />
-
-      <label>Organization Type</label>
-      <select>
-        <option>Pharma</option>
-        <option>CRO</option>
-        <option>Biotech</option>
-        <option>Healthcare Technology</option>
-        <option>Hospital / Healthcare Organization</option>
-        <option>Other</option>
-      </select>
-
-      <label>Team Size</label>
-      <select>
-        <option>1-10</option>
-        <option>11-25</option>
-        <option>26-50</option>
-        <option>51-100</option>
-        <option>100+</option>
-      </select>
-
-      <label>Training Interest</label>
-      <select>
-        <option>Executive Awareness Session</option>
-        <option>Team Upskilling Program</option>
-        <option>AI for Pharmacovigilance</option>
-        <option>Literature Screening Automation</option>
-        <option>Signal Detection</option>
-        <option>Aggregate Reporting</option>
-        <option>Regulatory Intelligence</option>
-        <option>Custom Program</option>
-      </select>
-
-      <label>Timeline</label>
-      <select>
-        <option>Immediate</option>
-        <option>0-3 months</option>
-        <option>3-6 months</option>
-        <option>6-12 months</option>
-        <option>Exploring options</option>
-      </select>
-
-      <label>Training Goals</label>
-      <textarea placeholder="Briefly describe what you want your team to learn or improve."></textarea>
-
-      <button class="btn btn-blue" type="submit">Request Corporate Training</button>
-    </form>
+    <div class="card">
+      <span class="tag green">WhatsApp</span>
+      <h3>+91 9182950889</h3>
+      <p>Reach out for quick questions about eligibility, training format, batch details and next steps.</p>
+    </div>
   </div>
 </section>
 
 <section class="cta">
   <div>
-    <h2>Build an AI-Ready Healthcare Team.</h2>
-    <p>Train your teams on practical, responsible and healthcare-specific AI adoption.</p>
+    <h2>Start Your Healthcare AI Transformation.</h2>
+    <p>Choose the individual internship path or train your organization with ClinixAI Academy.</p>
   </div>
-  <a href="#corporate-inquiry" class="btn btn-light">Request Training</a>
+  <a href="academy-individual.html" class="btn btn-light">Start Individual Internship</a>
 </section>
 
 </main>
@@ -380,10 +262,10 @@
 
   <div>
     <h4>Explore</h4>
+    <a href="academy-individual.html">Individual Internship</a>
+    <a href="academy-corporate.html">Corporate Training</a>
     <a href="solutions.html">Solutions</a>
     <a href="consulting.html">Consulting</a>
-    <a href="academy-individual.html">Individual Academy</a>
-    <a href="resources.html">Resources</a>
   </div>
 
   <div>
