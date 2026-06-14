@@ -1,44 +1,334 @@
-﻿<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ClinixAI Services | Solutions, Consulting & Training</title><meta name="description" content="ClinixAI services across AI Pharmacovigilance solutions, consulting, implementation support and training."><link rel="stylesheet" href="styles.css"></head>
-<body><header class="site-header">
-<div class="nav">
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<a class="logo" href="index.html">
-<span class="logo-mark"></span>ClinixAI
-</a>
+  <title>ClinixAI Services | PV Consulting, AI Solutions & Training</title>
+  <meta name="description" content="ClinixAI provides pharmacovigilance services, AI healthcare solutions, consulting, QMS support, SOP writing, PSMF, PV agreements, training and implementation support." />
 
-<button class="menu-toggle" aria-label="Open menu">=</button>
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
 
-<nav class="menu">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="solutions.html">Solutions</a>
-<a href="services.html">Services</a>
-<a href="consulting.html">Consulting</a>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
 
-<div class="dropdown">
-<span class="dropdown-toggle">Academy</span>
-<div class="dropdown-menu">
-<a href="academy-individual.html">
-<strong>Individual Career Transformation</strong>
-<span>Build your own Healthcare AI project. No coding required.</span>
-</a>
-<a href="academy-corporate.html">
-<strong>Corporate Training</strong>
-<span>AI upskilling workshops for Pharma, CRO and healthcare teams.</span>
-</a>
-</div>
-</div>
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
 
-<a href="resources.html">Resources</a>
-<a href="careers.html">Careers</a>
-<a class="nav-cta" href="contact.html">Contact</a>
-</nav>
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:46px 28px 48px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
 
-</div>
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
+
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card-grid.two{grid-template-columns:repeat(2,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
+    .card ul{padding-left:20px;margin-top:12px}
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+
+    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
+    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
+    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18);width:100%}
+
+    .contact-box{background:#fff;border:1px solid #d8e4f0;border-radius:20px;padding:30px;box-shadow:0 25px 70px rgba(7,26,52,.15)}
+    .contact-box h3{font-size:26px;font-weight:950;color:#061326;margin-bottom:8px}
+    .contact-box label{display:block;font-size:14px;font-weight:900;margin:16px 0 6px;color:#061326}
+    .contact-box input,.contact-box select,.contact-box textarea{width:100%;border:1px solid #d8e4f0;border-radius:12px;padding:13px;font:inherit;background:#fff}
+    .contact-box textarea{min-height:110px;resize:vertical}
+    .contact-box button{margin-top:20px;width:100%}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-image{height:auto}
+      .stats-container,.card-grid,.card-grid.two,.footer{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .stats-container,.card-grid,.card-grid.two,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="academy-individual.html">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
 </header>
-<main><section class="hero"><div class="hero-simple"><div class="eyebrow">ClinixAI Service Portfolio</div><h1>One connected service model for PV AI transformation.</h1><p>Choose AI solutions, consulting or training independently, or combine them into a phased transformation program.</p><div class="hero-actions"><a class="btn btn-primary" href="#service-fit">Find Service Fit</a><a class="btn btn-ghost" href="solutions.html">View Solutions</a></div></div></section>
-<section class="section center"><div class="section-head"><h2>Service lines</h2><p>Designed for organizations and professionals who need Pharmacovigilance-specific execution rather than generic AI advice.</p></div><div class="grid grid-3"><article class="card"><span class="badge badge-blue">AI Solutions</span><h3>Workflow support</h3><ul><li>Literature screening</li><li>Case intake and processing assistance</li><li>Signal and regulatory intelligence</li><li>Workflow dashboards</li></ul></article><article class="card"><span class="badge badge-teal">Consulting</span><h3>Advisory and implementation</h3><ul><li>AI roadmap and readiness</li><li>PV process optimization</li><li>QMS and inspection readiness</li><li>Veeva Vault Safety support</li></ul></article><article class="card"><span class="badge badge-green">Training</span><h3>Capability building</h3><ul><li>AI for PV professionals</li><li>SQL and Python for Drug Safety</li><li>Medical writing</li><li>Corporate workshops</li></ul></article></div></section>
-<section class="section"><div class="split"><div><div class="section-head"><h2>Media-ready service proof</h2><p>This section is prepared for future assets: service explainer video, client workflow diagram, solution mockups or proof-of-concept screenshots.</p></div><div class="media-slot" data-label="Service media slot: upload workflow map, implementation methodology graphic, client results visual, or short explainer video thumbnail."></div></div><form class="form-panel" id="service-fit"><h2>Find the Right Service</h2><p class="form-note">A short triage form for buyers who are unsure where to begin.</p><div class="field-grid"><div><label>Work email</label><input type="email" placeholder="name@company.com"></div><div><label>WhatsApp</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div><div><label>Organization type</label><select><option>Pharma</option><option>CRO</option><option>Biotech</option><option>Healthcare organization</option><option>Individual professional</option></select></div><div><label>Need</label><select><option>AI Solution</option><option>Consulting</option><option>Training</option><option>Not sure yet</option></select></div><div class="full"><label>What are you trying to improve?</label><textarea placeholder="One sentence is enough"></textarea></div><button class="btn btn-blue full" type="submit">Recommend My Next Step</button><p class="mini-copy full">This can later trigger different CRM routes for enterprise, training and consulting leads.</p></div></form></div></section></main>
-<footer class="site-footer"><div class="footer-inner"><div><h2>ClinixAI</h2><p>AI Solutions â€¢ Consulting â€¢ Training â€¢ Pharmacovigilance Innovation</p></div><div><strong>Explore</strong><a href="solutions.html">Solutions</a><a href="consulting.html">Consulting</a><a href="training.html">Training</a></div><div><strong>Contact</strong><p>contact@theclinixai.com</p><a href="contact.html">Send inquiry</a></div></div><div class="footer-bottom">Â© 2026 ClinixAI. All Rights Reserved.</div></footer><script src="site.js"></script></body></html>
 
+<main>
+
+<section class="hero">
+  <div class="hero-container">
+    <div>
+      <p class="eyebrow">ClinixAI Service Portfolio</p>
+      <h1>One Connected Service Model for PV, AI and Healthcare Transformation.</h1>
+      <p class="hero-text">
+        ClinixAI supports pharma, CRO, biotech and healthcare teams with pharmacovigilance services,
+        compliance documentation, AI workflow support, consulting and academy programs.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#service-fit" class="btn btn-light">Find Service Fit</a>
+        <a href="contact.html" class="btn btn-outline">Request Support</a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <img src="images/services-hero.png.png" alt="ClinixAI pharmacovigilance services and healthcare AI support" class="hero-image" />
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-container">
+    <div><strong>PV Services</strong><span>Documentation and operations support</span></div>
+    <div><strong>AI Solutions</strong><span>Workflow automation support</span></div>
+    <div><strong>Consulting</strong><span>Compliance and transformation advisory</span></div>
+    <div><strong>Academy</strong><span>Individual and corporate training</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Service Lines</h2>
+    <p>
+      Designed for organizations and professionals who need pharmacovigilance-specific execution,
+      healthcare domain understanding and responsible AI transformation.
+    </p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag blue">PV Services</span>
+      <h3>Pharmacovigilance Documentation & Operations</h3>
+      <ul>
+        <li>SOP writing and work instructions</li>
+        <li>PSMF support and PV system documentation</li>
+        <li>PV agreements, SDEAs and CDA support</li>
+        <li>Reconciliation and mailbox management support</li>
+        <li>Project charters, trackers and governance documents</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag teal">AI Solutions</span>
+      <h3>Healthcare AI Workflow Support</h3>
+      <ul>
+        <li>Literature screening support</li>
+        <li>Case intake and processing assistance</li>
+        <li>Validity and seriousness assessment support</li>
+        <li>Regulatory intelligence workflows</li>
+        <li>Operational dashboards and workflow visibility</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag green">Training</span>
+      <h3>Capability Building</h3>
+      <ul>
+        <li>AI for PV professionals</li>
+        <li>Healthcare AI project-building programs</li>
+        <li>Corporate AI adoption workshops</li>
+        <li>PV workflow and compliance training</li>
+        <li>Career transformation programs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="section-head">
+    <h2>Core PV Service Areas</h2>
+    <p>
+      ClinixAI helps organizations build stronger documentation, clearer governance and better operational control
+      across patient safety and regulated healthcare workflows.
+    </p>
+  </div>
+
+  <div class="card-grid two">
+    <div class="card"><h3>SOPs, WIs, Templates & Forms</h3><p>Creation and refinement of process documents for pharmacovigilance, case processing, literature, reconciliation, quality and training workflows.</p></div>
+    <div class="card"><h3>QMS Support</h3><p>Support for deviation, CAPA, RCA, change control, training matrix, audit readiness, documentation discipline and quality governance.</p></div>
+    <div class="card"><h3>PV Agreements & PSMF</h3><p>Support for PVAs, SDEAs, CDA, PSMF sections, partner responsibilities, process alignment and documentation traceability.</p></div>
+    <div class="card"><h3>Project Setup & Governance</h3><p>Project charters, milestones, organograms, trackers, weekly reports, SLA tracking and client governance documentation.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="two-column">
+    <div>
+      <h2>Choose One Service or Build a Phased Transformation Program</h2>
+      <p>
+        Some organizations need immediate documentation support. Others need workflow redesign, AI adoption planning,
+        training, or end-to-end transformation.
+      </p>
+      <p>
+        ClinixAI can support individual service needs or combine services into a staged roadmap covering assessment,
+        process design, documentation, training, automation and governance.
+      </p>
+      <a href="consulting.html" class="btn btn-blue">Explore Consulting</a>
+    </div>
+
+    <img src="images/consulting-hero.png.png" alt="ClinixAI service roadmap and implementation support" class="rounded-image" />
+  </div>
+</section>
+
+<section class="section white" id="service-fit">
+  <div class="two-column">
+    <div>
+      <h2>Find the Right Service</h2>
+      <p>
+        Not sure whether you need a solution, consulting support, training or documentation help?
+        Start with a simple service-fit inquiry.
+      </p>
+
+      <div class="card">
+        <h3>Contact Routing</h3>
+        <p><strong>General:</strong> contact@theclinixai.com</p>
+        <p><strong>Academy:</strong> academy@theclinixai.com</p>
+        <p><strong>Support:</strong> support@theclinixai.com</p>
+        <p><strong>WhatsApp:</strong> +91 9182950889</p>
+      </div>
+    </div>
+
+    <form class="contact-box">
+      <h3>Service Inquiry</h3>
+
+      <label>Work email</label>
+      <input type="email" placeholder="name@company.com" />
+
+      <label>WhatsApp</label>
+      <input type="tel" placeholder="+91 9182950889" />
+
+      <label>Organization type</label>
+      <select>
+        <option>Pharma</option>
+        <option>CRO</option>
+        <option>Biotech</option>
+        <option>Healthcare organization</option>
+        <option>Individual professional</option>
+      </select>
+
+      <label>Need</label>
+      <select>
+        <option>PV Services</option>
+        <option>AI Solution</option>
+        <option>Consulting</option>
+        <option>Academy / Training</option>
+        <option>Not sure yet</option>
+      </select>
+
+      <label>What are you trying to improve?</label>
+      <textarea placeholder="One sentence is enough"></textarea>
+
+      <button class="btn btn-blue" type="submit">Recommend My Next Step</button>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Need PV Support, AI Workflow Help or Training?</h2>
+    <p>ClinixAI can help you choose the right starting point and build a practical roadmap.</p>
+  </div>
+  <a href="contact.html" class="btn btn-light">Talk to ClinixAI</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
+
+  <div>
+    <h4>Explore</h4>
+    <a href="solutions.html">Solutions</a>
+    <a href="services.html">Services</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="academy-individual.html">Academy</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>contact@theclinixai.com</p>
+    <p>+91 9182950889</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
+</footer>
+
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
+</body>
+</html>
+```
