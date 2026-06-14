@@ -1,49 +1,417 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ClinixAI Solutions | AI-Powered Pharmacovigilance</title><meta name="description" content="AI-powered Pharmacovigilance solutions for Pharma, CRO, Biotech and Life Sciences organizations."><link rel="stylesheet" href="styles.css"></head>
-<body><header class="site-header">
-<div class="nav">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<a class="logo" href="index.html">
-<span class="logo-mark"></span>ClinixAI
-</a>
+  <title>ClinixAI Solutions | AI-Powered Pharmacovigilance & Healthcare Automation</title>
+  <meta name="description" content="ClinixAI provides AI-powered pharmacovigilance and healthcare automation solutions for literature screening, case intake, validity assessment, seriousness assessment, regulatory intelligence and workflow visibility." />
 
-<button class="menu-toggle" aria-label="Open menu">=</button>
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
 
-<nav class="menu">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="solutions.html">Solutions</a>
-<a href="services.html">Services</a>
-<a href="consulting.html">Consulting</a>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
 
-<div class="dropdown">
-<span class="dropdown-toggle">Academy</span>
-<div class="dropdown-menu">
-<a href="academy-individual.html">
-<strong>Individual Career Transformation</strong>
-<span>Build your own Healthcare AI project. No coding required.</span>
-</a>
-<a href="academy-corporate.html">
-<strong>Corporate Training</strong>
-<span>AI upskilling workshops for Pharma, CRO and healthcare teams.</span>
-</a>
-</div>
-</div>
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
 
-<a href="resources.html">Resources</a>
-<a href="careers.html">Careers</a>
-<a class="nav-cta" href="contact.html">Contact</a>
-</nav>
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:46px 28px 48px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
 
-</div>
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
+
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card-grid.two{grid-template-columns:repeat(2,1fr)}
+    .card-grid.four{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
+    .card ul{padding-left:20px;margin-top:12px}
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+    .amber{background:rgba(240,169,40,.16);color:#9a6500}
+
+    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
+    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
+    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18);width:100%}
+
+    .contact-box{background:#fff;border:1px solid #d8e4f0;border-radius:20px;padding:30px;box-shadow:0 25px 70px rgba(7,26,52,.15)}
+    .contact-box h3{font-size:26px;font-weight:950;color:#061326;margin-bottom:8px}
+    .contact-box label{display:block;font-size:14px;font-weight:900;margin:16px 0 6px;color:#061326}
+    .contact-box input,.contact-box select,.contact-box textarea{width:100%;border:1px solid #d8e4f0;border-radius:12px;padding:13px;font:inherit;background:#fff}
+    .contact-box textarea{min-height:110px;resize:vertical}
+    .contact-box button{margin-top:20px;width:100%}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-image{height:auto}
+      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html" class="active">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="academy-individual.html">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main><section class="hero"><div class="hero-grid"><div><div class="eyebrow">For Pharma, CRO and Life Sciences Teams</div><h1>AI-powered Pharmacovigilance solutions for safer, faster operations.</h1><p>Support high-volume Drug Safety workflows with AI-assisted screening, triage, documentation and workflow intelligence while keeping expert review central.</p><div class="hero-actions"><a class="btn btn-primary" href="#solution-demo">Request Demo</a><a class="btn btn-ghost" href="services.html">View Services</a></div></div><img class="hero-img" src="images/solutions-hero.png.png" alt="ClinixAI AI-powered Pharmacovigilance solutions dashboard"></div></section>
+<main>
 
-<section class="section center"><div class="section-head"><h2>Solution areas</h2><p>ClinixAI focuses on PV workflows where intelligent assistance can reduce manual burden and improve consistency.</p></div><div class="grid grid-3"><article class="card"><h3>Literature Screening</h3><p>AI-assisted monitoring, relevance review, prioritization and documentation support.</p></article><article class="card"><h3>Case Intake & Triage</h3><p>Support incoming safety information review, routing, duplicate checks and seriousness prompts.</p></article><article class="card"><h3>Case Processing Support</h3><p>Assist coding prompts, narrative drafting, quality review preparation and structured documentation.</p></article><article class="card"><h3>Signal Detection Support</h3><p>Surface patterns and emerging safety trends for expert evaluation.</p></article><article class="card"><h3>Regulatory Intelligence</h3><p>Monitor requirements, impact areas and safety communication changes.</p></article><article class="card"><h3>Workflow Intelligence</h3><p>Operational visibility, bottleneck analysis, KPI views and process improvement support.</p></article></div></section>
+<section class="hero">
+  <div class="hero-container">
+    <div>
+      <p class="eyebrow">For Pharma, CRO, Biotech and Life Sciences Teams</p>
+      <h1>AI-Powered Pharmacovigilance Solutions for Safer, Faster Operations.</h1>
+      <p class="hero-text">
+        ClinixAI helps Drug Safety and healthcare teams reduce repetitive workload, improve workflow visibility,
+        strengthen compliance discipline and support faster expert review through human-in-the-loop AI solutions.
+      </p>
 
-<section class="section"><div class="split"><div><div class="section-head"><h2>Built with a human-in-the-loop model</h2><p>AI should accelerate Pharmacovigilance work, not remove accountability. ClinixAI solution design keeps medical, scientific, quality and regulatory review in the workflow.</p></div><div class="grid"><article class="card"><h3>Governed use cases</h3><p>Every workflow is scoped around clear boundaries, review steps and expected outputs.</p></article><article class="card"><h3>Integration-ready thinking</h3><p>Designed to complement safety systems and established PV operations without forcing disruptive change.</p></article></div></div><form class="form-panel" id="solution-demo"><h2>Solution Demo Request</h2><p class="form-note">For CROs, Pharma, Biotech and Life Sciences organizations. Minimal fields first, deeper discovery later.</p><div class="field-grid"><div class="full"><label>Company email</label><div class="otp-row"><input type="email" placeholder="name@company.com"><button class="btn btn-blue" type="button">Send OTP</button></div></div><div><label>OTP code</label><input inputmode="numeric" placeholder="6-digit code"></div><div><label>WhatsApp number</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div><div><label>Designation</label><input placeholder="PV Head, Manager, QA, Founder"></div><div><label>Area of interest</label><select><option>Literature Screening</option><option>Case Intake & Triage</option><option>Case Processing</option><option>Signal Detection</option><option>Regulatory Intelligence</option><option>Workflow Intelligence</option></select></div><div><label>Implementation timeline</label><select><option>Within 1 month</option><option>Within 3 months</option><option>Within 4 months</option><option>Within 6 months</option><option>Within 12 months</option><option>Just exploring</option></select></div><div class="full"><label>Optional demo slot</label><div class="slot-row"><label><input name="slot" type="radio"><span>This week</span></label><label><input name="slot" type="radio"><span>Next week</span></label><label><input name="slot" type="radio"><span>Share calendar link</span></label></div></div><button class="btn btn-blue full" type="submit">Request AI Solution Demo</button><p class="mini-copy full">OTP and calendar actions are UI-ready and can be connected to your chosen backend.</p></div></form></div></section></main>
+      <div class="hero-actions">
+        <a href="#solution-demo" class="btn btn-light">Request Demo</a>
+        <a href="services.html" class="btn btn-outline">View Services</a>
+      </div>
+    </div>
 
-<section class="cta-band"><div class="cta-inner"><div><h2>Discuss a PV workflow that needs automation.</h2><p>Start with one use case, prove value, then scale responsibly.</p></div><a class="btn btn-primary" href="consulting.html">Get Advisory Support</a></div></section>
+    <div class="hero-image-wrap">
+      <img src="images/solutions-hero.png.png" alt="ClinixAI AI-powered pharmacovigilance solutions dashboard" class="hero-image" />
+    </div>
+  </div>
+</section>
 
-<footer class="site-footer"><div class="footer-inner"><div><h2>ClinixAI</h2><p>AI Solutions • Consulting • Training • Pharmacovigilance Innovation</p></div><div><strong>Explore</strong><a href="index.html">Home</a><a href="services.html">Services</a><a href="resources.html">Resources</a></div><div><strong>Contact</strong><p>contact@theclinixai.com</p><a href="contact.html">Send inquiry</a></div></div><div class="footer-bottom">© 2026 ClinixAI. All Rights Reserved.</div></footer><script src="site.js"></script></body></html>
+<section class="stats">
+  <div class="stats-container">
+    <div><strong>Human-in-Loop</strong><span>Expert review remains central</span></div>
+    <div><strong>PV Workflows</strong><span>Built for Drug Safety operations</span></div>
+    <div><strong>Compliance-First</strong><span>Audit-aware solution thinking</span></div>
+    <div><strong>Scalable Model</strong><span>Start with one workflow, then expand</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Solution Areas</h2>
+    <p>
+      ClinixAI focuses on high-impact pharmacovigilance and healthcare workflows where intelligent assistance
+      can reduce manual burden, improve consistency and support better decision-making.
+    </p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag blue">Literature AI</span>
+      <h3>Literature Intelligence</h3>
+      <p>AI-assisted literature screening support for relevance review, safety mention identification, prioritization and documentation preparation.</p>
+      <ul>
+        <li>Article screening support</li>
+        <li>Safety relevance prompts</li>
+        <li>Prioritization and workflow routing</li>
+        <li>Documentation support</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag teal">Validity</span>
+      <h3>Validity Assessment Assistant</h3>
+      <p>Support case qualification thinking by checking the four minimum criteria and highlighting missing or unclear information.</p>
+      <ul>
+        <li>Patient, reporter, product and event prompts</li>
+        <li>Missing information visibility</li>
+        <li>Invalid case reasoning support</li>
+        <li>Follow-up requirement prompts</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag green">Seriousness</span>
+      <h3>Seriousness Assessment Support</h3>
+      <p>Assist reviewers by identifying seriousness indicators, potential expedited triggers and workflow prioritization needs.</p>
+      <ul>
+        <li>Seriousness criteria prompts</li>
+        <li>Death, hospitalization and life-threatening flags</li>
+        <li>Priority routing support</li>
+        <li>Reviewer decision support</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag blue">ICSR</span>
+      <h3>Case Processing Support</h3>
+      <p>Support structured case review, narrative preparation, coding prompts and quality review readiness.</p>
+      <ul>
+        <li>Case narrative drafting support</li>
+        <li>MedDRA coding prompts</li>
+        <li>Quality check preparation</li>
+        <li>Structured documentation assistance</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag teal">Regulatory</span>
+      <h3>Regulatory Intelligence</h3>
+      <p>Monitor regulatory updates, identify possible impact areas and support action-ready intelligence for safety teams.</p>
+      <ul>
+        <li>Health authority update monitoring</li>
+        <li>Impact assessment support</li>
+        <li>Requirement tracking</li>
+        <li>Team communication preparation</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag green">Operations</span>
+      <h3>Workflow Intelligence</h3>
+      <p>Improve visibility across workloads, SLA pressure, bottlenecks, team capacity and operational performance.</p>
+      <ul>
+        <li>SLA and TAT visibility</li>
+        <li>Capacity and workload insights</li>
+        <li>Bottleneck identification</li>
+        <li>Operational dashboarding</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="two-column">
+    <div>
+      <h2>Built with a Human-in-the-Loop Model</h2>
+      <p>
+        AI should accelerate pharmacovigilance work, not remove accountability. ClinixAI solution design keeps
+        medical, scientific, quality and regulatory review inside the workflow.
+      </p>
+      <p>
+        Our approach supports review preparation, consistency, visibility and decision support while keeping final
+        judgment with trained professionals and accountable teams.
+      </p>
+      <a href="consulting.html" class="btn btn-blue">Get Governance Support</a>
+    </div>
+
+    <img src="images/case-processing.png.png" alt="ClinixAI human-in-the-loop pharmacovigilance AI model" class="rounded-image" />
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Responsible AI Framework</h2>
+    <p>
+      ClinixAI solutions are designed for regulated healthcare environments where trust, documentation,
+      explainability and oversight matter.
+    </p>
+  </div>
+
+  <div class="card-grid four">
+    <div class="card"><span class="tag blue">Oversight</span><h3>Human Review</h3><p>AI outputs support review but do not replace professional assessment or accountable decision-making.</p></div>
+    <div class="card"><span class="tag teal">Traceability</span><h3>Audit-Friendly Outputs</h3><p>Outputs are structured to support documentation, consistency and review trail thinking.</p></div>
+    <div class="card"><span class="tag green">Boundaries</span><h3>Governed Use Cases</h3><p>Each workflow is scoped with clear boundaries, expected outputs and review requirements.</p></div>
+    <div class="card"><span class="tag amber">Safety</span><h3>No Blind Automation</h3><p>ClinixAI focuses on responsible decision support, not uncontrolled autonomous safety decisions.</p></div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="section-head">
+    <h2>Product Roadmap</h2>
+    <p>
+      ClinixAI is building a connected solution ecosystem for patient safety, pharmacovigilance operations and healthcare intelligence.
+    </p>
+  </div>
+
+  <div class="card-grid two">
+    <div class="card">
+      <span class="tag blue">Current Focus</span>
+      <h3>High-Impact PV Workflow Support</h3>
+      <ul>
+        <li>Literature screening support</li>
+        <li>Validity assessment assistant</li>
+        <li>Seriousness assessment support</li>
+        <li>Case processing and workflow intelligence</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag green">Upcoming Focus</span>
+      <h3>Expanded Safety Intelligence</h3>
+      <ul>
+        <li>Signal detection assistant</li>
+        <li>Aggregate reporting support</li>
+        <li>Medical review copilot</li>
+        <li>Safety operations command center</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="solution-demo">
+  <div class="two-column">
+    <div>
+      <h2>Request a Solution Demo</h2>
+      <p>
+        Start with one workflow. Prove value. Then scale responsibly across operations.
+      </p>
+      <p>
+        ClinixAI can help you identify the right first use case based on your current operational pressure,
+        compliance needs, volume, timeline and team readiness.
+      </p>
+
+      <div class="card">
+        <h3>Solution Contact</h3>
+        <p><strong>Email:</strong> contact@theclinixai.com</p>
+        <p><strong>Support:</strong> support@theclinixai.com</p>
+        <p><strong>WhatsApp:</strong> +91 9182950889</p>
+      </div>
+    </div>
+
+    <form class="contact-box">
+      <h3>Solution Demo Request</h3>
+
+      <label>Name</label>
+      <input type="text" placeholder="Your name" />
+
+      <label>Company email</label>
+      <input type="email" placeholder="name@company.com" />
+
+      <label>WhatsApp number</label>
+      <input type="tel" placeholder="+91 9182950889" />
+
+      <label>Company / Organization</label>
+      <input type="text" placeholder="Company name" />
+
+      <label>Role</label>
+      <input type="text" placeholder="PV Head, Manager, QA, Founder" />
+
+      <label>Area of interest</label>
+      <select>
+        <option>Literature Intelligence</option>
+        <option>Validity Assessment Assistant</option>
+        <option>Seriousness Assessment Support</option>
+        <option>Case Processing Support</option>
+        <option>Regulatory Intelligence</option>
+        <option>Workflow Intelligence</option>
+        <option>Not sure yet</option>
+      </select>
+
+      <label>Implementation timeline</label>
+      <select>
+        <option>Within 1 month</option>
+        <option>Within 3 months</option>
+        <option>Within 6 months</option>
+        <option>Within 12 months</option>
+        <option>Just exploring</option>
+      </select>
+
+      <label>What workflow are you trying to improve?</label>
+      <textarea placeholder="Example: literature screening backlog, case intake triage, SLA visibility, seriousness assessment consistency"></textarea>
+
+      <button class="btn btn-blue" type="submit">Request AI Solution Demo</button>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Start with One Workflow. Scale Transformation Responsibly.</h2>
+    <p>ClinixAI helps teams modernize PV operations with responsible AI, domain expertise and human oversight.</p>
+  </div>
+  <a href="consulting.html" class="btn btn-light">Get Advisory Support</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
+
+  <div>
+    <h4>Explore</h4>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="academy-individual.html">Academy</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>contact@theclinixai.com</p>
+    <p>+91 9182950889</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
+</footer>
+
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
+</body>
+</html>
+```
