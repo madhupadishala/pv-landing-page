@@ -1,516 +1,222 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --ink: #061326;
-  --navy: #0b1f3a;
-  --blue: #2378ff;
-  --blue2: #0f6bff;
-  --teal: #10b8c7;
-  --green: #188a5b;
-  --soft: #f4f8fd;
-  --paper: #ffffff;
-  --line: #d8e4f0;
-  --text: #172234;
-  --muted: #5e7188;
-  --shadow: 0 18px 45px rgba(7, 26, 52, 0.12);
-  --shadow2: 0 28px 80px rgba(7, 26, 52, 0.18);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Inter, Arial, sans-serif;
-  background: var(--soft);
-  color: var(--text);
-  line-height: 1.65;
-  overflow-x: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* Header */
-.site-header {
-  width: 100%;
-  background: #061326;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.22);
-}
-
-.nav-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 14px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 28px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #ffffff;
-  font-size: 30px;
-  font-weight: 900;
-  white-space: nowrap;
-}
-
-.brand-mark {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--blue), var(--teal));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 19px;
-  font-weight: 900;
-  color: #ffffff;
-  box-shadow: 0 10px 28px rgba(35, 120, 255, 0.35);
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.main-nav a {
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 15px;
-  font-weight: 800;
-  transition: 0.2s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: #9ce7ff;
-}
-
-.nav-button {
-  background: linear-gradient(135deg, var(--blue), var(--blue2));
-  color: #ffffff !important;
-  padding: 10px 16px;
-  border-radius: 12px;
-  box-shadow: 0 10px 24px rgba(35, 120, 255, 0.3);
-}
-
-/* Hero */
-.hero {
-  background: linear-gradient(135deg, #071a34 0%, #103b73 58%, #0f6b85 100%);
-  color: #ffffff;
-  padding: 28px 24px 42px;
-  min-height: calc(100vh - 82px);
-  display: flex;
-  align-items: center;
-}
-
-.hero-container {
-  max-width: 1280px;
-  width: 100%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  align-items: center;
-  gap: 46px;
-}
-
-.eyebrow {
-  color: #b9efff;
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 0.03em;
-  margin-bottom: 12px;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 4.7vw, 66px);
-  line-height: 1.03;
-  letter-spacing: -0.055em;
-  font-weight: 950;
-  margin-bottom: 18px;
-}
-
-.hero-text {
-  font-size: 18px;
-  max-width: 760px;
-  color: rgba(255, 255, 255, 0.94);
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 24px;
-}
-
-.hero-image-wrap {
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: var(--shadow2);
-  max-height: 520px;
-}
-
-.hero-image {
-  width: 100%;
-  height: 520px;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  border-radius: 13px;
-  padding: 14px 20px;
-  font-size: 15px;
-  font-weight: 900;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn-light {
-  background: #ffffff;
-  color: var(--ink);
-  box-shadow: var(--shadow);
-}
-
-.btn-outline {
-  background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
-.btn-blue {
-  background: linear-gradient(135deg, var(--blue), var(--blue2));
-  color: #ffffff;
-}
-
-.full {
-  width: 100%;
-}
-
-/* Stats */
-.stats {
-  background: #ffffff;
-  border-bottom: 1px solid var(--line);
-}
-
-.stats-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 28px 24px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.stats-container div {
-  background: var(--soft);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 22px;
-}
-
-.stats-container strong {
-  display: block;
-  font-size: 22px;
-  font-weight: 950;
-  color: var(--ink);
-}
-
-.stats-container span {
-  color: var(--muted);
-  font-size: 15px;
-}
-
-/* Sections */
-.section {
-  padding: 80px 24px;
-}
-
-.section.soft {
-  background: #ffffff;
-}
-
-.section-head {
-  max-width: 850px;
-  margin-bottom: 38px;
-}
-
-.center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section h2,
-.two-column h2 {
-  color: var(--ink);
-  font-size: clamp(34px, 4vw, 52px);
-  line-height: 1.12;
-  letter-spacing: -0.04em;
-  font-weight: 950;
-  margin-bottom: 16px;
-}
-
-.section-head p,
-.two-column p {
-  color: var(--muted);
-  font-size: 18px;
-  margin-bottom: 18px;
-}
-
-.card-grid {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  gap: 22px;
-}
-
-.card-grid.three {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.two-column {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 0.9fr;
-  gap: 56px;
-  align-items: center;
-}
-
-.card {
-  background: #ffffff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  padding: 30px;
-}
-
-.card h3 {
-  font-size: 22px;
-  font-weight: 950;
-  color: var(--ink);
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: var(--muted);
-  font-size: 16px;
-}
-
-.tag {
-  display: inline-flex;
-  border-radius: 999px;
-  padding: 6px 12px;
-  font-size: 13px;
-  font-weight: 900;
-  margin-bottom: 14px;
-}
-
-.tag.blue {
-  background: rgba(35, 120, 255, 0.11);
-  color: var(--blue);
-}
-
-.tag.teal {
-  background: rgba(16, 184, 199, 0.13);
-  color: #05717d;
-}
-
-.tag.green {
-  background: rgba(24, 138, 91, 0.13);
-  color: var(--green);
-}
-
-.rounded-image {
-  width: 100%;
-  border-radius: 26px;
-  box-shadow: var(--shadow2);
-  object-fit: cover;
-}
-
-/* CTA */
-.cta {
-  background: linear-gradient(135deg, var(--ink), var(--navy));
-  color: #ffffff;
-  padding: 52px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-.cta h2 {
-  font-size: 34px;
-  font-weight: 950;
-  line-height: 1.15;
-  margin-bottom: 8px;
-}
-
-.cta p {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-/* Footer */
-.footer {
-  background: var(--ink);
-  color: #ffffff;
-  padding: 48px 24px;
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 32px;
-}
-
-.footer h2 {
-  font-size: 30px;
-  font-weight: 950;
-  margin-bottom: 8px;
-}
-
-.footer h4 {
-  margin-bottom: 12px;
-}
-
-.footer p,
-.footer a {
-  display: block;
-  color: rgba(255, 255, 255, 0.72);
-  margin-bottom: 6px;
-}
-
-.footer a:hover {
-  color: #9ce7ff;
-}
-
-.copyright {
-  background: #030b16;
-  color: rgba(255, 255, 255, 0.58);
-  padding: 16px 24px;
-  text-align: center;
-  font-size: 14px;
-}
-
-/* Laptop adjustment */
-@media (max-width: 1280px) {
-  .hero h1 {
-    font-size: 56px;
-  }
-
-  .hero-image,
-  .hero-image-wrap {
-    height: 470px;
-  }
-}
-
-/* Tablet */
-@media (max-width: 1100px) {
-  .nav-container {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .main-nav {
-    justify-content: flex-start;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 48px 24px;
-  }
-
-  .hero-container,
-  .two-column {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-image,
-  .hero-image-wrap {
-    height: auto;
-  }
-
-  .card-grid.three,
-  .stats-container,
-  .footer {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* Mobile */
-@media (max-width: 720px) {
-  .brand {
-    font-size: 26px;
-  }
-
-  .main-nav {
-    gap: 10px;
-  }
-
-  .main-nav a {
-    font-size: 14px;
-  }
-
-  .hero {
-    padding: 42px 18px;
-  }
-
-  .hero h1 {
-    font-size: 39px;
-  }
-
-  .hero-text {
-    font-size: 16px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .section {
-    padding: 58px 18px;
-  }
-
-  .card-grid.three,
-  .stats-container,
-  .footer {
-    grid-template-columns: 1fr;
-  }
-
-  .cta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ClinixAI | Healthcare AI & Pharmacovigilance Automation</title>
+  <meta name="description" content="ClinixAI helps healthcare, pharma, CRO and life sciences organizations strengthen patient safety, pharmacovigilance, compliance, consulting and AI training." />
+
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
+
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:34px 28px 38px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:680px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
+
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
+
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+
+    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
+    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
+    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18)}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-image{height:auto}
+      .stats-container,.card-grid,.footer{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .stats-container,.card-grid,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="academy-individual.html">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-container">
+    <div>
+      <p class="eyebrow">Healthcare AI • Patient Safety • Pharmacovigilance Automation</p>
+      <h1>Transforming Patient Safety Through Intelligent Automation.</h1>
+      <p class="hero-text">
+        ClinixAI helps healthcare, pharma, CRO and life sciences organizations strengthen compliance,
+        reduce operational risk, improve SLA performance and remain audit-ready 365 days a year.
+      </p>
+
+      <div class="hero-actions">
+        <a href="solutions.html" class="btn btn-light">Explore Solutions</a>
+        <a href="consulting.html" class="btn btn-outline">Talk to Our Team</a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <img src="images/home-hero.png.png" alt="ClinixAI healthcare AI dashboard" class="hero-image" />
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-container">
+    <div><strong>10+ Years</strong><span>Combined industry experience</span></div>
+    <div><strong>Patient Safety</strong><span>Governance-first thinking</span></div>
+    <div><strong>AI + Compliance</strong><span>Responsible automation adoption</span></div>
+    <div><strong>365 Days</strong><span>Audit-ready operating mindset</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Built by Healthcare Professionals. Designed for the Future of Healthcare.</h2>
+    <p>ClinixAI brings together Pharmacovigilance, Quality, Healthcare and Technology expertise to support the future of patient safety.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card"><span class="tag blue">Patient Safety</span><h3>Better Calibrated Decisions</h3><p>Support timely, defensible and patient-centric decisions across Drug Safety and regulated workflows.</p></div>
+    <div class="card"><span class="tag teal">Compliance</span><h3>Audit-Ready by Design</h3><p>Strengthen oversight, traceability, documentation and quality discipline across critical healthcare processes.</p></div>
+    <div class="card"><span class="tag green">Automation</span><h3>Reduced Manual Burden</h3><p>Use intelligent automation to reduce repetitive work and help teams focus on higher-value decisions.</p></div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="two-column">
+    <div>
+      <h2>Why ClinixAI Exists</h2>
+      <p>Healthcare is entering a defining decade. Organizations are managing increasing volumes of safety data, evolving regulatory expectations and growing operational complexity.</p>
+      <p>The future of healthcare will be built by professionals who understand how to apply technology responsibly.</p>
+      <a href="about.html" class="btn btn-blue">Read Our Vision</a>
+    </div>
+    <img src="images/solutions-hero.png.png" alt="ClinixAI AI healthcare platform" class="rounded-image" />
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>How ClinixAI Helps Organizations Move Forward</h2>
+    <p>We support organizations in moving from reactive operations to intelligent, compliant and patient-centric operating models.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card"><h3>Audit-Ready 365 Days</h3><p>Support continuous readiness through stronger documentation and workflow visibility.</p></div>
+    <div class="card"><h3>Improved SLA Performance</h3><p>Reduce delays, improve task visibility and support faster operational decisions.</p></div>
+    <div class="card"><h3>Responsible AI Adoption</h3><p>Adopt AI with human oversight, documented workflows and compliance-aware implementation.</p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Patient Safety Deserves Better Calibrated Decisions.</h2>
+    <p>Because better decisions create safer healthcare.</p>
+  </div>
+  <a href="contact.html" class="btn btn-light">Talk to ClinixAI</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
+  <div>
+    <h4>Explore</h4>
+    <a href="solutions.html">Solutions</a>
+    <a href="services.html">Services</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="academy-individual.html">Academy</a>
+  </div>
+  <div>
+    <h4>Contact</h4>
+    <p>contact@theclinixai.com</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
+</footer>
+
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
+</body>
+</html>
 ```
