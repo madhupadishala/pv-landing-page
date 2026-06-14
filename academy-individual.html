@@ -32,12 +32,20 @@
     h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
     .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
     .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900;border:0;cursor:pointer}
     .btn-light{background:#fff;color:#061326}
     .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
     .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .btn-green{background:linear-gradient(135deg,#188a5b,#10b8c7);color:#fff}
     .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
     .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
+
+    .urgency{background:#ffffff;border-bottom:1px solid #d8e4f0}
+    .urgency-inner{max-width:1280px;margin:auto;padding:22px 28px;display:grid;grid-template-columns:1.2fr 1fr;gap:18px;align-items:center}
+    .urgency h3{font-size:24px;color:#061326;margin-bottom:6px}
+    .urgency p{color:#5e7188}
+    .urgency-badges{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+    .pill{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:999px;padding:8px 12px;font-size:14px;font-weight:900;color:#061326}
 
     .stats{background:#fff}
     .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
@@ -51,8 +59,6 @@
     .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
     .section p{font-size:17px;line-height:1.65;color:#5e7188}
     .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .card-grid.two{grid-template-columns:repeat(2,1fr)}
-    .card-grid.four{grid-template-columns:repeat(4,1fr)}
     .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
     .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
     .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
@@ -62,6 +68,9 @@
     .teal{background:rgba(16,184,199,.13);color:#05717d}
     .green{background:rgba(24,138,91,.13);color:#188a5b}
     .amber{background:rgba(240,169,40,.16);color:#9a6500}
+
+    .center-cta{text-align:center;margin-top:38px}
+    .center-cta p{margin-bottom:16px;color:#5e7188}
 
     .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
     .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
@@ -89,11 +98,25 @@
     .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
     .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
 
+    .sticky-enroll{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      z-index:99999;
+      background:linear-gradient(135deg,#2378ff,#0f6bff);
+      color:#fff;
+      font-weight:950;
+      padding:15px 24px;
+      border-radius:50px;
+      box-shadow:0 10px 30px rgba(35,120,255,.35);
+    }
+
     @media(max-width:1100px){
       .nav-container{flex-direction:column;align-items:flex-start}
-      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-container,.two-column,.urgency-inner{grid-template-columns:1fr}
       .hero-image{height:auto}
-      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr 1fr}
+      .urgency-badges{justify-content:flex-start}
+      .stats-container,.card-grid,.footer{grid-template-columns:1fr 1fr}
     }
     @media(max-width:720px){
       .main-nav{gap:11px}
@@ -102,8 +125,10 @@
       h1{font-size:38px}
       .hero-actions{flex-direction:column}
       .btn{width:100%}
-      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr}
+      .stats-container,.card-grid,.footer{grid-template-columns:1fr}
       .cta{flex-direction:column;align-items:flex-start}
+      .sticky-enroll{left:16px;right:16px;bottom:14px;text-align:center}
+      body{padding-bottom:74px}
     }
   </style>
 </head>
@@ -144,13 +169,29 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#apply" class="btn btn-light">Apply for Internship</a>
+        <a href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener" class="btn btn-light">Enroll Now — ₹19,999</a>
         <a href="#projects" class="btn btn-outline">View Projects</a>
       </div>
     </div>
 
     <div class="hero-image-wrap">
       <img src="images/training-hero.png.png" alt="ClinixAI individual healthcare AI internship" class="hero-image" />
+    </div>
+  </div>
+</section>
+
+<section class="urgency">
+  <div class="urgency-inner">
+    <div>
+      <h3>Next Individual Internship Batch</h3>
+      <p>Start with one practical Healthcare AI project and build a career-ready portfolio asset.</p>
+    </div>
+
+    <div class="urgency-badges">
+      <span class="pill">Mobile Friendly</span>
+      <span class="pill">No Coding</span>
+      <span class="pill">Work From Anywhere</span>
+      <span class="pill">Limited Seats</span>
     </div>
   </div>
 </section>
@@ -167,9 +208,7 @@
 <section class="section">
   <div class="section-head">
     <h2>Who This Internship Is For</h2>
-    <p>
-      Designed for freshers, healthcare graduates and working professionals who want practical AI exposure without needing coding skills.
-    </p>
+    <p>Designed for freshers, healthcare graduates and working professionals who want practical AI exposure without needing coding skills.</p>
   </div>
 
   <div class="card-grid">
@@ -177,14 +216,17 @@
     <div class="card"><span class="tag teal">Professionals</span><h3>PV, QA, Regulatory & Medical Writing Professionals</h3><p>Working professionals who want to understand AI transformation and build practical portfolio projects.</p></div>
     <div class="card"><span class="tag green">Career Switchers</span><h3>Healthcare Career Transformation</h3><p>Professionals who want to move toward AI-enabled healthcare operations, PV automation and digital transformation roles.</p></div>
   </div>
+
+  <div class="center-cta">
+    <p>Ready to start your Healthcare AI career transformation?</p>
+    <a href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener" class="btn btn-blue">Start My AI Internship</a>
+  </div>
 </section>
 
 <section class="section white">
   <div class="section-head">
     <h2>What Makes This Different?</h2>
-    <p>
-      This is not only a course. It is an internship-style project-building program focused on practical Healthcare AI outcomes.
-    </p>
+    <p>This is not only a course. It is an internship-style project-building program focused on practical Healthcare AI outcomes.</p>
   </div>
 
   <div class="card-grid">
@@ -192,14 +234,17 @@
     <div class="card"><h3>No Coding Required</h3><p>Build with AI tools, structured prompts, no-code workflows and healthcare logic instead of programming.</p></div>
     <div class="card"><h3>Project-Based Outcome</h3><p>You will build and explain a Healthcare AI project that can be used in resume, LinkedIn and interviews.</p></div>
   </div>
+
+  <div class="center-cta">
+    <p>No coding background? No problem. Start with healthcare logic and no-code AI tools.</p>
+    <a href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener" class="btn btn-blue">Enroll in the Internship</a>
+  </div>
 </section>
 
 <section class="section" id="projects">
   <div class="section-head">
     <h2>Projects You Can Build</h2>
-    <p>
-      Each participant builds a project aligned to their background, interest and career goal.
-    </p>
+    <p>Each participant builds a project aligned to their background, interest and career goal.</p>
   </div>
 
   <div class="card-grid">
@@ -210,16 +255,18 @@
     <div class="card"><span class="tag teal">Regulatory</span><h3>Regulatory Intelligence Agent</h3><p>Track regulatory updates, summarize changes and identify possible action areas.</p></div>
     <div class="card"><span class="tag green">Operations</span><h3>PV Workflow Dashboard</h3><p>Improve visibility across workload, SLA pressure, task tracking and operational bottlenecks.</p></div>
   </div>
+
+  <div class="center-cta">
+    <p>Pick one project, build it, and showcase it professionally.</p>
+    <a href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener" class="btn btn-blue">Build These Projects</a>
+  </div>
 </section>
 
 <section class="section white">
   <div class="two-column">
     <div>
       <h2>Program Outcomes</h2>
-      <p>
-        By the end of the internship-style program, you should be able to explain a real healthcare AI use case,
-        demonstrate your project thinking and position your learning professionally.
-      </p>
+      <p>By the end of the internship-style program, you should be able to explain a real healthcare AI use case and position your learning professionally.</p>
 
       <div class="card">
         <h3>You Will Work Toward</h3>
@@ -232,6 +279,11 @@
           <li>Completion certificate after participation and project submission</li>
         </ul>
       </div>
+
+      <div class="center-cta">
+        <p>Build a project you can explain in interviews and show on LinkedIn.</p>
+        <a href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener" class="btn btn-blue">Join The Next Batch</a>
+      </div>
     </div>
 
     <img src="images/case-processing.png.png" alt="ClinixAI healthcare AI project building" class="rounded-image" />
@@ -241,9 +293,7 @@
 <section class="section">
   <div class="section-head">
     <h2>Program Includes</h2>
-    <p>
-      Focused learning, guided building and career positioning.
-    </p>
+    <p>Focused learning, guided building and career positioning.</p>
   </div>
 
   <div class="card-grid">
@@ -254,15 +304,18 @@
     <div class="card"><h3>Resume & LinkedIn Positioning</h3><p>Prepare your project story for career visibility and interview conversations.</p></div>
     <div class="card"><h3>Completion Certificate</h3><p>Receive certificate after successful participation and project completion.</p></div>
   </div>
+
+  <div class="center-cta">
+    <p>Training + project building + career positioning in one internship-style program.</p>
+    <a href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener" class="btn btn-blue">Enroll Now</a>
+  </div>
 </section>
 
 <section class="section white" id="apply">
   <div class="two-column">
     <div>
       <h2>Apply for Individual Internship</h2>
-      <p>
-        Use this section to start your individual career transformation journey.
-      </p>
+      <p>Use this section to start your individual career transformation journey.</p>
 
       <div class="price-card">
         <span class="tag blue">Program Fee</span>
@@ -283,20 +336,24 @@
       </div>
     </div>
 
-    <form class="contact-box">
+    <form class="contact-box" action="https://formsubmit.co/academy@theclinixai.com" method="POST">
+      <input type="hidden" name="_subject" value="New ClinixAI Academy Individual Internship Inquiry" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+
       <h3>Academy Inquiry</h3>
 
       <label>Name</label>
-      <input type="text" placeholder="Your name" />
+      <input type="text" name="name" placeholder="Your name" required />
 
       <label>Email</label>
-      <input type="email" placeholder="your@email.com" />
+      <input type="email" name="email" placeholder="your@email.com" required />
 
       <label>WhatsApp</label>
-      <input type="tel" placeholder="+91 9182950889" />
+      <input type="tel" name="whatsapp" placeholder="+91 9182950889" required />
 
       <label>Current Profile</label>
-      <select>
+      <select name="current_profile" required>
         <option>B.Pharm / M.Pharm Student</option>
         <option>PharmD Student / Graduate</option>
         <option>Life Sciences Graduate</option>
@@ -308,7 +365,7 @@
       </select>
 
       <label>Learning Goal</label>
-      <select>
+      <select name="learning_goal" required>
         <option>Build Healthcare AI Project</option>
         <option>Improve Resume / LinkedIn</option>
         <option>Prepare for PV / Healthcare AI roles</option>
@@ -317,7 +374,7 @@
       </select>
 
       <label>Message</label>
-      <textarea placeholder="Tell us briefly about your background and goal."></textarea>
+      <textarea name="message" placeholder="Tell us briefly about your background and goal."></textarea>
 
       <button class="btn btn-blue" type="submit">Submit Academy Inquiry</button>
     </form>
@@ -342,7 +399,7 @@
     <h2>The Future of Healthcare Needs AI-Ready Professionals.</h2>
     <p>Start with one practical project. Build confidence. Show your capability.</p>
   </div>
-  <a href="#apply" class="btn btn-light">Apply Now</a>
+  <a href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener" class="btn btn-light">Enroll Now</a>
 </section>
 
 </main>
@@ -370,6 +427,8 @@
 </footer>
 
 <div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
+<a href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener" class="sticky-enroll">🚀 Enroll Now</a>
 
 </body>
 </html>
