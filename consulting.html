@@ -1,47 +1,419 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ClinixAI Consulting | Pharmacovigilance & AI Advisory</title><meta name="description" content="PV operations, AI strategy, regulatory compliance, QMS, Veeva Vault Safety and process optimization consulting."><link rel="stylesheet" href="styles.css"></head>
-<body><header class="site-header">
-<div class="nav">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<a class="logo" href="index.html">
-<span class="logo-mark"></span>ClinixAI
-</a>
+  <title>ClinixAI Consulting | Pharmacovigilance, QMS & AI Advisory</title>
+  <meta name="description" content="ClinixAI consulting supports PV operations, AI strategy, regulatory compliance, QMS, audit readiness, Veeva Vault Safety alignment and healthcare transformation planning." />
 
-<button class="menu-toggle" aria-label="Open menu">=</button>
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
 
-<nav class="menu">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="solutions.html">Solutions</a>
-<a href="services.html">Services</a>
-<a href="consulting.html">Consulting</a>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
 
-<div class="dropdown">
-<span class="dropdown-toggle">Academy</span>
-<div class="dropdown-menu">
-<a href="academy-individual.html">
-<strong>Individual Career Transformation</strong>
-<span>Build your own Healthcare AI project. No coding required.</span>
-</a>
-<a href="academy-corporate.html">
-<strong>Corporate Training</strong>
-<span>AI upskilling workshops for Pharma, CRO and healthcare teams.</span>
-</a>
-</div>
-</div>
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
 
-<a href="resources.html">Resources</a>
-<a href="careers.html">Careers</a>
-<a class="nav-cta" href="contact.html">Contact</a>
-</nav>
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:46px 28px 48px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
 
-</div>
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
+
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card-grid.two{grid-template-columns:repeat(2,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
+    .card ul{padding-left:20px;margin-top:12px}
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+    .amber{background:rgba(240,169,40,.16);color:#9a6500}
+
+    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
+    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
+    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18);width:100%}
+
+    .contact-box{background:#fff;border:1px solid #d8e4f0;border-radius:20px;padding:30px;box-shadow:0 25px 70px rgba(7,26,52,.15)}
+    .contact-box h3{font-size:26px;font-weight:950;color:#061326;margin-bottom:8px}
+    .contact-box label{display:block;font-size:14px;font-weight:900;margin:16px 0 6px;color:#061326}
+    .contact-box input,.contact-box select,.contact-box textarea{width:100%;border:1px solid #d8e4f0;border-radius:12px;padding:13px;font:inherit;background:#fff}
+    .contact-box textarea{min-height:110px;resize:vertical}
+    .contact-box button{margin-top:20px;width:100%}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-image{height:auto}
+      .stats-container,.card-grid,.card-grid.two,.footer{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .stats-container,.card-grid,.card-grid.two,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="consulting.html" class="active">Consulting</a>
+      <a href="academy-individual.html">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main><section class="hero"><div class="hero-grid"><div><div class="eyebrow">PV Operations and AI Advisory</div><h1>Consulting for responsible Pharmacovigilance modernization.</h1><p>Get practical support for AI adoption, process optimization, QMS readiness, safety systems and transformation planning.</p><div class="hero-actions"><a class="btn btn-primary" href="#consultation">Request Consultation</a><a class="btn btn-ghost" href="resources.html">Read Resources</a></div></div><img class="hero-img" src="images/consulting-hero.png.png" alt="ClinixAI Pharmacovigilance and AI consulting workshop"></div></section>
+<main>
 
-<section class="section center"><div class="section-head"><h2>Consulting focus areas</h2><p>Structured advisory support for teams that need clarity, quality and implementation discipline.</p></div><div class="grid grid-3"><article class="card"><h3>PV Operations</h3><p>Workflow assessment, case processing optimization, operating model design and resource planning.</p></article><article class="card"><h3>AI Strategy & Adoption</h3><p>Use-case prioritization, governance, roadmap creation and pilot design.</p></article><article class="card"><h3>Veeva Vault Safety</h3><p>Implementation guidance, process alignment, user adoption and optimization support.</p></article><article class="card"><h3>Regulatory Compliance</h3><p>Inspection readiness, compliance reviews and quality-focused process improvements.</p></article><article class="card"><h3>QMS Support</h3><p>SOP alignment, CAPA support, deviation trends and governance frameworks.</p></article><article class="card"><h3>Transformation Programs</h3><p>Longer-term modernization initiatives with training and change management.</p></article></div></section>
+<section class="hero">
+  <div class="hero-container">
+    <div>
+      <p class="eyebrow">PV Operations • QMS • AI Advisory</p>
+      <h1>Consulting for Responsible Pharmacovigilance Modernization.</h1>
+      <p class="hero-text">
+        ClinixAI helps PV, quality, compliance and healthcare operations teams improve workflows,
+        strengthen documentation, prepare for audits and adopt AI responsibly.
+      </p>
 
-<section class="section"><div class="split"><div><div class="section-head"><h2>Advisory without heavy intake friction</h2><p>The first consultation form captures only enough to qualify the topic and urgency. Discovery can happen in the call.</p></div><img class="hero-img" src="images/signal-detection.png.png" alt="ClinixAI consulting methodology and signal detection advisory"></div><form class="form-panel" id="consultation"><h2>Request Consultation</h2><p class="form-note">For PV leaders, quality teams, founders and operations heads.</p><div class="field-grid"><div><label>Business email</label><input type="email" placeholder="name@company.com"></div><div><label>WhatsApp</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div><div><label>Designation</label><input placeholder="Head PV, QA Manager, Founder"></div><div><label>Consulting area</label><select><option>PV Operations</option><option>AI Strategy</option><option>Veeva Vault Safety</option><option>Regulatory Compliance</option><option>QMS</option><option>Process Optimization</option></select></div><div><label>Timeline</label><select><option>Immediate</option><option>0-3 months</option><option>3-6 months</option><option>6-12 months</option><option>Exploring</option></select></div><div><label>Preferred call window</label><select><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Email me options</option></select></div><div class="full"><label>Current challenge</label><textarea placeholder="One or two lines"></textarea></div><button class="btn btn-blue full" type="submit">Request Consultation</button><p class="mini-copy full">Ready for calendar, CRM and email notification integration.</p></div></form></div></section></main>
+      <div class="hero-actions">
+        <a href="#consultation" class="btn btn-light">Request Consultation</a>
+        <a href="services.html" class="btn btn-outline">View Services</a>
+      </div>
+    </div>
 
-<footer class="site-footer"><div class="footer-inner"><div><h2>ClinixAI</h2><p>AI Solutions • Consulting • Training • Pharmacovigilance Innovation</p></div><div><strong>Explore</strong><a href="solutions.html">Solutions</a><a href="services.html">Services</a><a href="training.html">Training</a></div><div><strong>Contact</strong><p>contact@theclinixai.com</p><a href="contact.html">Send inquiry</a></div></div><div class="footer-bottom">© 2026 ClinixAI. All Rights Reserved.</div></footer><script src="site.js"></script></body></html>
+    <div class="hero-image-wrap">
+      <img src="images/consulting-hero.png.png" alt="ClinixAI pharmacovigilance and AI consulting workshop" class="hero-image" />
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-container">
+    <div><strong>PV Operations</strong><span>Workflow and SLA optimization</span></div>
+    <div><strong>QMS Support</strong><span>SOP, CAPA, RCA and audit readiness</span></div>
+    <div><strong>AI Strategy</strong><span>Use-case roadmap and governance</span></div>
+    <div><strong>Transformation</strong><span>Process, people and technology alignment</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Consulting Focus Areas</h2>
+    <p>
+      Structured advisory support for organizations that need practical execution,
+      documentation clarity, quality discipline and implementation-ready guidance.
+    </p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag blue">Operations</span>
+      <h3>PV Operations Optimization</h3>
+      <p>Assessment and improvement of case processing, literature, reconciliation, mailbox and workflow management models.</p>
+      <ul>
+        <li>Workflow assessment</li>
+        <li>TAT and SLA visibility</li>
+        <li>Resource and capacity planning</li>
+        <li>Operating model improvement</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag teal">AI Advisory</span>
+      <h3>AI Strategy & Adoption</h3>
+      <p>Use-case prioritization, governance planning, pilot design and responsible AI adoption support for PV and healthcare teams.</p>
+      <ul>
+        <li>AI readiness assessment</li>
+        <li>Use-case selection</li>
+        <li>Governance model design</li>
+        <li>Pilot roadmap creation</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag green">Systems</span>
+      <h3>Safety System Alignment</h3>
+      <p>Support for safety system process alignment, user adoption, workflow mapping and implementation readiness.</p>
+      <ul>
+        <li>Veeva Vault Safety readiness thinking</li>
+        <li>Argus-to-modern system process alignment</li>
+        <li>User adoption support</li>
+        <li>Workflow and data model awareness</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag blue">Compliance</span>
+      <h3>Regulatory Compliance & Audit Readiness</h3>
+      <p>Support for inspection readiness, gap identification, documentation improvement and compliance-focused workflow strengthening.</p>
+      <ul>
+        <li>Audit readiness review</li>
+        <li>Process gap analysis</li>
+        <li>Governance documentation</li>
+        <li>Inspection preparation support</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag teal">Quality</span>
+      <h3>QMS Support</h3>
+      <p>Support for SOP alignment, deviation, CAPA, RCA, change control, training matrix and quality governance documentation.</p>
+      <ul>
+        <li>SOP and WI alignment</li>
+        <li>Deviation and CAPA support</li>
+        <li>RCA documentation</li>
+        <li>Training and quality tracking</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag green">Program</span>
+      <h3>Transformation Programs</h3>
+      <p>Longer-term modernization initiatives combining consulting, documentation, training, governance and AI adoption planning.</p>
+      <ul>
+        <li>Transformation roadmap</li>
+        <li>Stakeholder alignment</li>
+        <li>Change management support</li>
+        <li>Phased implementation planning</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="two-column">
+    <div>
+      <h2>Advisory Built for Real PV Delivery Pressure</h2>
+      <p>
+        Pharmacovigilance transformation is not only about tools. It requires clear process design,
+        practical governance, trained teams, quality documentation and implementation discipline.
+      </p>
+      <p>
+        ClinixAI consulting is designed for leaders who need clarity without heavy intake friction.
+        We start with the business problem, then convert it into a practical roadmap.
+      </p>
+      <a href="#consultation" class="btn btn-blue">Start Consultation</a>
+    </div>
+
+    <img src="images/signal-detection.png.png" alt="ClinixAI consulting methodology and safety intelligence advisory" class="rounded-image" />
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Typical Engagements</h2>
+    <p>
+      Start with a focused advisory need or build a broader transformation program.
+    </p>
+  </div>
+
+  <div class="card-grid two">
+    <div class="card">
+      <span class="tag blue">Short Engagement</span>
+      <h3>Readiness & Gap Review</h3>
+      <p>For teams that need a fast review of current workflow, documentation gaps, AI readiness or operational risks.</p>
+      <ul>
+        <li>Current-state review</li>
+        <li>Gap summary</li>
+        <li>Priority recommendations</li>
+        <li>Next-step roadmap</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag teal">Program Support</span>
+      <h3>Transformation Roadmap</h3>
+      <p>For organizations planning phased improvements across operations, documentation, training and AI enablement.</p>
+      <ul>
+        <li>Workflow redesign</li>
+        <li>Governance model</li>
+        <li>Training plan</li>
+        <li>Implementation milestones</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag green">Quality Support</span>
+      <h3>QMS & Audit Readiness Support</h3>
+      <p>For teams preparing for audits, client oversight, vendor qualification, inspection readiness or internal quality strengthening.</p>
+      <ul>
+        <li>SOP and WI review</li>
+        <li>CAPA/RCA support</li>
+        <li>Training documentation</li>
+        <li>Inspection readiness preparation</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag amber">AI Adoption</span>
+      <h3>Responsible AI Use-Case Pilot</h3>
+      <p>For teams that want to start with one realistic AI use case before expanding to broader automation programs.</p>
+      <ul>
+        <li>Use-case selection</li>
+        <li>Pilot boundary definition</li>
+        <li>Human review model</li>
+        <li>Success metrics</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section white" id="consultation">
+  <div class="two-column">
+    <div>
+      <h2>Request Consultation</h2>
+      <p>
+        The first consultation captures only enough to understand your topic, urgency and support needs.
+        Detailed discovery can happen during the call.
+      </p>
+
+      <div class="card">
+        <h3>Consulting Contact</h3>
+        <p><strong>Email:</strong> contact@theclinixai.com</p>
+        <p><strong>Support:</strong> support@theclinixai.com</p>
+        <p><strong>WhatsApp:</strong> +91 9182950889</p>
+      </div>
+    </div>
+
+    <form class="contact-box">
+      <h3>Consulting Inquiry</h3>
+
+      <label>Name</label>
+      <input type="text" placeholder="Your name" />
+
+      <label>Business email</label>
+      <input type="email" placeholder="name@company.com" />
+
+      <label>WhatsApp</label>
+      <input type="tel" placeholder="+91 9182950889" />
+
+      <label>Designation</label>
+      <input type="text" placeholder="Head PV, QA Manager, Founder" />
+
+      <label>Consulting area</label>
+      <select>
+        <option>PV Operations</option>
+        <option>AI Strategy</option>
+        <option>Safety System Alignment</option>
+        <option>Regulatory Compliance</option>
+        <option>QMS</option>
+        <option>Process Optimization</option>
+        <option>Not sure yet</option>
+      </select>
+
+      <label>Timeline</label>
+      <select>
+        <option>Immediate</option>
+        <option>0-3 months</option>
+        <option>3-6 months</option>
+        <option>6-12 months</option>
+        <option>Exploring</option>
+      </select>
+
+      <label>Current challenge</label>
+      <textarea placeholder="Example: SOP gaps, SLA tracking, audit readiness, AI roadmap, workflow redesign"></textarea>
+
+      <button class="btn btn-blue" type="submit">Request Consultation</button>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Modernize PV Operations Without Weakening Compliance.</h2>
+    <p>ClinixAI helps teams improve workflows, documentation, quality discipline and responsible AI adoption.</p>
+  </div>
+  <a href="contact.html" class="btn btn-light">Talk to ClinixAI</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
+
+  <div>
+    <h4>Explore</h4>
+    <a href="solutions.html">Solutions</a>
+    <a href="services.html">Services</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="academy-individual.html">Academy</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>contact@theclinixai.com</p>
+    <p>+91 9182950889</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
+</footer>
+
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
+</body>
+</html>
+```
