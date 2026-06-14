@@ -1,266 +1,516 @@
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <title>ClinixAI | Healthcare AI & Pharmacovigilance Automation</title>
-  <meta name="description" content="ClinixAI helps healthcare, pharma, CRO and life sciences organizations strengthen patient safety, pharmacovigilance, compliance, consulting and AI training." />
+:root {
+  --ink: #061326;
+  --navy: #0b1f3a;
+  --blue: #2378ff;
+  --blue2: #0f6bff;
+  --teal: #10b8c7;
+  --green: #188a5b;
+  --soft: #f4f8fd;
+  --paper: #ffffff;
+  --line: #d8e4f0;
+  --text: #172234;
+  --muted: #5e7188;
+  --shadow: 0 18px 45px rgba(7, 26, 52, 0.12);
+  --shadow2: 0 28px 80px rgba(7, 26, 52, 0.18);
+}
 
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/favicon.png" />
-  <link rel="stylesheet" href="/styles.css?v=100" />
-</head>
+html {
+  scroll-behavior: smooth;
+}
 
-<body>
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: var(--soft);
+  color: var(--text);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
 
-<header class="site-header">
-  <div class="nav-container">
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    <a href="index.html" class="brand">
-      <span class="brand-mark">C</span>
-      <span>ClinixAI</span>
-    </a>
+img {
+  max-width: 100%;
+  display: block;
+}
 
-    <nav class="main-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="solutions.html">Solutions</a>
-      <a href="services.html">Services</a>
-      <a href="consulting.html">Consulting</a>
-      <a href="academy-individual.html">Academy</a>
-      <a href="resources.html">Resources</a>
-      <a href="careers.html">Careers</a>
-      <a href="contact.html" class="nav-button">Contact</a>
-    </nav>
+/* Header */
+.site-header {
+  width: 100%;
+  background: #061326;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.22);
+}
 
-  </div>
-</header>
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
 
-<main>
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+  white-space: nowrap;
+}
 
-<section class="hero">
-  <div class="hero-container">
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: 900;
+  color: #ffffff;
+  box-shadow: 0 10px 28px rgba(35, 120, 255, 0.35);
+}
 
-    <div class="hero-content">
-      <p class="eyebrow">Healthcare AI • Patient Safety • Pharmacovigilance Automation</p>
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+}
 
-      <h1>Transforming Patient Safety Through Intelligent Automation.</h1>
+.main-nav a {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 15px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
 
-      <p class="hero-text">
-        ClinixAI helps healthcare, pharma, CRO and life sciences organizations strengthen compliance,
-        reduce operational risk, improve SLA performance and remain audit-ready 365 days a year.
-      </p>
+.main-nav a:hover,
+.main-nav a.active {
+  color: #9ce7ff;
+}
 
-      <div class="hero-actions">
-        <a href="solutions.html" class="btn btn-light">Explore Solutions</a>
-        <a href="consulting.html" class="btn btn-outline">Talk to Our Team</a>
-      </div>
-    </div>
+.nav-button {
+  background: linear-gradient(135deg, var(--blue), var(--blue2));
+  color: #ffffff !important;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(35, 120, 255, 0.3);
+}
 
-    <div class="hero-image-wrap">
-      <img src="images/home-hero.png.png" alt="ClinixAI healthcare AI dashboard" class="hero-image" />
-    </div>
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #071a34 0%, #103b73 58%, #0f6b85 100%);
+  color: #ffffff;
+  padding: 28px 24px 42px;
+  min-height: calc(100vh - 82px);
+  display: flex;
+  align-items: center;
+}
 
-  </div>
-</section>
+.hero-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 46px;
+}
 
-<section class="stats">
-  <div class="stats-container">
-    <div><strong>10+ Years</strong><span>Combined industry experience</span></div>
-    <div><strong>Patient Safety</strong><span>Governance-first thinking</span></div>
-    <div><strong>AI + Compliance</strong><span>Responsible automation adoption</span></div>
-    <div><strong>365 Days</strong><span>Audit-ready operating mindset</span></div>
-  </div>
-</section>
+.eyebrow {
+  color: #b9efff;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
 
-<section class="section">
-  <div class="section-head center">
-    <h2>Built by Healthcare Professionals. Designed for the Future of Healthcare.</h2>
-    <p>
-      ClinixAI brings together Pharmacovigilance, Quality, Healthcare and Technology expertise
-      to support organizations and professionals navigating the future of patient safety.
-    </p>
-  </div>
+.hero h1 {
+  font-size: clamp(42px, 4.7vw, 66px);
+  line-height: 1.03;
+  letter-spacing: -0.055em;
+  font-weight: 950;
+  margin-bottom: 18px;
+}
 
-  <div class="card-grid three">
-    <div class="card">
-      <span class="tag blue">Patient Safety</span>
-      <h3>Better Calibrated Decisions</h3>
-      <p>Support timely, defensible and patient-centric decisions across Drug Safety and regulated workflows.</p>
-    </div>
+.hero-text {
+  font-size: 18px;
+  max-width: 760px;
+  color: rgba(255, 255, 255, 0.94);
+}
 
-    <div class="card">
-      <span class="tag teal">Compliance</span>
-      <h3>Audit-Ready by Design</h3>
-      <p>Strengthen oversight, traceability, documentation and quality discipline across critical healthcare processes.</p>
-    </div>
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
 
-    <div class="card">
-      <span class="tag green">Automation</span>
-      <h3>Reduced Manual Burden</h3>
-      <p>Use intelligent automation to reduce repetitive work and help teams focus on higher-value decisions.</p>
-    </div>
-  </div>
-</section>
+.hero-image-wrap {
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow2);
+  max-height: 520px;
+}
 
-<section class="section soft">
-  <div class="two-column">
-    <div>
-      <h2>Why ClinixAI Exists</h2>
-      <p>
-        Healthcare is entering a defining decade. Across Pharmacovigilance, Regulatory Affairs,
-        Quality Management, Clinical Development and Healthcare Operations, organizations are managing
-        increasing volumes of safety data, evolving regulatory expectations and growing operational complexity.
-      </p>
-      <p>
-        The future of healthcare will not be built by technology alone. It will be built by healthcare
-        professionals who understand how to apply technology responsibly.
-      </p>
-      <a href="about.html" class="btn btn-blue">Read Our Vision</a>
-    </div>
+.hero-image {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center;
+}
 
-    <img src="images/solutions-hero.png.png" alt="ClinixAI AI healthcare platform" class="rounded-image" />
-  </div>
-</section>
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 13px;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
 
-<section class="section">
-  <div class="section-head center">
-    <h2>How ClinixAI Helps Organizations Move Forward</h2>
-    <p>We support organizations in moving from reactive operations to intelligent, compliant and patient-centric operating models.</p>
-  </div>
+.btn:hover {
+  transform: translateY(-2px);
+}
 
-  <div class="card-grid three">
-    <div class="card"><h3>Audit-Ready 365 Days</h3><p>Support continuous readiness through stronger documentation and workflow visibility.</p></div>
-    <div class="card"><h3>Improved SLA Performance</h3><p>Reduce delays, improve task visibility and support faster operational decisions.</p></div>
-    <div class="card"><h3>Reduced Human Error</h3><p>Use structured workflows and automation logic to reduce avoidable manual errors.</p></div>
-    <div class="card"><h3>Quality by Design</h3><p>Embed quality, consistency and traceability directly into workflows.</p></div>
-    <div class="card"><h3>Patient-Centric Operations</h3><p>Keep patient safety at the center of decisions, processes and technology adoption.</p></div>
-    <div class="card"><h3>Responsible AI Adoption</h3><p>Adopt AI with human oversight, documented workflows and compliance-aware implementation.</p></div>
-  </div>
-</section>
+.btn-light {
+  background: #ffffff;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
 
-<section class="section soft">
-  <div class="section-head center">
-    <h2>Solutions, Consulting and Academy — One Connected Model</h2>
-    <p>ClinixAI is built around three pillars that help organizations and professionals move confidently into the future of healthcare.</p>
-  </div>
+.btn-outline {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
 
-  <div class="card-grid three">
-    <div class="card">
-      <span class="tag blue">Solutions</span>
-      <h3>AI-Driven Healthcare & PV Workflows</h3>
-      <p>Literature screening, case intake, case processing support, regulatory intelligence and operational analytics.</p>
-    </div>
+.btn-blue {
+  background: linear-gradient(135deg, var(--blue), var(--blue2));
+  color: #ffffff;
+}
 
-    <div class="card">
-      <span class="tag teal">Consulting</span>
-      <h3>Compliance, Quality and Transformation Advisory</h3>
-      <p>PV operations, QMS support, audit readiness, regulatory compliance and workflow modernization.</p>
-    </div>
+.full {
+  width: 100%;
+}
 
-    <div class="card">
-      <span class="tag green">Academy</span>
-      <h3>Healthcare AI Workforce Transformation</h3>
-      <p>Individual career transformation programs and corporate training for AI-enabled healthcare operations.</p>
-    </div>
-  </div>
-</section>
+/* Stats */
+.stats {
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
 
-<section class="section">
-  <div class="two-column">
-    <div>
-      <h2>ClinixAI Academy</h2>
-      <p>
-        The future of healthcare careers belongs to professionals who can combine healthcare knowledge
-        with technology responsibly.
-      </p>
+.stats-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
 
-      <div class="mini-card">
-        <h3>Individual Career Transformation</h3>
-        <p>Build your own Healthcare AI project using your healthcare background. No coding experience required.</p>
-        <a href="academy-individual.html" class="btn btn-blue">Explore Individual Program</a>
-      </div>
+.stats-container div {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+}
 
-      <div class="mini-card">
-        <h3>Corporate Training</h3>
-        <p>Upskill pharma, CRO and healthcare teams on AI adoption, automation thinking and responsible transformation.</p>
-        <a href="academy-corporate.html" class="btn btn-blue">Explore Corporate Training</a>
-      </div>
-    </div>
+.stats-container strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 950;
+  color: var(--ink);
+}
 
-    <img src="images/training-hero.png.png" alt="ClinixAI healthcare AI training" class="rounded-image" />
-  </div>
-</section>
+.stats-container span {
+  color: var(--muted);
+  font-size: 15px;
+}
 
-<section class="section contact-section">
-  <div class="two-column">
-    <div>
-      <h2>Start with the Right Conversation</h2>
-      <p>
-        Whether you are exploring AI solutions, consulting support, corporate training or individual academy programs,
-        we will route your inquiry to the right path.
-      </p>
-      <h3>Better decisions create safer healthcare.</h3>
-    </div>
+/* Sections */
+.section {
+  padding: 80px 24px;
+}
 
-    <form class="contact-box">
-      <h3>Quick Connect</h3>
+.section.soft {
+  background: #ffffff;
+}
 
-      <label>I am interested in</label>
-      <select>
-        <option>AI Solutions</option>
-        <option>Consulting</option>
-        <option>Individual Academy Program</option>
-        <option>Corporate Training</option>
-        <option>Careers</option>
-      </select>
+.section-head {
+  max-width: 850px;
+  margin-bottom: 38px;
+}
 
-      <label>Email</label>
-      <input type="email" placeholder="you@company.com" />
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-      <label>WhatsApp</label>
-      <input type="tel" placeholder="+91 XXXXX XXXXX" />
+.section h2,
+.two-column h2 {
+  color: var(--ink);
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  font-weight: 950;
+  margin-bottom: 16px;
+}
 
-      <button type="submit" class="btn btn-blue full">Route My Request</button>
-    </form>
-  </div>
-</section>
+.section-head p,
+.two-column p {
+  color: var(--muted);
+  font-size: 18px;
+  margin-bottom: 18px;
+}
 
-</main>
+.card-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  gap: 22px;
+}
 
-<section class="cta">
-  <div>
-    <h2>Patient Safety Deserves Better Calibrated Decisions.</h2>
-    <p>Because better decisions create safer healthcare.</p>
-  </div>
-  <a href="contact.html" class="btn btn-light">Talk to ClinixAI</a>
-</section>
+.card-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
 
-<footer class="footer">
-  <div>
-    <h2>ClinixAI</h2>
-    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
-  </div>
+.two-column {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
 
-  <div>
-    <h4>Explore</h4>
-    <a href="solutions.html">Solutions</a>
-    <a href="services.html">Services</a>
-    <a href="consulting.html">Consulting</a>
-    <a href="academy-individual.html">Academy</a>
-  </div>
+.card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
 
-  <div>
-    <h4>Contact</h4>
-    <p>contact@theclinixai.com</p>
-    <a href="contact.html">Send inquiry</a>
-  </div>
-</footer>
+.card h3 {
+  font-size: 22px;
+  font-weight: 950;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
 
-<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+.card p {
+  color: var(--muted);
+  font-size: 16px;
+}
 
-</body>
-</html>
+.tag {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.tag.blue {
+  background: rgba(35, 120, 255, 0.11);
+  color: var(--blue);
+}
+
+.tag.teal {
+  background: rgba(16, 184, 199, 0.13);
+  color: #05717d;
+}
+
+.tag.green {
+  background: rgba(24, 138, 91, 0.13);
+  color: var(--green);
+}
+
+.rounded-image {
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: var(--shadow2);
+  object-fit: cover;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, var(--ink), var(--navy));
+  color: #ffffff;
+  padding: 52px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.cta h2 {
+  font-size: 34px;
+  font-weight: 950;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* Footer */
+.footer {
+  background: var(--ink);
+  color: #ffffff;
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+}
+
+.footer h2 {
+  font-size: 30px;
+  font-weight: 950;
+  margin-bottom: 8px;
+}
+
+.footer h4 {
+  margin-bottom: 12px;
+}
+
+.footer p,
+.footer a {
+  display: block;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 6px;
+}
+
+.footer a:hover {
+  color: #9ce7ff;
+}
+
+.copyright {
+  background: #030b16;
+  color: rgba(255, 255, 255, 0.58);
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Laptop adjustment */
+@media (max-width: 1280px) {
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero-image,
+  .hero-image-wrap {
+    height: 470px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .nav-container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 48px 24px;
+  }
+
+  .hero-container,
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image,
+  .hero-image-wrap {
+    height: auto;
+  }
+
+  .card-grid.three,
+  .stats-container,
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .brand {
+    font-size: 26px;
+  }
+
+  .main-nav {
+    gap: 10px;
+  }
+
+  .main-nav a {
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 42px 18px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .section {
+    padding: 58px 18px;
+  }
+
+  .card-grid.three,
+  .stats-container,
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 ```
