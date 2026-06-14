@@ -1,337 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>ClinixAI Academy | Healthcare AI Career Transformation Program</title>
-<meta name="description" content="Build and showcase a Healthcare AI agent with ClinixAI Academy. No coding required. Designed for freshers, PV professionals and healthcare professionals.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://theclinixai.com/academy-individual.html">
-<link rel="stylesheet" href="styles.css">
+  <title>ClinixAI Academy | Individual Healthcare AI Internship</title>
+  <meta name="description" content="ClinixAI Individual Career Transformation Internship helps freshers and healthcare professionals build Healthcare AI projects using no-code AI tools. Work from anywhere. Mobile is sufficient. No coding required." />
 
-<style>
-.academy-hero-title{font-size:48px;line-height:1.08}
-.academy-hero-sub{font-size:24px;line-height:1.45;max-width:860px}
-.ai-slider{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.28);border-radius:18px;box-shadow:0 24px 60px rgba(0,0,0,.24);min-height:380px;overflow:hidden;padding:34px;position:relative}
-.slide{display:none;animation:fadeSlide .8s ease}
-.slide.active{display:block}
-.slide span{background:#eaf3ff;border-radius:999px;color:#0c5fd1;display:inline-block;font-size:13px;font-weight:800;letter-spacing:.08em;margin-bottom:22px;padding:8px 14px;text-transform:uppercase}
-.slide h3{color:#fff;font-size:34px;line-height:1.15;margin-bottom:18px}
-.slide p{color:#dcefff;font-size:19px;line-height:1.55}
-.slider-dots{bottom:22px;display:flex;gap:8px;left:34px;position:absolute}
-.slider-dots span{background:rgba(255,255,255,.35);border-radius:50%;display:block;height:9px;width:9px}
-.slider-dots span.active{background:#fff}
-.offer-list{text-align:left;max-width:560px;margin:20px auto}
-.offer-list li{margin:9px 0}
-.price-line{font-size:18px;margin-top:22px}
-@keyframes fadeSlide{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:980px){.academy-hero-title{font-size:38px}.academy-hero-sub{font-size:19px}.ai-slider{min-height:330px}}
-</style>
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
+
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:46px 28px 48px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
+
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
+
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card-grid.two{grid-template-columns:repeat(2,1fr)}
+    .card-grid.four{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
+    .card ul{padding-left:20px;margin-top:12px}
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+    .amber{background:rgba(240,169,40,.16);color:#9a6500}
+
+    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
+    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
+    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18);width:100%}
+
+    .price-card{background:linear-gradient(135deg,#061326,#103b73);color:#fff;border-radius:22px;padding:34px;box-shadow:0 25px 70px rgba(7,26,52,.22)}
+    .price-card h3{font-size:30px;margin-bottom:10px}
+    .price-card p,.price-card li{color:rgba(255,255,255,.82)}
+    .price{font-size:42px;font-weight:950;margin:16px 0}
+
+    .contact-box{background:#fff;border:1px solid #d8e4f0;border-radius:20px;padding:30px;box-shadow:0 25px 70px rgba(7,26,52,.15)}
+    .contact-box h3{font-size:26px;font-weight:950;color:#061326;margin-bottom:8px}
+    .contact-box label{display:block;font-size:14px;font-weight:900;margin:16px 0 6px;color:#061326}
+    .contact-box input,.contact-box select,.contact-box textarea{width:100%;border:1px solid #d8e4f0;border-radius:12px;padding:13px;font:inherit;background:#fff}
+    .contact-box textarea{min-height:110px;resize:vertical}
+    .contact-box button{margin-top:20px;width:100%}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-image{height:auto}
+      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
 </head>
 
 <body>
 
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
 <header class="site-header">
-<div class="nav">
-<a class="logo" href="index.html" aria-label="ClinixAI Home"><span class="logo-mark"></span>ClinixAI</a>
-<button class="menu-toggle" aria-label="Open menu" aria-expanded="false" type="button"><span aria-hidden="true">☰</span></button>
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
 
-<nav class="menu" aria-label="Main navigation">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="solutions.html">Solutions</a>
-<a href="services.html">Services</a>
-<a href="consulting.html">Consulting</a>
-
-<div class="dropdown">
-<span class="dropdown-toggle" tabindex="0">Academy</span>
-<div class="dropdown-menu">
-<a href="academy-individual.html"><strong>Individual Career Transformation</strong><span>Build your own Healthcare AI project. No coding required.</span></a>
-<a href="academy-corporate.html"><strong>Corporate Training</strong><span>AI upskilling workshops for Pharma, CRO and healthcare teams.</span></a>
-</div>
-</div>
-
-<a href="resources.html">Resources</a>
-<a href="careers.html">Careers</a>
-<a class="nav-cta" href="contact.html">Contact</a>
-</nav>
-</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="academy.html" class="active">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<main id="main-content">
+<main>
 
 <section class="hero">
-<div class="hero-grid">
+  <div class="hero-container">
+    <div>
+      <p class="eyebrow">ClinixAI Academy • Individual Career Transformation Internship</p>
+      <h1>Build Healthcare AI Projects. Work From Anywhere. No Coding Required.</h1>
+      <p class="hero-text">
+        Mobile is sufficient. Learn with no-code AI tools and build practical Healthcare AI and Pharmacovigilance automation projects
+        that strengthen your resume, LinkedIn profile and interview confidence.
+      </p>
 
-<div>
-<div class="eyebrow">ClinixAI Academy • Healthcare AI Career Transformation</div>
-<h1 class="academy-hero-title">Become the Healthcare Professional Who Leads AI Transformation</h1>
-<p class="academy-hero-sub">AI is redefining Pharmacovigilance, Regulatory Affairs, and Healthcare Operations. Start your career transformation today.</p>
+      <div class="hero-actions">
+        <a href="#apply" class="btn btn-light">Apply for Internship</a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+      </div>
+    </div>
 
-<div class="hero-actions">
-<a class="btn btn-primary" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now — ₹19,999 (Pay Later Available)</a>
-<a class="btn btn-ghost" href="#outcomes">View Outcomes</a>
-</div>
-</div>
-
-<div class="ai-slider" aria-label="Healthcare AI application areas">
-
-<div class="slide active">
-<span>AI for PV</span>
-<h3>Data Extraction • AE Detection • Case Automation</h3>
-<p>Build AI workflows for literature screening, case intake, triage, adverse event identification and safety documentation.</p>
-</div>
-
-<div class="slide">
-<span>AI for Regulatory</span>
-<h3>Compliance • Submissions • Workflow Automation</h3>
-<p>Create AI agents for regulatory intelligence, impact assessment, compliance tracking and submission workflow support.</p>
-</div>
-
-<div class="slide">
-<span>AI for Medical Writing</span>
-<h3>Summarization • Literature Screening • Drafting</h3>
-<p>Use AI to summarize literature, structure documents, draft content and support medical writing quality workflows.</p>
-</div>
-
-<div class="slide">
-<span>AI for Clinical Research</span>
-<h3>Trial Data • Patient Safety Analytics</h3>
-<p>Explore AI workflows for trial data review, patient safety tracking, clinical operations and evidence organization.</p>
-</div>
-
-<div class="slider-dots" aria-hidden="true">
-<span class="active"></span><span></span><span></span><span></span>
-</div>
-
-</div>
-
-</div>
+    <div class="hero-image-wrap">
+      <img src="images/training-hero.png.png" alt="ClinixAI individual healthcare AI internship" class="hero-image" />
+    </div>
+  </div>
 </section>
 
 <section class="stats">
-<div class="stats-inner">
-<div class="stat"><strong>₹19,999</strong><span>Pay Later available</span></div>
-<div class="stat"><strong>No Coding</strong><span>Build using AI and no-code tools</span></div>
-<div class="stat"><strong>Project-Based</strong><span>Build & showcase your AI agent</span></div>
-<div class="stat"><strong>30 Seats</strong><span>Limited intake</span></div>
-</div>
-</section>
-
-<section class="section center" id="outcomes">
-<div class="section-head">
-<h2>What You Will Achieve</h2>
-<p>Build something real. Show it clearly. Use it in resume, LinkedIn and interview conversations.</p>
-</div>
-
-<div class="grid grid-3">
-<article class="card"><h3>Build & Showcase a Healthcare AI Agent</h3><p>Create a practical AI agent around a real healthcare or PV problem.</p></article>
-<article class="card"><h3>Create AI-Powered Workflows</h3><p>Design workflows recruiters, managers and interviewers can understand and discuss.</p></article>
-<article class="card"><h3>Identify Real PV Gaps</h3><p>Spot workflow gaps in drug safety and solve them with AI-powered automation thinking.</p></article>
-<article class="card"><h3>Strengthen Resume + LinkedIn</h3><p>Position your project professionally for visibility and career conversations.</p></article>
-<article class="card"><h3>Practice Interview Storytelling</h3><p>Explain what you built, why it matters, and how it solves a healthcare problem.</p></article>
-<article class="card"><h3>Build Future-Ready Skills</h3><p>Learn how AI is changing PV, regulatory, medical writing and healthcare operations.</p></article>
-</div>
-</section>
-
-<section class="section center">
-<div class="section-head">
-<h2>Built for Freshers and Experienced Professionals</h2>
-<p>Freshers build visibility. Experienced professionals build transformation capability.</p>
-</div>
-
-<div class="grid grid-2">
-
-<article class="card">
-<span class="badge badge-blue">FOR FRESHERS</span>
-<h3>Launch Your Healthcare Career With Practical AI Experience</h3>
-<p>Most candidates have similar qualifications. Very few can show a real Healthcare AI project that recruiters and interviewers can discuss.</p>
-
-<ul class="offer-list">
-<li>Build & showcase a Healthcare AI agent</li>
-<li>Create AI-powered workflows recruiters want to see</li>
-<li>Identify real PV gaps and solve them with AI</li>
-<li>Resume + LinkedIn makeover + recruiter connects</li>
-<li>Mock interviews + referral support</li>
-<li>Top performers may be considered for ClinixAI opportunities</li>
-<li>Limited 30 seats</li>
-</ul>
-
-<p class="price-line"><strong>₹19,999 — Pay Later Available</strong></p>
-<a class="btn btn-blue" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now</a>
-</article>
-
-<article class="card">
-<span class="badge badge-teal">FOR EXPERIENCED PROFESSIONALS</span>
-<h3>Transform Into AI-Enabled PV Leadership</h3>
-<p>Go beyond training — build complete AI-powered solutions. From writing URS and FRS to delivering end-to-end problem-solving systems, learn to identify gaps in drug safety workflows and fill them with intelligent automation.</p>
-
-<ul class="offer-list">
-<li>Master the full cycle: URS → FRS → AI solution delivery</li>
-<li>Build complete AI-powered PV workflows</li>
-<li>Identify real operational gaps and solve them with automation</li>
-<li>Learn the language of transformation for leadership roles</li>
-<li>Position yourself for premium career acceleration</li>
-</ul>
-
-<p class="price-line"><strong>₹19,999 — Pay Later Available</strong></p>
-<a class="btn btn-blue" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now</a>
-</article>
-
-</div>
+  <div class="stats-container">
+    <div><strong>Work Anywhere</strong><span>Remote internship-style learning</span></div>
+    <div><strong>Mobile Enough</strong><span>No laptop barrier to start</span></div>
+    <div><strong>No Coding</strong><span>Use no-code AI tools</span></div>
+    <div><strong>Project-Based</strong><span>Build portfolio-ready assets</span></div>
+  </div>
 </section>
 
 <section class="section">
-<div class="split">
-<div>
-<div class="section-head">
-<h2>Your Healthcare Knowledge Is the Foundation</h2>
-<p>You do not need Python, software development, data science or coding experience to begin.</p>
-</div>
+  <div class="section-head">
+    <h2>Who This Internship Is For</h2>
+    <p>
+      Designed for freshers, healthcare graduates and working professionals who want practical AI exposure without needing coding skills.
+    </p>
+  </div>
 
-<div class="grid">
-<article class="card"><h3>You Bring the Healthcare Context</h3><p>Choose a real problem from Pharmacovigilance, regulatory affairs, medical writing, clinical research, quality, nursing, hospital operations or life sciences.</p></article>
-<article class="card"><h3>ClinixAI Helps You Build the Solution</h3><p>Learn how to structure workflows, use AI tools, design prompts, define outputs and present the project professionally.</p></article>
-</div>
-</div>
-
-<img class="hero-img" src="images/case-processing.png.png" alt="ClinixAI no-code Healthcare AI project building" loading="lazy">
-</div>
+  <div class="card-grid">
+    <div class="card"><span class="tag blue">Freshers</span><h3>Healthcare & Life Science Graduates</h3><p>B.Pharm, PharmD, M.Pharm, life sciences and healthcare graduates who want stronger career positioning.</p></div>
+    <div class="card"><span class="tag teal">Professionals</span><h3>PV, QA, Regulatory & Medical Writing Professionals</h3><p>Working professionals who want to understand AI transformation and build practical portfolio projects.</p></div>
+    <div class="card"><span class="tag green">Career Switchers</span><h3>Healthcare Career Transformation</h3><p>Professionals who want to move toward AI-enabled healthcare operations, PV automation and digital transformation roles.</p></div>
+  </div>
 </section>
 
-<section class="section center" id="project">
-<div class="section-head">
-<h2>What You May Build</h2>
-<p>Every participant builds a project aligned to their background, interest and career goal.</p>
-</div>
+<section class="section white">
+  <div class="section-head">
+    <h2>What Makes This Different?</h2>
+    <p>
+      This is not only a course. It is an internship-style project-building program focused on practical Healthcare AI outcomes.
+    </p>
+  </div>
 
-<div class="grid grid-3">
-<article class="card"><h3>AI Literature Screening Assistant</h3><p>Support article prioritization, relevance review and safety documentation workflows.</p></article>
-<article class="card"><h3>Case Intake & Triage Assistant</h3><p>Support adverse event intake, triage logic, seriousness prompts and structured documentation.</p></article>
-<article class="card"><h3>Regulatory Intelligence Agent</h3><p>Track regulatory updates, identify impact areas and generate action-ready summaries.</p></article>
-<article class="card"><h3>Signal Detection Dashboard</h3><p>Visualize safety trends, risks and signal prioritization concepts.</p></article>
-<article class="card"><h3>Aggregate Reporting Assistant</h3><p>Support PSUR/PBRER-style data organization, summary preparation and report thinking.</p></article>
-<article class="card"><h3>Medical Information Assistant</h3><p>Support healthcare information retrieval, response drafting and knowledge management use cases.</p></article>
-<article class="card"><h3>Medical Writing Assistant</h3><p>Support structured writing, document outlines, summaries and quality review preparation.</p></article>
-<article class="card"><h3>Patient Education Assistant</h3><p>Create patient-friendly explanations, guidance content and healthcare communication flows.</p></article>
-<article class="card"><h3>Healthcare Workflow Intelligence Tool</h3><p>Improve tracking, visibility and decision support across healthcare operations.</p></article>
-</div>
+  <div class="card-grid">
+    <div class="card"><h3>Mobile-Friendly Learning</h3><p>You can start with a mobile phone. A laptop is helpful, but not mandatory to begin.</p></div>
+    <div class="card"><h3>No Coding Required</h3><p>Build with AI tools, structured prompts, no-code workflows and healthcare logic instead of programming.</p></div>
+    <div class="card"><h3>Project-Based Outcome</h3><p>You will build and explain a Healthcare AI project that can be used in resume, LinkedIn and interviews.</p></div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="section-head">
+    <h2>Projects You Can Build</h2>
+    <p>
+      Each participant builds a project aligned to their background, interest and career goal.
+    </p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card"><span class="tag blue">PV AI</span><h3>Literature Screening Assistant</h3><p>Support article prioritization, safety relevance review and documentation preparation.</p></div>
+    <div class="card"><span class="tag teal">Validity</span><h3>Case Validity Assessment Agent</h3><p>Identify patient, reporter, product and event criteria and highlight missing information.</p></div>
+    <div class="card"><span class="tag green">Safety</span><h3>Seriousness Assessment Agent</h3><p>Support seriousness criteria review, prioritization and expedited reporting awareness.</p></div>
+    <div class="card"><span class="tag blue">Medical Info</span><h3>Medical Information Assistant</h3><p>Support healthcare information retrieval, response drafting and knowledge management workflows.</p></div>
+    <div class="card"><span class="tag teal">Regulatory</span><h3>Regulatory Intelligence Agent</h3><p>Track regulatory updates, summarize changes and identify possible action areas.</p></div>
+    <div class="card"><span class="tag green">Operations</span><h3>PV Workflow Dashboard</h3><p>Improve visibility across workload, SLA pressure, task tracking and operational bottlenecks.</p></div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="two-column">
+    <div>
+      <h2>Program Outcomes</h2>
+      <p>
+        By the end of the internship-style program, you should be able to explain a real healthcare AI use case,
+        demonstrate your project thinking and position your learning professionally.
+      </p>
+
+      <div class="card">
+        <h3>You Will Work Toward</h3>
+        <ul>
+          <li>Healthcare AI project portfolio</li>
+          <li>Resume project description</li>
+          <li>LinkedIn showcase content</li>
+          <li>Interview storytelling preparation</li>
+          <li>Understanding of AI in PV and healthcare workflows</li>
+          <li>Completion certificate after participation and project submission</li>
+        </ul>
+      </div>
+    </div>
+
+    <img src="images/case-processing.png.png" alt="ClinixAI healthcare AI project building" class="rounded-image" />
+  </div>
 </section>
 
 <section class="section">
-<div class="split">
-<div>
-<div class="section-head">
-<h2>What Makes ClinixAI Different</h2>
-<p>Most programs stop at lectures, slides and certificates. ClinixAI focuses on practical application.</p>
-</div>
+  <div class="section-head">
+    <h2>Program Includes</h2>
+    <p>
+      Focused learning, guided building and career positioning.
+    </p>
+  </div>
 
-<div class="card">
-<h3>You Do Not Just Learn Healthcare AI.</h3>
-<p>You build it. You explain it. You showcase it.</p>
-<ul>
-<li>Real healthcare problem selection</li>
-<li>Project idea refinement</li>
-<li>No-code AI workflow design</li>
-<li>Prompt and output structuring</li>
-<li>Project presentation guidance</li>
-<li>Career positioning support</li>
-</ul>
-</div>
-</div>
-
-<img class="hero-img" src="images/solutions-hero.png.png" alt="ClinixAI Healthcare AI project workflow" loading="lazy">
-</div>
+  <div class="card-grid">
+    <div class="card"><h3>Healthcare AI Foundations</h3><p>Understand AI concepts in healthcare language, not software jargon.</p></div>
+    <div class="card"><h3>No-Code AI Tools</h3><p>Use AI tools and no-code workflows to build practical healthcare solutions.</p></div>
+    <div class="card"><h3>PV Automation Thinking</h3><p>Understand how AI can support literature, case intake, validity, seriousness and workflow visibility.</p></div>
+    <div class="card"><h3>Project Mentorship</h3><p>Get guidance to refine your idea, workflow and final project direction.</p></div>
+    <div class="card"><h3>Resume & LinkedIn Positioning</h3><p>Prepare your project story for career visibility and interview conversations.</p></div>
+    <div class="card"><h3>Completion Certificate</h3><p>Receive certificate after successful participation and project completion.</p></div>
+  </div>
 </section>
 
-<section class="section center">
-<div class="section-head">
-<h2>Program Includes</h2>
-<p>Focused learning, practical building and career positioning.</p>
-</div>
+<section class="section white" id="apply">
+  <div class="two-column">
+    <div>
+      <h2>Apply for Individual Internship</h2>
+      <p>
+        Use this section to start your individual career transformation journey.
+      </p>
 
-<div class="grid grid-3">
-<article class="card"><h3>Healthcare AI Foundations</h3><p>Understand AI concepts in healthcare language, not software jargon.</p></article>
-<article class="card"><h3>No-Code AI Tools</h3><p>Learn how to use AI and no-code tools to create practical solutions.</p></article>
-<article class="card"><h3>AI Workflow Design</h3><p>Convert healthcare problems into structured AI-enabled workflows.</p></article>
-<article class="card"><h3>Project Mentorship</h3><p>Get guidance to refine your idea, workflow and final project direction.</p></article>
-<article class="card"><h3>Signal Detection Fundamentals</h3><p>Bonus module to understand safety trend and signal-thinking concepts.</p></article>
-<article class="card"><h3>Aggregate Reporting Fundamentals</h3><p>Bonus module to understand reporting concepts and safety summary thinking.</p></article>
-<article class="card"><h3>Resume Positioning</h3><p>Learn how to describe your project professionally.</p></article>
-<article class="card"><h3>LinkedIn Showcase</h3><p>Prepare a project story that can be shared publicly.</p></article>
-<article class="card"><h3>Completion Certificate</h3><p>Receive certificate after successful participation and project completion.</p></article>
-</div>
+      <div class="price-card">
+        <span class="tag blue">Program Fee</span>
+        <h3>Individual Career Transformation Internship</h3>
+        <div class="price">₹19,999</div>
+        <p>Pay Later available through supported payment options.</p>
+        <br>
+        <ul>
+          <li>Work from anywhere</li>
+          <li>Mobile is sufficient</li>
+          <li>No coding required</li>
+          <li>No-code AI tools</li>
+          <li>Project-based learning</li>
+          <li>Limited seats per batch</li>
+        </ul>
+        <br>
+        <a href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener" class="btn btn-light">Enroll Now</a>
+      </div>
+    </div>
+
+    <form class="contact-box">
+      <h3>Academy Inquiry</h3>
+
+      <label>Name</label>
+      <input type="text" placeholder="Your name" />
+
+      <label>Email</label>
+      <input type="email" placeholder="your@email.com" />
+
+      <label>WhatsApp</label>
+      <input type="tel" placeholder="+91 9182950889" />
+
+      <label>Current Profile</label>
+      <select>
+        <option>B.Pharm / M.Pharm Student</option>
+        <option>PharmD Student / Graduate</option>
+        <option>Life Sciences Graduate</option>
+        <option>PV Fresher</option>
+        <option>PV Professional</option>
+        <option>QA / Regulatory / Medical Writing Professional</option>
+        <option>Healthcare Professional</option>
+        <option>Other</option>
+      </select>
+
+      <label>Learning Goal</label>
+      <select>
+        <option>Build Healthcare AI Project</option>
+        <option>Improve Resume / LinkedIn</option>
+        <option>Prepare for PV / Healthcare AI roles</option>
+        <option>Understand AI in Pharmacovigilance</option>
+        <option>Career Transformation</option>
+      </select>
+
+      <label>Message</label>
+      <textarea placeholder="Tell us briefly about your background and goal."></textarea>
+
+      <button class="btn btn-blue" type="submit">Submit Academy Inquiry</button>
+    </form>
+  </div>
 </section>
 
-<section class="section center" id="enroll">
-<div class="section-head">
-<h2>Program Investment</h2>
-<p>Build a real Healthcare AI project with expert guidance and future-ready positioning.</p>
-</div>
+<section class="section">
+  <div class="section-head">
+    <h2>Important Terms</h2>
+    <p>Please review the key terms before enrolling.</p>
+  </div>
 
-<div class="grid grid-3">
-<article class="card"><h3>Program Fee</h3><p><strong>₹19,999</strong></p><p>Pay Later available through supported Razorpay payment options.</p></article>
-<article class="card"><h3>What Is Included</h3><p>Training, project guidance, mentorship, bonus modules, career positioning and completion certificate.</p></article>
-<article class="card"><h3>After Payment</h3><p>You will receive onboarding instructions and complete the Project Discovery Form to start your project journey.</p></article>
-</div>
-
-<br>
-<a class="btn btn-blue" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now — ₹19,999</a>
+  <div class="card-grid">
+    <div class="card"><h3>Enrollment</h3><p>Enrollment is confirmed only after successful payment through the official payment link.</p></div>
+    <div class="card"><h3>No Job Guarantee</h3><p>This program improves project experience, portfolio strength and career positioning, but does not guarantee employment, salary increase or job placement.</p></div>
+    <div class="card"><h3>Communication</h3><p>By enrolling or submitting an inquiry, you agree to receive program-related communication through email and/or WhatsApp.</p></div>
+  </div>
 </section>
 
-<section class="section center">
-<div class="section-head">
-<h2>Important Terms</h2>
-<p>Please review the key terms before enrolling.</p>
-</div>
-
-<div class="grid grid-3">
-<article class="card"><h3>Enrollment</h3><p>Enrollment is confirmed only after successful payment through Razorpay.</p></article>
-<article class="card"><h3>No Job Guarantee</h3><p>This program improves project experience, portfolio strength and career positioning, but does not guarantee employment, salary increase or job placement.</p></article>
-<article class="card"><h3>Communication</h3><p>By enrolling, you agree to receive program-related communication through email and/or WhatsApp.</p></article>
-</div>
+<section class="cta">
+  <div>
+    <h2>The Future of Healthcare Needs AI-Ready Professionals.</h2>
+    <p>Start with one practical project. Build confidence. Show your capability.</p>
+  </div>
+  <a href="#apply" class="btn btn-light">Apply Now</a>
 </section>
 
 </main>
 
-<section class="cta-band">
-<div class="cta-inner">
-<div>
-<h2>The Future of Healthcare Will Not Be Built by Technology Alone.</h2>
-<p>It will be built by healthcare professionals who understand how to apply technology responsibly. Become one of them.</p>
-</div>
-<a class="btn btn-primary" href="https://rzp.io/rzp/5xvXbosv" target="_blank" rel="noopener">Enroll Now</a>
-</div>
-</section>
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
 
-<footer class="site-footer">
-<div class="footer-inner">
-<div><p class="footer-brand">ClinixAI</p><p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p></div>
-<div><strong>Explore</strong><a href="solutions.html">Solutions</a><a href="consulting.html">Consulting</a><a href="academy-corporate.html">Corporate Training</a><a href="resources.html">Resources</a></div>
-<div><strong>Contact</strong><p>academy@theclinixai.com</p><a href="contact.html">Send inquiry</a></div>
-</div>
-<div class="footer-bottom">© 2026 ClinixAI. All Rights Reserved.</div>
+  <div>
+    <h4>Explore</h4>
+    <a href="academy.html">Academy</a>
+    <a href="academy-corporate.html">Corporate Training</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="consulting.html">Consulting</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>academy@theclinixai.com</p>
+    <p>+91 9182950889</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
 </footer>
 
-<script>
-const slides = document.querySelectorAll(".ai-slider .slide");
-const dots = document.querySelectorAll(".slider-dots span");
-let currentSlide = 0;
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
 
-if (slides.length) {
-setInterval(() => {
-slides[currentSlide].classList.remove("active");
-dots[currentSlide].classList.remove("active");
-currentSlide = (currentSlide + 1) % slides.length;
-slides[currentSlide].classList.add("active");
-dots[currentSlide].classList.add("active");
-}, 3000);
-}
-</script>
-
-<script src="site.js"></script>
 </body>
 </html>
+```
