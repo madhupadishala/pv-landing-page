@@ -1,232 +1,401 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ClinixAI Academy | Corporate AI Training for Pharmacovigilance Teams</title><meta name="description" content="Corporate AI training programs for Pharmacovigilance, Drug Safety, Regulatory, Medical Writing and healthcare teams."><link rel="stylesheet" href="styles.css"></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body><header class="site-header"><div class="nav"><a class="logo" href="index.html"><span class="logo-mark"></span>ClinixAI</a><button class="menu-toggle" aria-label="Open menu">=</button><nav class="menu"><a href="index.html">Home</a><a href="about.html">About</a><a href="solutions.html">Solutions</a><a href="services.html">Services</a><a href="consulting.html">Consulting</a><div class="dropdown"><span class="dropdown-toggle">Academy</span><div class="dropdown-menu"><a href="academy-individual.html"><strong>Individual Career Transformation</strong><span>Build your own Healthcare AI project. No coding required.</span></a><a href="academy-corporate.html"><strong>Corporate Training</strong><span>AI upskilling workshops for Pharma, CRO and healthcare teams.</span></a></div></div><a href="resources.html">Resources</a><a href="careers.html">Careers</a><a class="nav-cta" href="contact.html">Contact</a></nav></div></header>
+  <title>ClinixAI Academy | Corporate AI Training for PV & Healthcare Teams</title>
+  <meta name="description" content="Corporate AI training programs for pharmacovigilance, drug safety, regulatory, medical writing, quality and healthcare teams." />
+
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
+
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:46px 28px 48px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
+
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
+
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card-grid.two{grid-template-columns:repeat(2,1fr)}
+    .card-grid.four{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
+    .card ul{padding-left:20px;margin-top:12px}
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+    .amber{background:rgba(240,169,40,.16);color:#9a6500}
+
+    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
+    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
+    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18);width:100%}
+
+    .contact-box{background:#fff;border:1px solid #d8e4f0;border-radius:20px;padding:30px;box-shadow:0 25px 70px rgba(7,26,52,.15)}
+    .contact-box h3{font-size:26px;font-weight:950;color:#061326;margin-bottom:8px}
+    .contact-box label{display:block;font-size:14px;font-weight:900;margin:16px 0 6px;color:#061326}
+    .contact-box input,.contact-box select,.contact-box textarea{width:100%;border:1px solid #d8e4f0;border-radius:12px;padding:13px;font:inherit;background:#fff}
+    .contact-box textarea{min-height:110px;resize:vertical}
+    .contact-box button{margin-top:20px;width:100%}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-image{height:auto}
+      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="academy-individual.html">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
+</header>
 
 <main>
 
 <section class="hero">
-<div class="hero-grid">
-<div>
-<div class="eyebrow">ClinixAI Academy for Organizations</div>
-<h1>AI training for Pharmacovigilance and healthcare teams.</h1>
-<p>Help your teams understand, evaluate and adopt AI responsibly across Drug Safety, Regulatory, Medical Writing and healthcare operations.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#corporate-inquiry">Request Corporate Training</a>
-<a class="btn btn-ghost" href="#programs">View Programs</a>
-</div>
-</div>
-<img class="hero-img" src="images/consulting-hero.png.png" alt="ClinixAI corporate AI training for Pharmacovigilance teams">
-</div>
+  <div class="hero-container">
+    <div>
+      <p class="eyebrow">ClinixAI Academy for Organizations</p>
+      <h1>Corporate AI Training for Pharmacovigilance and Healthcare Teams.</h1>
+      <p class="hero-text">
+        Help your teams understand, evaluate and adopt AI responsibly across Drug Safety,
+        Regulatory, Medical Writing, Quality and healthcare operations.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#corporate-inquiry" class="btn btn-light">Request Corporate Training</a>
+        <a href="#programs" class="btn btn-outline">View Programs</a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <img src="images/consulting-hero.png.png" alt="ClinixAI corporate AI training for pharmacovigilance teams" class="hero-image" />
+    </div>
+  </div>
 </section>
 
 <section class="stats">
-<div class="stats-inner">
-<div class="stat"><strong>PV-focused</strong><span>Not generic AI training</span></div>
-<div class="stat"><strong>Role-based</strong><span>Built for real healthcare teams</span></div>
-<div class="stat"><strong>Customizable</strong><span>Adapted to your workflows</span></div>
-<div class="stat"><strong>Practical</strong><span>Use cases, governance and adoption</span></div>
-</div>
+  <div class="stats-container">
+    <div><strong>PV-Focused</strong><span>Not generic AI training</span></div>
+    <div><strong>Role-Based</strong><span>Built for real healthcare teams</span></div>
+    <div><strong>Customizable</strong><span>Adapted to your workflows</span></div>
+    <div><strong>Practical</strong><span>Use cases, governance and adoption</span></div>
+  </div>
 </section>
 
-<section class="section center" id="programs">
-<div class="section-head">
-<h2>Choose the Right Corporate Program</h2>
-<p>ClinixAI offers practical AI training formats for leadership teams, operational teams and organizations preparing for AI-enabled transformation.</p>
-</div>
+<section class="section" id="programs">
+  <div class="section-head">
+    <h2>Choose the Right Corporate Program</h2>
+    <p>
+      ClinixAI offers practical AI training formats for leadership teams, operational teams and organizations preparing for AI-enabled transformation.
+    </p>
+  </div>
 
-<div class="grid grid-3">
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag blue">Leadership</span>
+      <h3>Executive Awareness Session</h3>
+      <p>For PV Heads, Directors, QA leaders, Regulatory leaders and business decision-makers who need strategic clarity on AI adoption.</p>
+      <ul>
+        <li>Duration: 2–4 hours</li>
+        <li>AI opportunity overview</li>
+        <li>Risk, governance and compliance discussion</li>
+        <li>Use-case prioritization</li>
+      </ul>
+    </div>
 
-<article class="card">
-<span class="badge badge-blue">Leadership</span>
-<h3>Executive Awareness Session</h3>
-<p>For PV Heads, Directors, QA leaders, Regulatory leaders and business decision-makers who need strategic clarity on AI adoption.</p>
-<ul>
-<li>Duration: 2–4 hours</li>
-<li>AI opportunity overview</li>
-<li>Risk, governance and compliance discussion</li>
-<li>Use-case prioritization</li>
-</ul>
-</article>
+    <div class="card">
+      <span class="tag teal">Teams</span>
+      <h3>Team Upskilling Program</h3>
+      <p>For case processors, medical reviewers, safety scientists, regulatory teams, QA teams and medical writing teams.</p>
+      <ul>
+        <li>Duration: 1–3 days</li>
+        <li>Hands-on workflow examples</li>
+        <li>AI use cases by function</li>
+        <li>Human-in-the-loop design</li>
+      </ul>
+    </div>
 
-<article class="card">
-<span class="badge badge-teal">Teams</span>
-<h3>Team Upskilling Program</h3>
-<p>For case processors, medical reviewers, safety scientists, regulatory teams, QA teams and medical writing teams.</p>
-<ul>
-<li>Duration: 1–3 days</li>
-<li>Hands-on workflow examples</li>
-<li>AI use cases by function</li>
-<li>Human-in-the-loop design</li>
-</ul>
-</article>
-
-<article class="card">
-<span class="badge badge-green">Enterprise</span>
-<h3>AI Adoption Enablement</h3>
-<p>For organizations planning structured AI pilots, internal enablement and long-term transformation programs.</p>
-<ul>
-<li>Assessment support</li>
-<li>Training roadmap</li>
-<li>Governance workshops</li>
-<li>Change management support</li>
-</ul>
-</article>
-
-</div>
+    <div class="card">
+      <span class="tag green">Enterprise</span>
+      <h3>AI Adoption Enablement</h3>
+      <p>For organizations planning structured AI pilots, internal enablement and long-term transformation programs.</p>
+      <ul>
+        <li>Assessment support</li>
+        <li>Training roadmap</li>
+        <li>Governance workshops</li>
+        <li>Change management support</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section class="section">
-<div class="split">
+<section class="section white">
+  <div class="two-column">
+    <div>
+      <h2>Training Areas</h2>
+      <p>
+        Corporate modules can be delivered independently or combined into a customized program based on your team size,
+        maturity level and objectives.
+      </p>
 
-<div>
-<div class="section-head">
-<h2>Training Areas</h2>
-<p>Corporate modules can be delivered independently or combined into a customized program based on your team size, maturity level and objectives.</p>
-</div>
+      <div class="card">
+        <h3>Core Modules</h3>
+        <ul>
+          <li>AI for Pharmacovigilance</li>
+          <li>Literature Screening Automation</li>
+          <li>Case Intake, Triage and Validity Thinking</li>
+          <li>Seriousness Assessment and Prioritization</li>
+          <li>Signal Detection Fundamentals</li>
+          <li>Aggregate Reporting Fundamentals</li>
+          <li>Regulatory Intelligence</li>
+          <li>AI Governance, Compliance and Human Oversight</li>
+          <li>No-Code AI for Healthcare Teams</li>
+        </ul>
+      </div>
+    </div>
 
-<div class="grid">
-<article class="card"><h3>AI for Pharmacovigilance</h3><p>How AI can support Drug Safety workflows without replacing expert accountability.</p></article>
-<article class="card"><h3>Literature Screening Automation</h3><p>Screening, relevance review, prioritization and documentation support.</p></article>
-<article class="card"><h3>Case Intake & Triage</h3><p>AI-assisted intake, routing, seriousness prompts and duplicate-check thinking.</p></article>
-<article class="card"><h3>Signal Detection Fundamentals</h3><p>Signal concepts, prioritization, dashboards and expert evaluation workflows.</p></article>
-<article class="card"><h3>Aggregate Reporting Fundamentals</h3><p>PSUR/PBRER concepts, data organization and reporting support use cases.</p></article>
-<article class="card"><h3>Regulatory Intelligence</h3><p>Monitoring regulatory updates, impact areas and action-oriented intelligence.</p></article>
-<article class="card"><h3>AI Governance & Compliance</h3><p>Human oversight, auditability, documentation and responsible AI adoption.</p></article>
-<article class="card"><h3>No-Code AI for Healthcare Teams</h3><p>Practical tools and workflows that teams can understand without software engineering backgrounds.</p></article>
-</div>
-</div>
-
-<img class="hero-img" src="images/signal-detection.png.png" alt="ClinixAI signal detection and corporate AI training modules">
-
-</div>
-</section>
-
-<section class="section center">
-<div class="section-head">
-<h2>Built for Healthcare Workflows</h2>
-<p>This is not generic prompt engineering training. ClinixAI corporate programs are designed around Pharmacovigilance, Drug Safety, Regulatory, Medical Writing and healthcare operational realities.</p>
-</div>
-
-<div class="grid grid-4">
-
-<article class="card">
-<h3>Pharma</h3>
-<p>Support PV, regulatory, medical writing, QA and transformation teams.</p>
-</article>
-
-<article class="card">
-<h3>CROs</h3>
-<p>Upskill operational teams handling high-volume safety and clinical workflows.</p>
-</article>
-
-<article class="card">
-<h3>Biotech</h3>
-<p>Prepare lean teams for scalable, AI-enabled operating models.</p>
-</article>
-
-<article class="card">
-<h3>Healthcare Tech</h3>
-<p>Train teams building or supporting healthcare and life sciences technology solutions.</p>
-</article>
-
-</div>
+    <img src="images/signal-detection.png.png" alt="ClinixAI signal detection and corporate AI training modules" class="rounded-image" />
+  </div>
 </section>
 
 <section class="section">
-<div class="split">
+  <div class="section-head">
+    <h2>Built for Healthcare Workflows</h2>
+    <p>
+      This is not generic prompt engineering training. ClinixAI corporate programs are designed around pharmacovigilance,
+      drug safety, regulatory, medical writing, quality and healthcare operational realities.
+    </p>
+  </div>
 
-<div>
-<div class="section-head">
-<h2>Customized to Your Organization</h2>
-<p>Every organization is different. ClinixAI can tailor training content to your workflows, maturity level, regulatory environment, team structure and business goals.</p>
-</div>
+  <div class="card-grid four">
+    <div class="card"><span class="tag blue">Pharma</span><h3>Pharma Teams</h3><p>Support PV, regulatory, medical writing, QA and transformation teams.</p></div>
+    <div class="card"><span class="tag teal">CRO</span><h3>CRO Operations</h3><p>Upskill teams handling high-volume safety, clinical and quality workflows.</p></div>
+    <div class="card"><span class="tag green">Biotech</span><h3>Biotech Teams</h3><p>Prepare lean teams for scalable, AI-enabled operating models.</p></div>
+    <div class="card"><span class="tag amber">Tech</span><h3>Healthcare Tech</h3><p>Train teams building or supporting healthcare and life sciences technology solutions.</p></div>
+  </div>
+</section>
 
-<div class="grid">
-<article class="card"><h3>Before the Session</h3><p>We understand your team profile, training goals and current AI maturity level.</p></article>
-<article class="card"><h3>During the Session</h3><p>We use relevant healthcare and PV examples instead of generic AI theory.</p></article>
-<article class="card"><h3>After the Session</h3><p>Your team receives practical next steps for safer, governed and more useful AI adoption.</p></article>
-</div>
-</div>
+<section class="section white">
+  <div class="two-column">
+    <div>
+      <h2>Customized to Your Organization</h2>
+      <p>
+        Every organization is different. ClinixAI can tailor training content to your workflows, maturity level,
+        regulatory environment, team structure and business goals.
+      </p>
 
-<img class="hero-img" src="images/resources-hero.png.png" alt="ClinixAI corporate training resources and AI adoption roadmap">
+      <div class="card-grid">
+        <div class="card"><h3>Before</h3><p>We understand your team profile, training goals and current AI maturity level.</p></div>
+        <div class="card"><h3>During</h3><p>We use relevant healthcare and PV examples instead of generic AI theory.</p></div>
+        <div class="card"><h3>After</h3><p>Your team receives practical next steps for safer, governed and more useful AI adoption.</p></div>
+      </div>
+    </div>
 
-</div>
+    <img src="images/resources-hero.png.png" alt="ClinixAI corporate training resources and AI adoption roadmap" class="rounded-image" />
+  </div>
 </section>
 
 <section class="section" id="corporate-inquiry">
-<div class="split">
+  <div class="two-column">
+    <div>
+      <h2>Request Corporate Training</h2>
+      <p>
+        Use this short form to start a conversation. The first step is understanding your team, goals and timeline.
+      </p>
 
-<div>
-<div class="section-head">
-<h2>Request Corporate Training</h2>
-<p>Use this short form to start a conversation. The first step is understanding your team, goals and timeline.</p>
-</div>
+      <div class="card">
+        <h3>Ideal For</h3>
+        <ul>
+          <li>PV leadership teams</li>
+          <li>Drug Safety operations teams</li>
+          <li>Medical writing teams</li>
+          <li>Regulatory affairs teams</li>
+          <li>Quality and compliance teams</li>
+          <li>Healthcare transformation teams</li>
+        </ul>
+      </div>
 
-<div class="card">
-<h3>Ideal for</h3>
-<ul>
-<li>PV leadership teams</li>
-<li>Drug Safety operations teams</li>
-<li>Medical writing teams</li>
-<li>Regulatory affairs teams</li>
-<li>Quality and compliance teams</li>
-<li>Healthcare transformation teams</li>
-</ul>
-</div>
-</div>
+      <div class="card" style="margin-top:18px;">
+        <h3>Academy Contact</h3>
+        <p><strong>Email:</strong> academy@theclinixai.com</p>
+        <p><strong>WhatsApp:</strong> +91 9182950889</p>
+      </div>
+    </div>
 
-<form class="form-panel">
-<h2>Corporate Training Inquiry</h2>
-<p class="form-note">For Pharma, CRO, Biotech and healthcare organizations.</p>
+    <form class="contact-box">
+      <h3>Corporate Training Inquiry</h3>
 
-<div class="field-grid">
+      <label>Company</label>
+      <input type="text" placeholder="Company name" />
 
-<div><label>Company</label><input placeholder="Company name"></div>
-<div><label>Contact Person</label><input placeholder="Your name"></div>
-<div><label>Business Email</label><input type="email" placeholder="name@company.com"></div>
-<div><label>WhatsApp / Phone</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
+      <label>Contact Person</label>
+      <input type="text" placeholder="Your name" />
 
-<div><label>Organization Type</label><select><option>Pharma</option><option>CRO</option><option>Biotech</option><option>Healthcare Technology</option><option>Hospital / Healthcare Organization</option><option>Other</option></select></div>
+      <label>Business Email</label>
+      <input type="email" placeholder="name@company.com" />
 
-<div><label>Team Size</label><select><option>1-10</option><option>11-25</option><option>26-50</option><option>51-100</option><option>100+</option></select></div>
+      <label>WhatsApp / Phone</label>
+      <input type="tel" placeholder="+91 9182950889" />
 
-<div><label>Training Interest</label><select><option>Executive Awareness Session</option><option>Team Upskilling Program</option><option>AI for Pharmacovigilance</option><option>Literature Screening Automation</option><option>Signal Detection</option><option>Aggregate Reporting</option><option>Regulatory Intelligence</option><option>Custom Program</option></select></div>
+      <label>Organization Type</label>
+      <select>
+        <option>Pharma</option>
+        <option>CRO</option>
+        <option>Biotech</option>
+        <option>Healthcare Technology</option>
+        <option>Hospital / Healthcare Organization</option>
+        <option>Other</option>
+      </select>
 
-<div><label>Timeline</label><select><option>Immediate</option><option>0-3 months</option><option>3-6 months</option><option>6-12 months</option><option>Exploring options</option></select></div>
+      <label>Team Size</label>
+      <select>
+        <option>1-10</option>
+        <option>11-25</option>
+        <option>26-50</option>
+        <option>51-100</option>
+        <option>100+</option>
+      </select>
 
-<div class="full"><label>Training Goals</label><textarea placeholder="Briefly describe what you want your team to learn or improve."></textarea></div>
+      <label>Training Interest</label>
+      <select>
+        <option>Executive Awareness Session</option>
+        <option>Team Upskilling Program</option>
+        <option>AI for Pharmacovigilance</option>
+        <option>Literature Screening Automation</option>
+        <option>Signal Detection</option>
+        <option>Aggregate Reporting</option>
+        <option>Regulatory Intelligence</option>
+        <option>Custom Program</option>
+      </select>
 
-<button class="btn btn-blue full" type="submit">Request Corporate Training</button>
-<p class="mini-copy full">This can later connect to email, CRM, calendar scheduling and proposal automation.</p>
+      <label>Timeline</label>
+      <select>
+        <option>Immediate</option>
+        <option>0-3 months</option>
+        <option>3-6 months</option>
+        <option>6-12 months</option>
+        <option>Exploring options</option>
+      </select>
 
-</div>
-</form>
+      <label>Training Goals</label>
+      <textarea placeholder="Briefly describe what you want your team to learn or improve."></textarea>
 
-</div>
+      <button class="btn btn-blue" type="submit">Request Corporate Training</button>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Build an AI-Ready Healthcare Team.</h2>
+    <p>Train your teams on practical, responsible and healthcare-specific AI adoption.</p>
+  </div>
+  <a href="#corporate-inquiry" class="btn btn-light">Request Training</a>
 </section>
 
 </main>
 
-<section class="cta-band">
-<div class="cta-inner">
-<div>
-<h2>Build an AI-ready healthcare team.</h2>
-<p>Train your teams on practical, responsible and healthcare-specific AI adoption.</p>
-</div>
-<a class="btn btn-primary" href="#corporate-inquiry">Request Training</a>
-</div>
-</section>
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
 
-<footer class="site-footer">
-<div class="footer-inner">
-<div><h2>ClinixAI</h2><p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p></div>
-<div><strong>Explore</strong><a href="solutions.html">Solutions</a><a href="consulting.html">Consulting</a><a href="academy-individual.html">Individual Academy</a><a href="resources.html">Resources</a></div>
-<div><strong>Contact</strong><p>contact@theclinixai.com</p><a href="contact.html">Send inquiry</a></div>
-</div>
-<div class="footer-bottom">© 2026 ClinixAI. All Rights Reserved.</div>
+  <div>
+    <h4>Explore</h4>
+    <a href="solutions.html">Solutions</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="academy-individual.html">Individual Academy</a>
+    <a href="resources.html">Resources</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>academy@theclinixai.com</p>
+    <p>+91 9182950889</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
 </footer>
 
-<script src="site.js"></script>
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
 </body>
 </html>
+```
