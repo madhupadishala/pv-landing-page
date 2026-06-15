@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ClinixAI Academy | Healthcare AI Education & Training</title>
+  <meta name="description" content="ClinixAI Academy offers individual healthcare AI internships and corporate AI training for pharmacovigilance, regulatory, medical writing and healthcare teams." />
+
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
+
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:46px 28px 48px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900;border:0;cursor:pointer}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+
+    .carousel{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:26px;padding:34px;min-height:430px;box-shadow:0 25px 70px rgba(0,0,0,.28);position:relative;overflow:hidden}
+    .slide{display:none;animation:fade .7s ease}
+    .slide.active{display:block}
+    .slide .tagline{display:inline-block;background:#fff;color:#0f6bff;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:900;margin-bottom:18px}
+    .slide h2{font-size:34px;line-height:1.15;margin-bottom:14px;color:#fff}
+    .slide p{font-size:18px;line-height:1.6;color:rgba(255,255,255,.86)}
+    .slide ul{margin-top:18px;padding-left:22px;color:rgba(255,255,255,.86);line-height:1.9}
+    .dots{position:absolute;bottom:22px;left:34px;display:flex;gap:8px}
+    .dots span{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.38)}
+    .dots span.active{background:#fff}
+    @keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
+
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card-grid.two{grid-template-columns:repeat(2,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
+    .card ul{padding-left:20px;margin-top:12px}
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+    .amber{background:rgba(240,169,40,.16);color:#9a6500}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container{grid-template-columns:1fr}
+      .stats-container,.card-grid,.card-grid.two,.footer{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .carousel{min-height:520px;padding:26px}
+      .slide h2{font-size:28px}
+      .stats-container,.card-grid,.card-grid.two,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="academy.html" class="active">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-container">
+    <div>
+      <p class="eyebrow">ClinixAI Academy</p>
+      <h1>Healthcare AI Education for Professionals and Organizations.</h1>
+      <p class="hero-text">
+        Choose your path: individual career transformation internship or corporate AI training for pharmacovigilance,
+        healthcare, regulatory, quality and medical writing teams.
+      </p>
+
+      <div class="hero-actions">
+        <a href="academy-individual.html" class="btn btn-light">Individual Internship</a>
+        <a href="academy-corporate.html" class="btn btn-outline">Corporate Training</a>
+      </div>
+    </div>
+
+    <div class="carousel">
+      <div class="slide active">
+        <span class="tagline">What You Build</span>
+        <h2>Build Real Healthcare AI Projects</h2>
+        <p>Create practical AI workflows around pharmacovigilance, literature screening, validity assessment, seriousness assessment and healthcare operations.</p>
+        <ul>
+          <li>Literature Screening Assistant</li>
+          <li>Case Validity Assessment Agent</li>
+          <li>Seriousness Assessment Agent</li>
+          <li>PV Workflow Dashboard</li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <span class="tagline">Who It Is For</span>
+        <h2>Freshers, Professionals and Healthcare Teams</h2>
+        <p>ClinixAI Academy is designed for individuals and organizations preparing for AI-enabled healthcare operations.</p>
+        <ul>
+          <li>B.Pharm, PharmD, M.Pharm and Life Sciences graduates</li>
+          <li>PV, QA, Regulatory and Medical Writing professionals</li>
+          <li>Pharma, CRO, Biotech and Healthcare teams</li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <span class="tagline">Individual Internship</span>
+        <h2>Work From Anywhere. Mobile Is Sufficient.</h2>
+        <p>No coding required. Build Healthcare AI projects using no-code AI tools and strengthen your resume, LinkedIn profile and interview story.</p>
+        <ul>
+          <li>Remote internship-style learning</li>
+          <li>No laptop barrier to start</li>
+          <li>Project-based outcomes</li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <span class="tagline">Corporate Training</span>
+        <h2>Train AI-Ready Healthcare Teams</h2>
+        <p>Upskill pharmacovigilance, regulatory, quality, medical writing and healthcare teams with practical AI adoption and governance workshops.</p>
+        <ul>
+          <li>Executive awareness sessions</li>
+          <li>Team upskilling workshops</li>
+          <li>Custom corporate programs</li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <span class="tagline">What You Learn</span>
+        <h2>Practical AI, Not Generic Theory</h2>
+        <p>Learn how AI can support real healthcare workflows without replacing human review, compliance thinking or domain expertise.</p>
+        <ul>
+          <li>No-code AI workflow design</li>
+          <li>Human-in-the-loop thinking</li>
+          <li>Healthcare AI project presentation</li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <span class="tagline">Why No Coding?</span>
+        <h2>Healthcare Logic Comes First</h2>
+        <p>Most healthcare professionals do not need to become software engineers first. They need to identify problems, design workflows and use AI responsibly.</p>
+        <ul>
+          <li>Start with domain knowledge</li>
+          <li>Use no-code AI tools</li>
+          <li>Build practical solutions faster</li>
+        </ul>
+      </div>
+
+      <div class="slide">
+        <span class="tagline">The Problem</span>
+        <h2>Healthcare Teams Are Not AI-Ready Yet</h2>
+        <p>AI is moving fast, but most healthcare professionals are still stuck with manual workflows, generic training and no practical project experience.</p>
+        <ul>
+          <li>Manual repetitive work</li>
+          <li>Lack of AI project exposure</li>
+          <li>Difficulty explaining AI in interviews and business discussions</li>
+        </ul>
+      </div>
+
+      <div class="dots">
+        <span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-container">
+    <div><strong>No Coding</strong><span>Built around no-code AI tools</span></div>
+    <div><strong>Mobile Friendly</strong><span>Learn from anywhere</span></div>
+    <div><strong>PV + AI</strong><span>Healthcare-specific learning</span></div>
+    <div><strong>Corporate Ready</strong><span>Training for teams and leaders</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Choose Your Academy Path</h2>
+    <p>ClinixAI Academy supports both individual career growth and enterprise workforce transformation.</p>
+  </div>
+
+  <div class="card-grid two">
+    <div class="card">
+      <span class="tag blue">For Individuals</span>
+      <h3>Individual Career Transformation Internship</h3>
+      <p>Work from anywhere. Mobile is sufficient. No coding required. Build Healthcare AI and PV automation projects using no-code AI tools.</p>
+      <ul>
+        <li>Internship-style learning model</li>
+        <li>Portfolio-ready Healthcare AI projects</li>
+        <li>Resume, LinkedIn and interview positioning</li>
+        <li>Freshers and working professionals can join</li>
+      </ul>
+      <br>
+      <a href="academy-individual.html" class="btn btn-blue">Explore Individual Internship</a>
+    </div>
+
+    <div class="card">
+      <span class="tag teal">For Organizations</span>
+      <h3>Corporate AI Training</h3>
+      <p>Train pharmacovigilance, regulatory, quality, medical writing and healthcare teams on practical, responsible AI adoption.</p>
+      <ul>
+        <li>Executive AI awareness sessions</li>
+        <li>Team upskilling workshops</li>
+        <li>AI governance and compliance training</li>
+        <li>Custom programs for Pharma, CRO and Biotech</li>
+      </ul>
+      <br>
+      <a href="academy-corporate.html" class="btn btn-blue">Explore Corporate Training</a>
+    </div>
+  </div>
+</section>
+
+<section class="section white">
+  <div class="section-head">
+    <h2>The Generic Problem ClinixAI Solves</h2>
+    <p>Healthcare professionals know the domain. But most are not prepared to translate that knowledge into AI-enabled workflows.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card"><span class="tag amber">Problem</span><h3>Generic AI Training Does Not Fit Healthcare</h3><p>Most AI programs teach prompts and tools without connecting them to pharmacovigilance, safety, regulatory or healthcare operations.</p></div>
+    <div class="card"><span class="tag blue">Gap</span><h3>Professionals Lack Portfolio Projects</h3><p>Many candidates can say they learned AI, but very few can show a practical healthcare AI workflow they built and understood.</p></div>
+    <div class="card"><span class="tag green">Solution</span><h3>Project-Based Healthcare AI Learning</h3><p>ClinixAI Academy helps individuals and teams learn AI through real healthcare use cases, workflow design and responsible adoption.</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>What You Learn</h2>
+    <p>Practical AI adoption for healthcare workflows, not generic prompt engineering.</p>
+  </div>
+
+  <div class="card-grid">
+    <div class="card"><span class="tag blue">PV AI</span><h3>Pharmacovigilance Automation</h3><p>Literature screening, case validity, seriousness assessment, workflow tracking and case processing support.</p></div>
+    <div class="card"><span class="tag teal">No-Code AI</span><h3>AI Tools Without Coding</h3><p>Use practical AI tools to build healthcare workflows without software engineering knowledge.</p></div>
+    <div class="card"><span class="tag green">Governance</span><h3>Responsible AI Adoption</h3><p>Human oversight, documentation, compliance awareness and safe AI implementation thinking.</p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Choose Your ClinixAI Academy Path.</h2>
+    <p>Start as an individual learner or train your organization with healthcare-specific AI programs.</p>
+  </div>
+  <a href="academy-individual.html" class="btn btn-light">Start Individual Internship</a>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
+
+  <div>
+    <h4>Explore</h4>
+    <a href="academy-individual.html">Individual Internship</a>
+    <a href="academy-corporate.html">Corporate Training</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="consulting.html">Consulting</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>academy@theclinixai.com</p>
+    <p>+91 9182950889</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
+</footer>
+
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
+<script>
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dots span");
+let current = 0;
+
+setInterval(() => {
+  slides[current].classList.remove("active");
+  dots[current].classList.remove("active");
+  current = (current + 1) % slides.length;
+  slides[current].classList.add("active");
+  dots[current].classList.add("active");
+}, 3500);
+</script>
+
+</body>
