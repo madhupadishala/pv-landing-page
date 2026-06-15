@@ -1,150 +1,237 @@
 ```html
-<!-- HERO -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Careers at ClinixAI | AI, Pharmacovigilance & Drug Safety</title>
+  <meta name="description" content="Career opportunities at ClinixAI across Pharmacovigilance, AI, medical writing, business development, training, digital marketing and healthcare technology." />
+
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
+
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:46px 28px 48px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900;border:0;cursor:pointer}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
+
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
+
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card-grid.four{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
+    .card ul{padding-left:20px;margin-top:12px}
+
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+    .amber{background:rgba(240,169,40,.16);color:#9a6500}
+
+    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
+    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
+    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18);width:100%}
+
+    .contact-box{background:#fff;border:1px solid #d8e4f0;border-radius:20px;padding:30px;box-shadow:0 25px 70px rgba(7,26,52,.15)}
+    .contact-box h3{font-size:26px;font-weight:950;color:#061326;margin-bottom:8px}
+    .contact-box label{display:block;font-size:14px;font-weight:900;margin:16px 0 6px;color:#061326}
+    .contact-box input,.contact-box select,.contact-box textarea{width:100%;border:1px solid #d8e4f0;border-radius:12px;padding:13px;font:inherit;background:#fff}
+    .contact-box textarea{min-height:110px;resize:vertical}
+    .contact-box button{margin-top:20px;width:100%}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-image{height:auto}
+      .stats-container,.card-grid,.card-grid.four,.footer{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .stats-container,.card-grid,.card-grid.four,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="academy.html">Academy</a>
+      <a href="resources.html">Resources</a>
+      <a href="careers.html" class="active">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
 <section class="hero">
-  <div class="hero-grid">
+  <div class="hero-container">
     <div>
-      <div class="eyebrow">Careers at ClinixAI</div>
-
+      <p class="eyebrow">Careers at ClinixAI</p>
       <h1>Build the Future of AI-Powered Pharmacovigilance.</h1>
-
-      <p>
-        Join a mission-driven team building innovative Healthcare AI,
-        Pharmacovigilance and Drug Safety solutions that improve patient safety
-        and operational excellence.
+      <p class="hero-text">
+        Join a growing company working across Drug Safety, healthcare AI, consulting,
+        training and patient-safety innovation.
       </p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#apply">Apply Now</a>
-        <a class="btn btn-ghost" href="about.html">Why ClinixAI</a>
+        <a href="#apply" class="btn btn-light">Apply Now</a>
+        <a href="#open-roles" class="btn btn-outline">View Open Roles</a>
       </div>
     </div>
 
-    <img
-      class="hero-img"
-      src="images/careers-hero.png.png"
-      alt="Careers at ClinixAI"
-    >
+    <div class="hero-image-wrap">
+      <img src="images/careers-hero.png.png" alt="Careers at ClinixAI" class="hero-image" />
+    </div>
   </div>
 </section>
 
-<!-- WHY JOIN -->
-<section class="section center">
-
-  <div class="section-head">
-    <h2>Why Join ClinixAI?</h2>
-
-    <p>
-      Work at the intersection of Healthcare, Pharmacovigilance,
-      Artificial Intelligence and Innovation.
-    </p>
+<section class="stats">
+  <div class="stats-container">
+    <div><strong>PV + AI</strong><span>Work at the intersection of safety and technology</span></div>
+    <div><strong>Remote Friendly</strong><span>Flexible opportunities for selected roles</span></div>
+    <div><strong>Learning Culture</strong><span>Grow through mentorship and training</span></div>
+    <div><strong>Innovation</strong><span>Build future-ready healthcare solutions</span></div>
   </div>
-
-  <div class="grid grid-4">
-
-    <article class="card">
-      <h3>Healthcare AI</h3>
-      <p>Work on next-generation AI solutions for Drug Safety and Healthcare.</p>
-    </article>
-
-    <article class="card">
-      <h3>Remote Flexibility</h3>
-      <p>Remote-friendly opportunities with flexible work culture.</p>
-    </article>
-
-    <article class="card">
-      <h3>Learning Culture</h3>
-      <p>Continuous growth through training, mentorship and innovation.</p>
-    </article>
-
-    <article class="card">
-      <h3>Career Growth</h3>
-      <p>Grow with a company focused on long-term impact and transformation.</p>
-    </article>
-
-  </div>
-
 </section>
-
-<!-- OPEN POSITIONS -->
 
 <section class="section">
-
   <div class="section-head">
-    <h2>Current Open Positions</h2>
-    <p>Join us today and help shape the future of Healthcare AI.</p>
+    <h2>Why Join ClinixAI?</h2>
+    <p>Work at the intersection of healthcare, pharmacovigilance, artificial intelligence and innovation.</p>
   </div>
 
-  <div class="grid grid-3">
-
-    <article class="card">
-      <span class="badge badge-green">OPEN</span>
-
-      <h3>PV Coordinator Internship</h3>
-
-      <p>
-        Fresher | Remote / Hyderabad | 3–6 Months
-      </p>
-
-      <ul>
-        <li>B.Pharm / M.Pharm / PharmD</li>
-        <li>Life Sciences Graduates</li>
-        <li>Healthcare AI Exposure</li>
-        <li>Internship Certificate</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <span class="badge badge-green">OPEN</span>
-
-      <h3>Digital Marketing Specialist</h3>
-
-      <p>
-        2–5 Years | Remote / Hyderabad
-      </p>
-
-      <ul>
-        <li>SEO</li>
-        <li>Social Media Marketing</li>
-        <li>Lead Generation</li>
-        <li>Brand Building</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <span class="badge badge-green">OPEN</span>
-
-      <h3>Healthcare AI Developer</h3>
-
-      <p>
-        Python & SQL | 2–5 Years
-      </p>
-
-      <ul>
-        <li>Python Development</li>
-        <li>SQL Databases</li>
-        <li>AI Integration</li>
-        <li>Healthcare Automation</li>
-      </ul>
-    </article>
-
+  <div class="card-grid four">
+    <div class="card"><span class="tag blue">Healthcare AI</span><h3>Future-Focused Work</h3><p>Work on AI solutions for Drug Safety, healthcare operations and patient safety.</p></div>
+    <div class="card"><span class="tag teal">Flexibility</span><h3>Remote-Friendly Culture</h3><p>Selected roles offer remote or hybrid flexibility depending on business needs.</p></div>
+    <div class="card"><span class="tag green">Growth</span><h3>Learning & Mentorship</h3><p>Develop skills through training, real projects, mentorship and exposure to healthcare AI.</p></div>
+    <div class="card"><span class="tag amber">Impact</span><h3>Patient Safety Mission</h3><p>Contribute to work that supports safer healthcare and stronger pharmacovigilance systems.</p></div>
   </div>
-
 </section>
 
-<!-- FUTURE OPPORTUNITIES -->
-
-<section class="section center">
-
+<section class="section white" id="open-roles">
   <div class="section-head">
-    <h2>Future Opportunities</h2>
-
-    <p>
-      Join our talent network and stay informed about future openings.
-    </p>
+    <h2>Current Open Positions</h2>
+    <p>Join us today and help shape the future of Healthcare AI and Pharmacovigilance innovation.</p>
   </div>
 
-  <div class="grid grid-4">
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag green">Open</span>
+      <h3>PV Coordinator Internship</h3>
+      <p><strong>Experience:</strong> Fresher</p>
+      <p><strong>Location:</strong> Remote / Hyderabad</p>
+      <p><strong>Duration:</strong> 3–6 Months</p>
+      <ul>
+        <li>B.Pharm, M.Pharm, PharmD or Life Sciences graduates</li>
+        <li>Learn PV operations, validity assessment and literature screening</li>
+        <li>Exposure to AI-assisted healthcare workflows</li>
+        <li>Internship certificate after successful completion</li>
+      </ul>
+    </div>
 
+    <div class="card">
+      <span class="tag green">Open</span>
+      <h3>Digital Marketing Specialist</h3>
+      <p><strong>Experience:</strong> 2–5 Years</p>
+      <p><strong>Location:</strong> Remote / Hyderabad</p>
+      <ul>
+        <li>SEO, social media and campaign execution</li>
+        <li>Lead generation for academy, consulting and solutions</li>
+        <li>Healthcare and life sciences content promotion</li>
+        <li>Webinar, brand and recruitment marketing support</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="tag green">Open</span>
+      <h3>Healthcare AI Developer</h3>
+      <p><strong>Skills:</strong> Python, SQL, APIs</p>
+      <p><strong>Experience:</strong> 2–5 Years</p>
+      <p><strong>Location:</strong> Remote / Hyderabad</p>
+      <ul>
+        <li>Build Healthcare AI and PV automation workflows</li>
+        <li>Develop Python-based tools and SQL-backed systems</li>
+        <li>Support AI API integrations and dashboards</li>
+        <li>Work with pharmacovigilance and healthcare use cases</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>Future Opportunities</h2>
+    <p>Join our talent network and stay connected for future openings.</p>
+  </div>
+
+  <div class="card-grid four">
     <div class="card"><h3>PV Associate</h3></div>
     <div class="card"><h3>Senior PV Associate</h3></div>
     <div class="card"><h3>Medical Writer</h3></div>
@@ -153,143 +240,127 @@
     <div class="card"><h3>AI Automation Intern</h3></div>
     <div class="card"><h3>Healthcare AI Consultant</h3></div>
     <div class="card"><h3>Workflow Manager</h3></div>
-
   </div>
-
 </section>
 
-<!-- APPLICATION FORM -->
+<section class="section white">
+  <div class="two-column">
+    <div>
+      <h2>Life at ClinixAI</h2>
+      <p>
+        ClinixAI is building a culture of learning, ownership and responsible innovation.
+        We value people who are curious, disciplined, ethical and willing to build meaningful healthcare solutions.
+      </p>
+
+      <div class="card">
+        <h3>What We Value</h3>
+        <ul>
+          <li>Patient safety mindset</li>
+          <li>Learning and adaptability</li>
+          <li>Quality and documentation discipline</li>
+          <li>Problem-solving with ownership</li>
+          <li>Responsible AI adoption</li>
+        </ul>
+      </div>
+    </div>
+
+    <img src="images/contact-hero.png.png" alt="ClinixAI career growth and team culture" class="rounded-image" />
+  </div>
+</section>
 
 <section class="section" id="apply">
+  <div class="two-column">
+    <div>
+      <h2>Apply to ClinixAI</h2>
+      <p>
+        Submit your details and we will contact shortlisted candidates. You may also email your resume directly.
+      </p>
 
-<div class="split">
+      <div class="card">
+        <h3>Resume Email</h3>
+        <p><strong>careers@theclinixai.com</strong></p>
+        <p><strong>Subject format:</strong> Role Name – Your Name</p>
+        <p><strong>WhatsApp:</strong> +91 9182950889</p>
+      </div>
+    </div>
 
-<div>
+    <form class="contact-box" action="https://formsubmit.co/careers@theclinixai.com" method="POST">
+      <input type="hidden" name="_subject" value="New ClinixAI Career Application" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
 
-<div class="section-head">
+      <h3>Career Application</h3>
 
-<h2>Apply to ClinixAI</h2>
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Your name" required />
 
-<p>
-Submit your details and we will contact shortlisted candidates.
-</p>
+      <label>Email</label>
+      <input type="email" name="email" placeholder="you@email.com" required />
 
-</div>
+      <label>WhatsApp</label>
+      <input type="tel" name="whatsapp" placeholder="+91 9182950889" required />
 
-<img
-class="hero-img"
-src="images/contact-hero.png.png"
-alt="Apply to ClinixAI">
+      <label>Position</label>
+      <select name="position" required>
+        <option>PV Coordinator Internship</option>
+        <option>Digital Marketing Specialist</option>
+        <option>Healthcare AI Developer</option>
+        <option>Future Opportunities</option>
+      </select>
 
-</div>
+      <label>Experience</label>
+      <select name="experience" required>
+        <option>Student / Fresher</option>
+        <option>0–2 Years</option>
+        <option>2–5 Years</option>
+        <option>5+ Years</option>
+      </select>
 
-<form
-class="form-panel"
-action="https://formsubmit.co/careers@theclinixai.com"
-method="POST">
+      <label>LinkedIn / Resume Link</label>
+      <input type="text" name="resume_link" placeholder="Paste Google Drive / LinkedIn / Resume link" />
 
-<input type="hidden"
-name="_subject"
-value="New Career Application">
+      <label>Why ClinixAI?</label>
+      <textarea name="message" placeholder="Tell us briefly why you are interested in ClinixAI."></textarea>
 
-<input type="hidden"
-name="_captcha"
-value="false">
-
-<input type="hidden"
-name="_template"
-value="table">
-
-<h2>Career Application</h2>
-
-<div class="field-grid">
-
-<div>
-<label>Name</label>
-<input type="text" name="name" required>
-</div>
-
-<div>
-<label>Email</label>
-<input type="email" name="email" required>
-</div>
-
-<div>
-<label>WhatsApp</label>
-<input type="tel" name="whatsapp">
-</div>
-
-<div>
-<label>Position</label>
-
-<select name="position">
-<option>PV Coordinator Internship</option>
-<option>Digital Marketing Specialist</option>
-<option>Healthcare AI Developer</option>
-<option>Future Opportunities</option>
-</select>
-
-</div>
-
-<div>
-<label>Experience</label>
-
-<select name="experience">
-<option>Student / Fresher</option>
-<option>0–2 Years</option>
-<option>2–5 Years</option>
-<option>5+ Years</option>
-</select>
-
-</div>
-
-<div>
-<label>LinkedIn / Resume Link</label>
-<input type="text" name="resume">
-</div>
-
-<div class="full">
-<label>Why ClinixAI?</label>
-<textarea name="message"></textarea>
-</div>
-
-<button class="btn btn-blue full" type="submit">
-Submit Application
-</button>
-
-</div>
-
-</form>
-
-</div>
-
+      <button class="btn btn-blue" type="submit">Submit Application</button>
+    </form>
+  </div>
 </section>
 
-<!-- RESUME CTA -->
-
-<section class="cta-band">
-
-<div class="cta-inner">
-
-<div>
-
-<h2>Don't See the Right Role?</h2>
-
-<p>
-Send your resume and we will consider you for future opportunities.
-</p>
-
-<p>
-careers@theclinixai.com
-</p>
-
-<p>
-+91 9182950889
-</p>
-
-</div>
-
-</div>
-
+<section class="cta">
+  <div>
+    <h2>Don't See the Right Role?</h2>
+    <p>Send your resume to careers@theclinixai.com and we will consider you for future opportunities.</p>
+  </div>
+  <a href="mailto:careers@theclinixai.com" class="btn btn-light">Send Resume</a>
 </section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
+
+  <div>
+    <h4>Explore</h4>
+    <a href="about.html">About</a>
+    <a href="academy.html">Academy</a>
+    <a href="resources.html">Resources</a>
+    <a href="solutions.html">Solutions</a>
+  </div>
+
+  <div>
+    <h4>Contact</h4>
+    <p>careers@theclinixai.com</p>
+    <p>+91 9182950889</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
+</footer>
+
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
+</body>
+</html>
 ```
