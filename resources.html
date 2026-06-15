@@ -1,189 +1,376 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ClinixAI Resources | AI in Pharmacovigilance</title><meta name="description" content="Resources on AI in Pharmacovigilance, Drug Safety automation, responsible AI, PV operations, training and patient safety."><link rel="stylesheet" href="styles.css"></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body><header class="site-header">
-<div class="nav">
+  <title>ClinixAI Resources | AI in Pharmacovigilance & Healthcare Automation</title>
+  <meta name="description" content="ClinixAI Resources provides guides, checklists, webinars and practical insights on AI in pharmacovigilance, drug safety automation, healthcare AI careers and responsible AI adoption." />
 
-<a class="logo" href="index.html">
-<span class="logo-mark"></span>ClinixAI
-</a>
+  <link rel="icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png?v=50" />
+  <link rel="apple-touch-icon" href="/favicon.png?v=50" />
 
-<button class="menu-toggle" aria-label="Open menu">=</button>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,Arial,sans-serif;background:#f4f8fd;color:#172234;overflow-x:hidden}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
 
-<nav class="menu">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="solutions.html">Solutions</a>
-<a href="services.html">Services</a>
-<a href="consulting.html">Consulting</a>
+    .site-header{background:#061326;position:sticky;top:0;z-index:9999}
+    .nav-container{max-width:1280px;margin:auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:30px;font-weight:900;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#2378ff,#10b8c7);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+    .main-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+    .main-nav a{color:rgba(255,255,255,.86);font-size:15px;font-weight:800}
+    .main-nav a.active,.main-nav a:hover{color:#9ce7ff}
+    .nav-button{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff!important;padding:11px 18px;border-radius:13px}
 
-<div class="dropdown">
-<span class="dropdown-toggle">Academy</span>
-<div class="dropdown-menu">
-<a href="academy-individual.html">
-<strong>Individual Career Transformation</strong>
-<span>Build your own Healthcare AI project. No coding required.</span>
-</a>
-<a href="academy-corporate.html">
-<strong>Corporate Training</strong>
-<span>AI upskilling workshops for Pharma, CRO and healthcare teams.</span>
-</a>
-</div>
-</div>
+    .hero{background:linear-gradient(135deg,#071a34 0%,#103b73 60%,#0f6b85 100%);color:#fff;padding:46px 28px 48px}
+    .hero-container{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px}
+    .eyebrow{color:#b9efff;font-size:14px;font-weight:900;margin-bottom:10px}
+    h1{font-size:clamp(42px,4.5vw,64px);line-height:1.04;font-weight:950;letter-spacing:-.05em;margin-bottom:16px}
+    .hero-text{font-size:18px;line-height:1.55;color:rgba(255,255,255,.94);max-width:700px}
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:22px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;padding:13px 20px;font-size:15px;font-weight:900;border:0;cursor:pointer}
+    .btn-light{background:#fff;color:#061326}
+    .btn-outline{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+    .btn-blue{background:linear-gradient(135deg,#2378ff,#0f6bff);color:#fff}
+    .hero-image-wrap{border-radius:26px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.28)}
+    .hero-image{width:100%;height:430px;object-fit:cover;object-position:center}
 
-<a href="resources.html">Resources</a>
-<a href="careers.html">Careers</a>
-<a class="nav-cta" href="contact.html">Contact</a>
-</nav>
+    .stats{background:#fff}
+    .stats-container{max-width:1280px;margin:auto;padding:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stats-container div{background:#f4f8fd;border:1px solid #d8e4f0;border-radius:16px;padding:20px}
+    .stats-container strong{display:block;font-size:21px;font-weight:950;color:#061326}
+    .stats-container span{color:#5e7188;font-size:15px}
 
-</div>
+    .section{padding:70px 28px}
+    .section.white{background:#fff}
+    .section-head{max-width:850px;margin:0 auto 36px;text-align:center}
+    .section h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;color:#061326;margin-bottom:14px}
+    .section p{font-size:17px;line-height:1.65;color:#5e7188}
+
+    .card-grid{max-width:1280px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card-grid.two{grid-template-columns:repeat(2,1fr)}
+    .card-grid.four{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid #d8e4f0;border-radius:18px;padding:28px;box-shadow:0 18px 45px rgba(7,26,52,.1)}
+    .card h3{font-size:21px;font-weight:950;margin-bottom:8px;color:#061326}
+    .card p,.card li{color:#5e7188;font-size:16px;line-height:1.65}
+    .card ul{padding-left:20px;margin-top:12px}
+
+    .tag{display:inline-block;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:900;margin-bottom:13px}
+    .blue{background:rgba(35,120,255,.12);color:#2378ff}
+    .teal{background:rgba(16,184,199,.13);color:#05717d}
+    .green{background:rgba(24,138,91,.13);color:#188a5b}
+    .amber{background:rgba(240,169,40,.16);color:#9a6500}
+
+    .two-column{max-width:1280px;margin:auto;display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .two-column h2{font-size:clamp(32px,4vw,48px);line-height:1.12;font-weight:950;margin-bottom:14px;color:#061326}
+    .two-column p{font-size:17px;line-height:1.65;color:#5e7188;margin-bottom:16px}
+    .rounded-image{border-radius:24px;box-shadow:0 25px 70px rgba(7,26,52,.18);width:100%}
+
+    .contact-box{background:#fff;border:1px solid #d8e4f0;border-radius:20px;padding:30px;box-shadow:0 25px 70px rgba(7,26,52,.15)}
+    .contact-box h3{font-size:26px;font-weight:950;color:#061326;margin-bottom:8px}
+    .contact-box label{display:block;font-size:14px;font-weight:900;margin:16px 0 6px;color:#061326}
+    .contact-box input,.contact-box select,.contact-box textarea{width:100%;border:1px solid #d8e4f0;border-radius:12px;padding:13px;font:inherit;background:#fff}
+    .contact-box textarea{min-height:110px;resize:vertical}
+    .contact-box button{margin-top:20px;width:100%}
+
+    .cta{background:linear-gradient(135deg,#061326,#0b1f3a);color:#fff;padding:46px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .cta h2{font-size:32px;font-weight:950;margin-bottom:6px}
+    .cta p{color:rgba(255,255,255,.72)}
+
+    .footer{background:#061326;color:#fff;padding:42px 28px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+    .footer h2{font-size:30px;margin-bottom:8px}
+    .footer a,.footer p{display:block;color:rgba(255,255,255,.72);margin-bottom:6px}
+    .copyright{background:#030b16;color:rgba(255,255,255,.55);text-align:center;padding:14px;font-size:14px}
+
+    @media(max-width:1100px){
+      .nav-container{flex-direction:column;align-items:flex-start}
+      .hero-container,.two-column{grid-template-columns:1fr}
+      .hero-image{height:auto}
+      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:720px){
+      .main-nav{gap:11px}
+      .main-nav a{font-size:14px}
+      .hero{padding:38px 18px}
+      h1{font-size:38px}
+      .hero-actions{flex-direction:column}
+      .btn{width:100%}
+      .stats-container,.card-grid,.card-grid.two,.card-grid.four,.footer{grid-template-columns:1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">C</span>
+      <span>ClinixAI</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="services.html">Services</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="academy.html">Academy</a>
+      <a href="resources.html" class="active">Resources</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+  </div>
 </header>
+
 <main>
 
 <section class="hero">
-<div class="hero-grid">
-<div>
-<div class="eyebrow">PV AI Knowledge Hub</div>
-<h1>Resources for responsible AI adoption in Drug Safety.</h1>
-<p>Frameworks, explainers and practical thinking for PV teams, professionals and healthcare organizations.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#resource-access">Request Resource</a>
-<a class="btn btn-ghost" href="training.html">Explore Training</a>
-</div>
-</div>
+  <div class="hero-container">
+    <div>
+      <p class="eyebrow">ClinixAI Knowledge Hub</p>
+      <h1>Resources for Responsible AI Adoption in Drug Safety and Healthcare.</h1>
+      <p class="hero-text">
+        Explore practical guides, checklists, webinars and insights on AI in pharmacovigilance,
+        healthcare automation, patient safety, regulatory intelligence and AI-ready careers.
+      </p>
 
-<img class="hero-img" src="images/resources-hero.png.png" alt="ClinixAI Resources and Knowledge Hub">
+      <div class="hero-actions">
+        <a href="#resource-access" class="btn btn-light">Request Resources</a>
+        <a href="academy.html" class="btn btn-outline">Explore Academy</a>
+      </div>
+    </div>
 
-</div>
+    <div class="hero-image-wrap">
+      <img src="images/resources-hero.png.png" alt="ClinixAI resources and healthcare AI knowledge hub" class="hero-image" />
+    </div>
+  </div>
 </section>
 
-<section class="section center">
-<div class="section-head">
-<h2>Featured Topics</h2>
-<p>Use this page for future blogs, downloadable PDFs, videos, webinars and guides.</p>
-</div>
-
-<div class="grid grid-3">
-
-<article class="card">
-<span class="badge badge-blue">Guide</span>
-<h3>AI in PV Readiness Checklist</h3>
-<p>Questions to answer before launching AI pilots in safety workflows.</p>
-</article>
-
-<article class="card">
-<span class="badge badge-teal">Use Case</span>
-<h3>Literature Screening Automation</h3>
-<p>Where AI can support screening and where expert review remains essential.</p>
-</article>
-
-<article class="card">
-<span class="badge badge-amber">Framework</span>
-<h3>Human-in-the-Loop PV Design</h3>
-<p>Governance, review ownership, escalation and documentation checkpoints.</p>
-</article>
-
-</div>
+<section class="stats">
+  <div class="stats-container">
+    <div><strong>PV AI</strong><span>Pharmacovigilance automation insights</span></div>
+    <div><strong>Guides</strong><span>Checklists and practical frameworks</span></div>
+    <div><strong>Webinars</strong><span>Healthcare AI learning sessions</span></div>
+    <div><strong>Careers</strong><span>AI-ready healthcare skill development</span></div>
+  </div>
 </section>
 
 <section class="section">
-<div class="split">
+  <div class="section-head">
+    <h2>Featured Resources</h2>
+    <p>
+      Practical resources for PV teams, healthcare professionals and organizations preparing for responsible AI adoption.
+    </p>
+  </div>
 
-<div>
+  <div class="card-grid">
+    <div class="card">
+      <span class="tag blue">Starter Kit</span>
+      <h3>AI in Pharmacovigilance Starter Kit</h3>
+      <p>A practical introduction to Healthcare AI, Pharmacovigilance automation and responsible AI adoption.</p>
+    </div>
 
-<div class="section-head">
-<h2>Future Media Library</h2>
-<p>Add webinar recordings, course previews, downloadable resources, platform walkthroughs or expert interviews here as your content grows.</p>
-</div>
+    <div class="card">
+      <span class="tag teal">Framework</span>
+      <h3>Human-in-the-Loop AI Framework</h3>
+      <p>Learn how healthcare teams can use AI while maintaining scientific, regulatory and quality accountability.</p>
+    </div>
 
-<div class="grid">
+    <div class="card">
+      <span class="tag green">Guide</span>
+      <h3>Literature Screening Automation Guide</h3>
+      <p>Understand where AI can support literature review and where expert oversight remains essential.</p>
+    </div>
+  </div>
+</section>
 
-<img class="hero-img" src="images/training-hero.png.png" alt="ClinixAI Webinar and Training Library">
+<section class="section white">
+  <div class="section-head">
+    <h2>AI in PV Learning Hub</h2>
+    <p>
+      Explore key topics shaping the future of pharmacovigilance, patient safety and healthcare automation.
+    </p>
+  </div>
 
-<img class="hero-img" src="images/signal-detection.png.png" alt="ClinixAI Whitepapers and Resource Downloads">
+  <div class="card-grid four">
+    <div class="card"><span class="tag blue">PV</span><h3>Case Processing Automation</h3><p>How AI can support intake, triage, validity, seriousness and documentation workflows.</p></div>
+    <div class="card"><span class="tag teal">Literature</span><h3>Literature Screening</h3><p>Screening, relevance review, safety detection and documentation support.</p></div>
+    <div class="card"><span class="tag green">Signal</span><h3>Signal Detection</h3><p>Safety trends, signal prioritization, dashboards and expert evaluation workflows.</p></div>
+    <div class="card"><span class="tag amber">Compliance</span><h3>AI Governance</h3><p>Human oversight, auditability, documentation and responsible AI adoption.</p></div>
+  </div>
+</section>
 
-</div>
+<section class="section">
+  <div class="section-head">
+    <h2>Free Downloads</h2>
+    <p>
+      Use these resources to start structured conversations around AI readiness, automation and healthcare transformation.
+    </p>
+  </div>
 
-</div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>AI Readiness Checklist for PV Teams</h3>
+      <p>A practical checklist to evaluate readiness before launching AI pilots in Drug Safety workflows.</p>
+      <br>
+      <a href="#resource-access" class="btn btn-blue">Request Checklist</a>
+    </div>
 
-<form class="form-panel" id="resource-access">
+    <div class="card">
+      <h3>Pharmacovigilance Automation Roadmap</h3>
+      <p>A step-by-step framework for identifying, prioritizing and testing AI use cases in safety operations.</p>
+      <br>
+      <a href="#resource-access" class="btn btn-blue">Request Roadmap</a>
+    </div>
 
-<h2>Request a Resource</h2>
+    <div class="card">
+      <h3>Healthcare AI Career Guide</h3>
+      <p>A guide for students and professionals exploring AI-enabled healthcare careers and project-based learning.</p>
+      <br>
+      <a href="#resource-access" class="btn btn-blue">Request Career Guide</a>
+    </div>
+  </div>
+</section>
 
-<p class="form-note">Simple capture for people interested in guides, webinars or updates.</p>
+<section class="section white">
+  <div class="two-column">
+    <div>
+      <h2>Upcoming Webinars</h2>
+      <p>
+        ClinixAI webinars are designed to make AI in healthcare practical, understandable and directly connected to real workflows.
+      </p>
 
-<div class="field-grid">
+      <div class="card">
+        <h3>Planned Webinar Topics</h3>
+        <ul>
+          <li>AI in Pharmacovigilance — Beyond the Hype</li>
+          <li>Building Healthcare AI Projects Without Coding</li>
+          <li>AI Governance for Healthcare Organizations</li>
+          <li>Literature Screening Automation in Drug Safety</li>
+          <li>How Healthcare Professionals Can Become AI-Ready</li>
+        </ul>
+      </div>
+    </div>
 
-<div>
-<label>Email</label>
-<input type="email" placeholder="you@email.com">
-</div>
+    <img src="images/training-hero.png.png" alt="ClinixAI healthcare AI webinars and learning resources" class="rounded-image" />
+  </div>
+</section>
 
-<div>
-<label>WhatsApp</label>
-<input type="tel" placeholder="+91 XXXXX XXXXX">
-</div>
+<section class="section">
+  <div class="section-head">
+    <h2>Video Learning Library</h2>
+    <p>
+      ClinixAI Resources will host practical videos, walkthroughs and explainers for professionals and organizations.
+    </p>
+  </div>
 
-<div>
-<label>Profile</label>
-<select>
-<option>PV Professional</option>
-<option>Pharma / CRO</option>
-<option>Student</option>
-<option>Healthcare Founder</option>
-<option>Other</option>
-</select>
-</div>
+  <div class="card-grid">
+    <div class="card"><span class="tag blue">Demo</span><h3>Product Walkthroughs</h3><p>Short videos explaining AI-assisted PV workflows and solution concepts.</p></div>
+    <div class="card"><span class="tag teal">Webinars</span><h3>Expert Sessions</h3><p>Recorded sessions on AI in PV, healthcare automation, compliance and workforce transformation.</p></div>
+    <div class="card"><span class="tag green">Academy</span><h3>Course Previews</h3><p>Preview videos for individual internships and corporate AI training programs.</p></div>
+  </div>
+</section>
 
-<div>
-<label>Interested In</label>
-<select>
-<option>AI in PV Checklist</option>
-<option>Literature Screening</option>
-<option>Training Resources</option>
-<option>Consulting Framework</option>
-<option>Webinars</option>
-</select>
-</div>
+<section class="section white" id="resource-access">
+  <div class="two-column">
+    <div>
+      <h2>Request Resources or Join the Knowledge List</h2>
+      <p>
+        Get updates on AI in Pharmacovigilance, healthcare automation, academy programs, webinars and ClinixAI resources.
+      </p>
 
-<button class="btn btn-blue full" type="submit">Send Me Resources</button>
+      <div class="card">
+        <h3>Resource Contact</h3>
+        <p><strong>Email:</strong> academy@theclinixai.com</p>
+        <p><strong>WhatsApp:</strong> +91 9182950889</p>
+      </div>
+    </div>
 
-<p class="mini-copy full">Later this can connect to email automation or a resource download page.</p>
+    <form class="contact-box" action="https://formsubmit.co/academy@theclinixai.com" method="POST">
+      <input type="hidden" name="_subject" value="New ClinixAI Resource Request" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
 
-</div>
+      <h3>Resource Request</h3>
 
-</form>
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Your name" required />
 
-</div>
+      <label>Email</label>
+      <input type="email" name="email" placeholder="you@email.com" required />
+
+      <label>WhatsApp</label>
+      <input type="tel" name="whatsapp" placeholder="+91 9182950889" />
+
+      <label>Profile</label>
+      <select name="profile" required>
+        <option>PV Professional</option>
+        <option>Pharma / CRO / Biotech</option>
+        <option>Student / Fresher</option>
+        <option>Healthcare Professional</option>
+        <option>Founder / Business Leader</option>
+        <option>Other</option>
+      </select>
+
+      <label>Interested In</label>
+      <select name="interest" required>
+        <option>AI in PV Starter Kit</option>
+        <option>AI Readiness Checklist</option>
+        <option>Literature Screening Automation</option>
+        <option>Healthcare AI Career Guide</option>
+        <option>Corporate AI Training</option>
+        <option>Webinars</option>
+      </select>
+
+      <label>Message</label>
+      <textarea name="message" placeholder="Tell us what resource or topic you are interested in."></textarea>
+
+      <button class="btn btn-blue" type="submit">Send Me Resources</button>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <div>
+    <h2>Turn Healthcare Knowledge Into AI-Ready Capability.</h2>
+    <p>Explore resources, attend webinars or join ClinixAI Academy to build practical healthcare AI skills.</p>
+  </div>
+  <a href="academy.html" class="btn btn-light">Explore Academy</a>
 </section>
 
 </main>
 
-<footer class="site-footer">
-<div class="footer-inner">
-<div>
-<h2>ClinixAI</h2>
-<p>AI Solutions • Consulting • Training • Pharmacovigilance Innovation</p>
-</div>
+<footer class="footer">
+  <div>
+    <h2>ClinixAI</h2>
+    <p>AI Solutions • Consulting • Academy • Pharmacovigilance Innovation</p>
+  </div>
 
-<div>
-<strong>Explore</strong>
-<a href="solutions.html">Solutions</a>
-<a href="services.html">Services</a>
-<a href="training.html">Training</a>
-</div>
+  <div>
+    <h4>Explore</h4>
+    <a href="academy.html">Academy</a>
+    <a href="academy-individual.html">Individual Internship</a>
+    <a href="academy-corporate.html">Corporate Training</a>
+    <a href="solutions.html">Solutions</a>
+  </div>
 
-<div>
-<strong>Contact</strong>
-<p>contact@theclinixai.com</p>
-<a href="contact.html">Send inquiry</a>
-</div>
-
-</div>
-
-<div class="footer-bottom">© 2026 ClinixAI. All Rights Reserved.</div>
+  <div>
+    <h4>Contact</h4>
+    <p>academy@theclinixai.com</p>
+    <p>+91 9182950889</p>
+    <a href="contact.html">Send inquiry</a>
+  </div>
 </footer>
 
-<script src="site.js"></script>
+<div class="copyright">© 2026 ClinixAI. All Rights Reserved.</div>
+
 </body>
 </html>
+```
